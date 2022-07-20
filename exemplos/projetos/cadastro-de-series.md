@@ -132,7 +132,7 @@ namespace Series
 
 - - - 
 
-- Diretório: Enum
+- Diretório: enum
 - Arquivo: Genero.cs
 
 ~~~csharp
@@ -152,7 +152,7 @@ namespace Series
 
 - - - 
 
-- Diretório: Interfaces
+- Diretório: interfaces
 - Arquivo: IRepositorio.cs
 
 ~~~csharp
@@ -179,7 +179,7 @@ namespace Series.Interfaces
 
 - - - 
 
-- Diretório: Raiz do projeto
+- Diretório: raiz do projeto
 - Arquivo: Program.cs
 
 ~~~csharp
