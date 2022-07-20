@@ -1,6 +1,6 @@
-# .NET Command-Line Interface (CLI)
+# .NET 
 
-## Comandos
+## Command-Line Interface (CLI) 
 
 ~~~bash
 # geral
@@ -56,7 +56,3 @@ dotnet sln add tests/minhaapi.tests/
 ## adiciona referencia dos testes à api
 dotnet add tests/minhaapi.tests/ reference src/minhaapi/
 ~~~
-
-## Referências
-
-- [Documentação Oficial - Microsoft](https://docs.microsoft.com/pt-br/dotnet/)
