@@ -11,3 +11,48 @@
 
 > There's also two combinations: protected internal and private protected.
 > By default, all members of a class are private if you don't specify an access modifier
+
+## Exemplo
+
+- Arquivo: Aluno.cs
+
+~~~csharp
+using System;
+
+namespace Encapsulamento
+{
+    public class Aluno
+    {
+        private double nota1, nota2;
+        private double media()
+        {
+            return (nota1 + nota2) / 2;
+        }
+        public void mensagem()
+        {
+            Console.WriteLine("Digite as 2 notas");
+            nota1 = Convert.ToDouble(Console.ReadLine());
+            nota2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Media = " + media());
+        }
+    }
+}
+~~~
+
+- Arquivo: Program.cs
+
+~~~csharp
+using System;
+
+namespace Encapsulamento
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Aluno a = new Aluno();
+            a.mensagem();
+        }
+    }
+}
+~~~
