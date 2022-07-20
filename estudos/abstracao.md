@@ -15,6 +15,90 @@
 
 ## Exemplo
 
+- Arquivo: Padrao.cs
+
+~~~csharp
+using System;
+
+namespace MeuProjeto
+{
+    // classe abstrata
+    public abstract class Padrao
+    {
+        // metodo obrigatorio
+        public abstract void taxaEmprestimo(double valor); // quem implementar a classe padrão precisa implementar esse método.
+
+        // metodo opcional
+        public void calculoPoupanca(double valor, double taxa)
+        {
+            Console.WriteLine("Ganho poupança: " + valor * taxa);
+        }
+    }
+}
+~~~
+
+- Arquivo: PessoaFisica.cs
+
+~~~csharp
+using System;
+
+namespace MeuProjeto
+{
+    public class PessoaFisica : Padrao
+    {
+        // metodo obrigatorio
+        public override void taxaEmprestimo(double valor)
+        {
+            Console.WriteLine("Taxa Emprestimo PF = " + valor * 0.1);
+        }
+    }
+}
+~~~
+
+- Arquivo: PessoaJuridica.cs
+
+~~~csharp
+using System;
+
+namespace MeuProjeto
+{
+    public class PessoaJuridica : Padrao
+    {
+        // metodo obrigatorio
+        public override void taxaEmprestimo(double valor)
+        {
+            Console.WriteLine("Taxa Emprestimo PJ = " + valor * 0.2);
+        }
+    }
+}
+~~~
+
+- Arquivo: Program.cs
+
+~~~csharp
+using System;
+
+namespace MeuProjeto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PessoaFisica pf = new PessoaFisica();
+            PessoaJuridica pj = new PessoaJuridica();
+
+            pf.taxaEmprestimo(1000);
+            pf.calculoPoupanca(1000, 0.1);
+
+            pj.taxaEmprestimo(1000);
+            pj.calculoPoupanca(1000, 0.1);
+        }
+    }
+}
+~~~
+
+## Exemplo
+
 ~~~csharp
 // file Program.cs, dir MyApplication
 using System;
