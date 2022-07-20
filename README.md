@@ -14,7 +14,6 @@
 12. [For e Foreach](for-foreach.md)
 13. [Break e Continue](break-continue.md)
 14. [Arrays](arrays.md)
-15. [Funções](funcoes.md)
 16. [Structs](structs.md)
 17. [Enums](enums.md)
 18. [Coleções](colecoes.md)
