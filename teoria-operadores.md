@@ -1,40 +1,48 @@
 # C#
 
--  Operadores de Atribuição
-    - ``` = ```
-    - 
-- Operadores Aritméticos
-    - ``` + ```
-    - ``` - ```
-    - ``` * ```
-    - ``` / ```
-    - ``` % ```
-    - 
-- Operadores Aritméticos de Atribuição Reduzida
-    - ``` += ```
-    - ``` -= ```
-    - ``` *= ```
-    - ``` /= ```
-    - ``` %= ```
-    - 
-- Operadores Incrementais (prefixo ou sufixo)
-    - ``` ++ ```
+##  Operadores de Atribuição
 
-- Operadores Decrementais (prefixo ou sufixo)
-    - ``` -- ```
+``` = ```
 
-- Operadores Relacionais
-    - ``` == ```
-    - ``` != ```
-    - ``` > ```
-    - ``` < ```
-    - ``` >= ```
-    - ``` <= ```
+## Operadores Aritméticos
 
-- Operadores Lógicos
-    - ``` && ```
-    - ``` || ```
-    - ``` ! ```
+``` + ```
+``` - ```
+``` * ```
+``` / ```
+``` % ```
+ 
+## Operadores Aritméticos de Atribuição Reduzida
 
-- Operador Ternário
-    - ``` teste lógico ? valor se verdadeiro : valor se falso; ```
+``` += ```
+``` -= ```
+``` *= ```
+``` /= ```
+``` %= ```
+  
+## Operadores Incrementais (prefixo ou sufixo)
+
+``` ++ ```
+
+## Operadores Decrementais (prefixo ou sufixo)
+
+``` -- ```
+
+## Operadores Relacionais
+
+``` == ```
+``` != ```
+``` > ```
+``` < ```
+``` >= ```
+``` <= ```
+
+## Operadores Lógicos
+
+``` && ```
+``` || ```
+``` ! ```
+
+## Operador Ternário
+
+``` teste lógico ? valor se verdadeiro : valor se falso; ```
