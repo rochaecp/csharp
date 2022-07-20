@@ -36,3 +36,32 @@ namespace Entrada_pelo_Console
     }
 }
 ~~~
+
+## Exemplo
+
+~~~csharp
+using System;
+
+namespace Saida_pelo_Console
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nome = "Mauricio";
+            int idade = 30;
+            double salario = 6500.00D;
+
+            Console.WriteLine("on a new line.");
+            Console.Write("on the same line. ");
+
+            Console.WriteLine($"Olá {nome}");
+            Console.WriteLine("Olá: " + nome);
+            Console.WriteLine("Sua idade é: " + idade); // int
+            Console.WriteLine($"Sua idade é: {salario:F2}"); // double
+            Console.WriteLine("nome: {0} salario: {1:F2}", nome, salario); // double
+
+        }
+    }
+}
+~~~
