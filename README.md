@@ -16,7 +16,7 @@
 14. [Arrays](arrays.md)
 16. [Structs](structs.md)
 17. [Enums](enums.md)
-18. [Coleções](colecoes.md)
+18. [Listas](listas.md)
 19. [Tuplas](tuplas.md)
 20. [Exceções](excecoes.md)
 21. [Arquivos](arquivos.md)
