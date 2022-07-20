@@ -29,7 +29,7 @@
 1. [Classes e Objetos](classes-objetos.md)
 1. [Métodos](metodos.md)
 1. [Encapsulamento](encapsulamento.md)
-1. [Método Construtor](metodo-construtor.md)
+1. [Métodos Construtores](metodo-construtor.md)
 1. [Métodos Get e Set](metodos-get-set.md)
 1. [Sobrecarga de Métodos](metodos-sobrecarga.md)
 1. [Sobrescrita de Métodos](metodos-sobrescrita.md)
