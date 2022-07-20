@@ -1,8 +1,6 @@
-# C#
+# C# - Tipos
 
-## Tipos de dados
-
-- Tipos por Valor
+## Tipos por Valor
 
 ~~~csharp
 byte myByte = 10;       // 1 byte unsigned 0 to 255
@@ -26,7 +24,7 @@ bool myBoolean = true;  // 1 bit
 // nullable
 ~~~
 
-- Tipos por Referência
+## Tipos por Referência
 
 ~~~csharp
 string myString = "abc";
@@ -38,7 +36,7 @@ string myString = "abc";
 // Delegate
 ~~~
 
-- Constantes
+## Constantes
 
 ~~~csharp
 const int myConst = 10; // myConst = 9; // erro
