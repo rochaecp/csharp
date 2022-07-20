@@ -22,3 +22,4 @@
 20. [Exceções](excecoes.md)
 21. [Arquivos](arquivos.md)
 22. [LINQ](linq.md)
+23. [CLI](cli.md)
