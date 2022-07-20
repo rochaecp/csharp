@@ -106,3 +106,25 @@ namespace Operadores
     }
 }
 ~~~
+
+## Exemplo
+
+~~~csharp
+using System;
+
+namespace Operador_Ternario
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int time = 20;
+            string result = (time < 18) ? "Good day." : "Good evening.";
+
+            // operador ternário
+            int myInt = 10;
+            string myString = (myInt == 10) ? "dez" : "zero";
+        }
+    }
+}
+~~~
