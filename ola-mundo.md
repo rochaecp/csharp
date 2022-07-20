@@ -1,6 +1,4 @@
-# C#
-
-## Olá Mundo
+# C# - Olá Mundo
 
 ~~~csharp
 // classes do namespace System
