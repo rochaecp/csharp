@@ -9,6 +9,63 @@
 
 ## Exemplo
 
+- Arquivo: IPadrao.cs
+
+~~~csharp
+namespace MeuProjeto
+{
+    public interface IPadrao
+    {
+        // metodo obrigatorio
+        void somar(int n1, int n2); // obrigatoriamente abstract e public
+        void subtrair(int n1, int n2);
+    }
+}
+~~~
+
+- Arquivo: Calculo.cs
+
+~~~csharp
+using System;
+
+namespace MeuProjeto
+{
+    public class Calculo : IPadrao // Calculo implementa a interface IPadrao, é do mesmo jeito que herança
+    {
+        public void somar(int n1, int n2) // poderia ser privado se quisesse
+        {
+            Console.WriteLine(n1 + n2);
+        }
+
+        public void subtrair(int n1, int n2)
+        {
+            Console.WriteLine(n1 - n2);
+        }
+    }
+}
+~~~
+
+- Arquivo: Program.cs
+
+~~~csharp
+using System;
+
+namespace MeuProjeto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculo obj = new Calculo();
+            obj.somar(1, 1);
+            obj.subtrair(11, 10);
+        }
+    }
+}
+~~~
+
+## Exemplo
+
 ~~~csharp
 // file Program.cs, dir MyApplication
 using System;
