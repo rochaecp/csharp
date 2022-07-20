@@ -1,6 +1,4 @@
-# .NET 
-
-## Command-Line Interface (CLI) 
+# .NET - Command-Line Interface (CLI) 
 
 ~~~bash
 # geral
