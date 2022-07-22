@@ -105,9 +105,15 @@
     - Convertendo String em Array de Char
         
         ~~~csharp
-        String myString = "This is String example.";
-        char[] myCharArray = myString.ToCharArray();        
+        string myStr = "This is String example";
+        char[] myCharArr = myStr.ToCharArray();        
         ~~~
+        
+    - Convertendo Array de Char em String
+
+    ~~~csharp
+        myStr = string.Join("", myCharArr);    
+    ~~~
 
 ## Arrays Bidimensionais        
 
