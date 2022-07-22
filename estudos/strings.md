@@ -1,82 +1,117 @@
 # C# - Strings
 
-## Caracteres de Escape
+> Namespace: System - ``` using System; ```  
+> Namespace: System.Text - ``` using System.Text ```
 
-``` \' ``` 
-``` \" ```
-``` \n ```
-``` \t ```
-``` \b ```
-``` \\ ```
+- Criação
 
-## Concatenação de strings
+    ```csharp
+    string myStr = "";
+    ```
 
-``` + ```
+- Concatenação 
 
-## Exemplo
+    ```csharp 
+    myStr = myStr2 + "  " + myStr3;
+    myStr = string.Concat(myStr2, myStr3);
+    ```
+    
+- Interpolação - versão 6 do C#
 
-~~~csharp
-using System;
-using System.Text;
+    ```csharp
+    myStr = $"Meu nome completo é: {myStr2} {myStr3}";
+    ```
 
-namespace Strings
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string nome = "";
-            string primeiroNome = "Mauricio";
-            string ultimoNome = "Rocha";
-            string frase = "";
-            string texto = "";
-            bool myBool = false;
+- Acessar caracteres - read only
 
-            // Array de Strings
-            string[] cores = { "Azul", "Amarelo", "Vermelho" };
+    ```csharp
+    myChar = myStr[0];
+    ```
 
-            // Concatenacao de Strings
-            nome = primeiroNome + ultimoNome;
+- Caracteres de Escape
 
-            // Concatenacao de Strings 
-            nome = string.Concat(primeiroNome, ultimoNome);
+    ``` \' ``` 
+    ``` \" ```
+    ``` \n ```
+    ``` \t ```
+    ``` \b ```
+    ``` \\ ```
+    
+## Propriedades
 
-            // Interpolação de Strings C# version 6
-            frase = $"Meu nome completo é: {primeiroNome} {ultimoNome}";
+- Length
 
-            // Accessando Strings - read only
-            char primeiraLetra = nome[0]; // M
+    ```csharp
+    myInt = myStr.Length;
+    ```
+    
+## Métodos    
 
-            // Metodos
-            nome = string.Concat(primeiroNome, ultimoNome);
-            int myLength = nome.Length;
-            int myIndex = nome.IndexOf("M"); // -1 == not find
-            texto = nome.Substring(2); // do inicio ate posicao 2
-            texto = nome.ToUpper();
-            texto = nome.ToLower();
-            myBool = string.IsNullOrEmpty(nome);
-            myBool = nome.Equals("myText");
+- IndexOf()
 
-            // Obtendo ASCII a partir de char
-            char myChar = 'c'; // create char c
-            int myAscii = (int)myChar;
+    ```csharp
+    myInt = myStr.IndexOf("M"); // -1 == not find
+    ```
+- Substring()
 
-            // Convertendo string em array de char
-            String myString = "This is String example.";
-            char[] myCharArray = myString.ToCharArray();
+    ```csharp
+    myStr = myStr2.Substring(2); // do inicio ate posicao 2    
+    ```
 
-            // Modificando um caractere de uma string em um determinado índice
-            string myStringSetChar = "Mauricio";
-            char[] myCharArray2 = myStringSetChar.ToCharArray();
-            myCharArray2[0] = 'X';
-            myStringSetChar = new string(myCharArray2);
+- ToUpper()
 
-            // Modificando um caractere de uma string em um determinado índice - usando StringBuilder
-            string myStringSetCharSB = "Mauricio";
-            StringBuilder sb = new StringBuilder(myStringSetCharSB);
-            sb[0] = 'X';
-            myStringSetCharSB = sb.ToString();
-        }
-    }
-}
-~~~
+    ```csharp
+    myStr = myStr2.ToUpper();
+    ```
+
+- ToLower()
+
+    ```csharp
+    myStr = myStr2.ToLower();
+    ```
+
+- IsNullOfEmpty()
+
+    ```csharp
+    myBool = string.IsNullOrEmpty(myStr);
+    ```
+
+- Equals()
+
+    ```csharp
+    myBool = myStr.Equals(myStr);
+    ```
+
+## Exemplos
+
+- Obtendo ASCII a partir de char
+
+    ```csharp
+    char myChar = 'c'; // create char c
+    int myAscii = (int)myChar;
+    ```
+
+- Convertendo string em array de char
+
+    ```csharp
+    String myStr = "This is String example.";
+    char[] myCharArray = myStr.ToCharArray();
+    ```
+
+- Modificando um caractere de uma string em um determinado índice
+
+    ```csharp
+    string myStr = "Mauricio";
+    char[] myCharArray = myStr.ToCharArray();
+    myCharArray[0] = 'X';
+    myStringSetChar = new string(myCharArray);
+    ```
+    
+- Modificando um caractere de uma string em um determinado índice - usando StringBuilder
+
+    ```csharp
+    string myStr = "Mauricio";
+    StringBuilder sb = new StringBuilder(myStr);
+    sb[0] = 'X';
+    myStr = sb.ToString();
+    ```
