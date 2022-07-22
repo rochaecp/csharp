@@ -2,38 +2,36 @@
 
 > Namespace: System - ``` using System; ```
 
-## Métodos de Leitura
+- Métodos 
 
-- Console.Read() - Le próximo caractere
+    - Console.Read() - Le próximo caractere
 
-    ```csharp
-    myInt = Console.Read();
-    myChar = (char)Console.Read();
-    ```
+        ```csharp
+        myInt = Console.Read();
+        myChar = (char)Console.Read();
+        ```
 
-- Console.ReadLine() - Lê próxima linha
+    - Console.ReadLine() - Lê próxima linha
 
-    ```csharp
-    myStr = Console.ReadLine();
-    myInt = Convert.ToInt32(Console.ReadLine());
-    ```
+        ```csharp
+        myStr = Console.ReadLine();
+        myInt = Convert.ToInt32(Console.ReadLine());
+        ```
 
-## Métodos de Escrita
+    - Console.Write()
 
-- Console.Write()
+        ```csharp
+        Console.Write("Olá Mundo");
+        ```
 
-```csharp
-Console.Write("Olá Mundo");
-```
+    - Console.WriteLine()
 
-- Console.WriteLine()
+        ```csharp
+        Console.WriteLine("Olá Mundo");
+        Console.WriteLine("Olá: " + myStr);
+        Console.WriteLine("Sua idade é: " + myInt);
 
-```csharp
-Console.WriteLine("Olá Mundo");
-Console.WriteLine("Olá: " + myStr);
-Console.WriteLine("Sua idade é: " + myInt);
-
-Console.WriteLine($"Olá {myStr}");
-Console.WriteLine($"Seu salário é: {myDouble:F2}");
-Console.WriteLine("Olá {0} Salário: {1:F2}", myStr, myDouble);
-```
+        Console.WriteLine($"Olá {myStr}");
+        Console.WriteLine($"Seu salário é: {myDouble:F2}");
+        Console.WriteLine("Olá {0} Salário: {1:F2}", myStr, myDouble);
+        ```
