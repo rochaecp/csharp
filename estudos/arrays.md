@@ -111,9 +111,9 @@
         
     - Convertendo Array de Char em String
 
-    ~~~csharp
+        ~~~csharp
         myStr = string.Join("", myCharArr);    
-    ~~~
+        ~~~
 
 ## Arrays Bidimensionais        
 
