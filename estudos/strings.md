@@ -1,7 +1,6 @@
-# C# - Strings
+# C# - Strings 
 
-> Namespace: System - ``` using System; ```  
-> Namespace: System.Text - ``` using System.Text ```
+> Namespace: System - ``` using System; ```
 
 - Criação
 
@@ -87,30 +86,32 @@
 - Obtendo ASCII a partir de char
 
     ```csharp
-    char myChar = 'c'; // create char c
-    int myAscii = (int)myChar;
+    myChar = 'c'; 
+    myInt = (int)myChar;
     ```
 
 - Convertendo string em array de char
 
     ```csharp
-    String myStr = "This is String example.";
+    myStr = "This is String example.";
     char[] myCharArray = myStr.ToCharArray();
     ```
 
 - Modificando um caractere de uma string em um determinado índice
 
     ```csharp
-    string myStr = "Mauricio";
+    myStr = "Mauricio";
     char[] myCharArray = myStr.ToCharArray();
     myCharArray[0] = 'X';
-    myStringSetChar = new string(myCharArray);
+    myStr = new string(myCharArray);
     ```
     
 - Modificando um caractere de uma string em um determinado índice - usando StringBuilder
 
+    > Namespace: System.Text - ``` using System.Text; ```
+
     ```csharp
-    string myStr = "Mauricio";
+    myStr = "Mauricio";
     StringBuilder sb = new StringBuilder(myStr);
     sb[0] = 'X';
     myStr = sb.ToString();
