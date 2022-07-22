@@ -36,83 +36,83 @@
     ``` \b ```
     ``` \\ ```
     
-## Propriedades
+- Propriedades
 
-- Length
+    - Length
 
-    ```csharp
-    myInt = myStr.Length;
-    ```
+        ```csharp
+        myInt = myStr.Length;
+        ```
     
-## Métodos    
+- Métodos    
 
-- IndexOf()
+    - IndexOf()
 
-    ```csharp
-    myInt = myStr.IndexOf("M"); // -1 == not find
-    ```
-- Substring()
+        ```csharp
+        myInt = myStr.IndexOf("M"); // -1 == not find
+        ```
+    - Substring()
 
-    ```csharp
-    myStr = myStr2.Substring(2); // do inicio ate posicao 2    
-    ```
+        ```csharp
+        myStr = myStr2.Substring(2); // do inicio ate posicao 2    
+        ```
 
-- ToUpper()
+    - ToUpper()
 
-    ```csharp
-    myStr = myStr2.ToUpper();
-    ```
+        ```csharp
+        myStr = myStr2.ToUpper();
+        ```
 
-- ToLower()
+    - ToLower()
 
-    ```csharp
-    myStr = myStr2.ToLower();
-    ```
+        ```csharp
+        myStr = myStr2.ToLower();
+        ```
 
-- IsNullOfEmpty()
+    - IsNullOfEmpty()
 
-    ```csharp
-    myBool = string.IsNullOrEmpty(myStr);
-    ```
+        ```csharp
+        myBool = string.IsNullOrEmpty(myStr);
+        ```
 
-- Equals()
+    - Equals()
 
-    ```csharp
-    myBool = myStr.Equals(myStr);
-    ```
+        ```csharp
+        myBool = myStr.Equals(myStr);
+        ```
 
-## Exemplos
+- Exemplos
 
-- Obtendo ASCII a partir de char
+    - Obtendo ASCII a partir de char
 
-    ```csharp
-    myChar = 'c'; 
-    myInt = (int)myChar;
-    ```
+        ```csharp
+        myChar = 'c'; 
+        myInt = (int)myChar;
+        ```
 
-- Convertendo string em array de char
+    - Convertendo string em array de char
 
-    ```csharp
-    myStr = "This is String example.";
-    char[] myCharArray = myStr.ToCharArray();
-    ```
+        ```csharp
+        myStr = "This is String example.";
+        char[] myCharArray = myStr.ToCharArray();
+        ```
 
-- Modificando um caractere de uma string em um determinado índice
+    - Modificando um caractere de uma string em um determinado índice
 
-    ```csharp
-    myStr = "Mauricio";
-    char[] myCharArray = myStr.ToCharArray();
-    myCharArray[0] = 'X';
-    myStr = new string(myCharArray);
-    ```
-    
-- Modificando um caractere de uma string em um determinado índice - usando StringBuilder
+        ```csharp
+        myStr = "Mauricio";
+        char[] myCharArray = myStr.ToCharArray();
+        myCharArray[0] = 'X';
+        myStr = new string(myCharArray);
+        ```
 
-    > Namespace: System.Text - ``` using System.Text; ```
+    - Modificando um caractere de uma string em um determinado índice - usando StringBuilder
 
-    ```csharp
-    myStr = "Mauricio";
-    StringBuilder sb = new StringBuilder(myStr);
-    sb[0] = 'X';
-    myStr = sb.ToString();
-    ```
+        > Namespace: System.Text - ``` using System.Text; ```
+
+        ```csharp
+        myStr = "Mauricio";
+        StringBuilder sb = new StringBuilder(myStr);
+        sb[0] = 'X';
+        myStr = sb.ToString();
+        ```
