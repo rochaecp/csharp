@@ -8,6 +8,7 @@
 
         ~~~csharp
         List<int> myIntList = new List<int>();
+        List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
         ~~~
         
 - Inclusão
@@ -16,6 +17,14 @@
 
         ~~~csharp
         myIntList.Add(10);
+        ~~~
+        
+- Remoção
+
+    - Primeiro Elemento
+
+        ~~~csharp
+        myBool = myIntList.Remove(0);
         ~~~
         
 - Acesso
@@ -48,6 +57,15 @@
             Console.WriteLine(myInt);
         });
         ~~~
+        
+- Propriedades
+
+    - Count
+
+        ~~~csharp
+        myInt = myIntList.Count;
+        ~~~
+      
         
 - Métodos
 
