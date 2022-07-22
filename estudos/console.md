@@ -2,7 +2,7 @@
 
 ## Métodos de Leitura  no Console
 
-> Usam o namespace System: ``` using System; ```
+> Namespace: System - ``` using System; ```
 
 - Console.Read() - Le próximo caractere
 
@@ -20,7 +20,7 @@
 
 ## Métodos de Escrita no Console
 
-> Usam o namespace System: ``` using System; ```
+> Namespace: System - ``` using System; ```
 
 - Console.Write()
 
