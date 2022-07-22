@@ -2,6 +2,8 @@
 
 ## Métodos de Leitura  no Console
 
+> Usam o namespace System: ``` using System; ```
+
 - Console.Read() - Le próximo caractere
 
     ```csharp
@@ -17,6 +19,8 @@
     ```
 
 ## Métodos de Escrita no Console
+
+> Usam o namespace System: ``` using System; ```
 
 - Console.Write()
 
