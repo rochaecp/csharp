@@ -1,6 +1,6 @@
 # C# - IF .. Else
 
-- Comando
+- IF .. Else
 
     ~~~csharp
     if (myInt == 1)
