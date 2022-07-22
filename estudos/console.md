@@ -1,67 +1,37 @@
 # C# - Console
 
-## Entrada pelo Console
+## Métodos de Leitura  no Console
 
-### Console.Read()
+- Console.Read() - Le próximo caractere
 
-- Le próximo caractere
+    ```csharp
+    myInt = Console.Read();
+    myChar = (char)Console.Read();
+    ```
 
-### Console.ReadLine()
+- Console.ReadLine() - Lê próxima linha
 
-- Lê próxima linha
+    ```csharp
+    myStr = Console.ReadLine();
+    myInt = Convert.ToInt32(Console.ReadLine());
+    ```
 
-## Saída pelo Console
+## Métodos de Escrita no Console
 
-## Exemplo
+- Console.Write()
 
-~~~csharp
-using System;
+```csharp
+Console.Write("Olá Mundo");
+```
 
-namespace Entrada_pelo_Console
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string nome = "";
+- Console.WriteLine()
 
-            Console.WriteLine("Digite o seu nome: ");
-            nome = Console.ReadLine();
-            Console.WriteLine("Seu nome é: " + nome);
+```csharp
+Console.WriteLine("Olá Mundo");
+Console.WriteLine("Olá: " + myStr);
+Console.WriteLine("Sua idade é: " + myInt);
 
-            Console.WriteLine("\nDigite a sua idade: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Sua idade é: " + age);
-        }
-    }
-}
-~~~
-
-## Exemplo
-
-~~~csharp
-using System;
-
-namespace Saida_pelo_Console
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string nome = "Mauricio";
-            int idade = 30;
-            double salario = 6500.00D;
-
-            Console.WriteLine("on a new line.");
-            Console.Write("on the same line. ");
-
-            Console.WriteLine($"Olá {nome}");
-            Console.WriteLine("Olá: " + nome);
-            Console.WriteLine("Sua idade é: " + idade); // int
-            Console.WriteLine($"Sua idade é: {salario:F2}"); // double
-            Console.WriteLine("nome: {0} salario: {1:F2}", nome, salario); // double
-
-        }
-    }
-}
-~~~
+Console.WriteLine($"Olá {myStr}");
+Console.WriteLine($"Seu salário é: {myDouble:F2}");
+Console.WriteLine("Olá {0} Salário: {1:F2}", myStr, myDouble);
+```
