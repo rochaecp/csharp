@@ -2,7 +2,7 @@
 
 > Namespace: System - ``` using System; ```
 
-## Métodos de Leitura  no Console
+## Métodos de Leitura
 
 - Console.Read() - Le próximo caractere
 
@@ -18,7 +18,7 @@
     myInt = Convert.ToInt32(Console.ReadLine());
     ```
 
-## Métodos de Escrita no Console
+## Métodos de Escrita
 
 - Console.Write()
 
