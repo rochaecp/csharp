@@ -1,8 +1,8 @@
 # C# - Console
 
-## Métodos de Leitura  no Console
-
 > Namespace: System - ``` using System; ```
+
+## Métodos de Leitura  no Console
 
 - Console.Read() - Le próximo caractere
 
@@ -19,8 +19,6 @@
     ```
 
 ## Métodos de Escrita no Console
-
-> Namespace: System - ``` using System; ```
 
 - Console.Write()
 
