@@ -1,53 +1,66 @@
 # C# - Listas
 
-## Covertendo listas em arrays
+> Namespace: System.Collections.Generic - ``` using System.Collections.Generic; ```
 
-~~~csharp
-int[] meuArray = minhaLista.ToArray();
-~~~
+- Criação
 
-## Exemplo
+    - Int
 
-~~~csharp
-using System;
-using System.Collections.Generic;
+        ~~~csharp
+        List<int> myIntList = new List<int>();
+        ~~~
+        
+- Inclusão
 
-namespace Listas
-{
-    class Program
-    {
-        static void Main(string[] args)
+    - Int
+
+        ~~~csharp
+        myIntList.Add(10);
+        ~~~
+        
+- Acesso
+
+    - Um elemento
+
+        ~~~csharp
+        myIntList.Add(10);
+        ~~~
+        
+    - Todos Elementos - For
+
+        ~~~csharp
+        for (int i = 0; i < myIntList.Count; i++)
+            Console.WriteLine(myIntList[i]);
+        ~~~
+        
+    - Todos Elementos - Foreach
+
+        ~~~csharp
+        foreach (int myInt in myIntList)
+            Console.WriteLine(myInt);
+        ~~~  
+        
+    - Todos Elementos - Foreach        
+
+        ~~~csharp
+        myIntList.ForEach(delegate (int myInt)
         {
-            // cria a lista
-            List<int> lista_numeros = new List<int>();
+            Console.WriteLine(myInt);
+        });
+        ~~~
+        
+- Métodos
 
-            // adiciona elementos
-            lista_numeros.Add(3);
-            lista_numeros.Add(2);
-            lista_numeros.Add(1);
+    - Sort()
 
-            // acessa elementos
-            for (int i = 0; i < lista_numeros.Count; i++)
-                Console.WriteLine($"Elemento = {lista_numeros[i]}");
-            Console.WriteLine();
+        ~~~csharp
+        myIntList.Sort();
+        ~~~
 
-            // acessa elementos
-            foreach (int e in lista_numeros)
-                Console.WriteLine($"Elemento = {e}");
-            Console.WriteLine();
+## Exemplos
 
-            // acessa elementos
-            lista_numeros.ForEach(delegate (int x)
-            {
-                Console.WriteLine($"Elemento = {x}");
-            });
-            Console.WriteLine();
+- Covertendo listas em arrays
 
-            // ordena itens ordenados
-            lista_numeros.Sort();
-
-
-        }
-    }
-}
-~~~
+    ~~~csharp
+    int[] meuArray = minhaLista.ToArray();
+    ~~~
