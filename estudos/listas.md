@@ -23,7 +23,7 @@
     - Um elemento
 
         ~~~csharp
-        myIntList.Add(10);
+        myInt = myIntList[0];
         ~~~
         
     - Todos Elementos - For
