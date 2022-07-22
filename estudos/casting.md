@@ -38,7 +38,7 @@
 
     ```csharp 
     string myStringConv = Convert.ToString(myInt);
-    double myDoubleConv = Convert.ToDouble(myInt);
+    double myDoubleConv = Convert.ToDouble(myStr);
     int myIntConv = Convert.ToInt32(myDouble);
     long myLongConv = Convert.ToInt64(myDouble);
     bool myBoolConv = Convert.ToBoolean(myInt);
