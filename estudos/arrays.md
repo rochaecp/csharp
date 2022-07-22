@@ -1,5 +1,11 @@
 # C# - Arrays
 
+- String
+
+    ```csharp
+    string[] cores = { "Azul", "Amarelo", "Vermelho" };
+    ```
+
 ## Exemplo
 
 ~~~csharp
