@@ -41,3 +41,9 @@ string myString = "abc";
 ~~~csharp
 const int myConst = 10; // myConst = 9; // erro
 ~~~
+
+## Outros
+
+~~~csharp
+int tamanho = sizeof(byte)
+~~~
