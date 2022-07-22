@@ -64,10 +64,11 @@
 - TryParse:
 
     ```csharp
-    if (decimal.TryParse(Console.ReadLine(), out decimal grade))
-        myDecimal = grade;
-    else
-        throw new ArgumentException("O valor da nota deve ser decimal.");
+    float notaAluno = 0F;
+    string myString = Console.ReadLine();
 
-    Console.WriteLine($"myDecimal = {myDecimal}");
+    if (float.TryParse(myString, out float myFloat))
+        notaAluno = myFloat;
+    else
+        throw new ArgumentException("O valor da nota deve ser float");
     ```
