@@ -1,36 +1,23 @@
 # C# - While e Do .. While
 
-## Exemplo
+- While
 
-~~~csharp
-using System;
-
-namespace While_e_Do_While
-{
-    class Program
+    ~~~csharp
+    i = 0;
+    while (i < 5)
     {
-        static void Main(string[] args)
-        {
-            int i;
-
-            // while
-            i = 0;
-            while (i < 5)
-            {
-                Console.WriteLine(i);
-                i++;
-            }
-
-            Console.WriteLine();
-
-            // do .. while
-            i = 0;
-            do
-            {
-                Console.WriteLine(i);
-                i++;
-            } while (i < 5);
-        }
+        Console.WriteLine(i);
+        i++;
     }
-}
-~~~
+    ~~~
+
+- Do .. While
+
+    ~~~csharp
+    i = 0;
+    do
+    {
+        Console.WriteLine(i);
+        i++;
+    } while (i < 5);
+    ~~~
