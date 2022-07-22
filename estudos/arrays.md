@@ -100,21 +100,6 @@
         myInt = myIntArr.Sum();
         ~~~ 
 
-- Exemplos
-
-    - Convertendo String em Array de Char
-        
-        ~~~csharp
-        string myStr = "This is String example";
-        char[] myCharArr = myStr.ToCharArray();        
-        ~~~
-        
-    - Convertendo Array de Char em String
-
-        ~~~csharp
-        myStr = string.Join("", myCharArr);    
-        ~~~
-
 ## Arrays Bidimensionais        
 
 - Criação
@@ -143,3 +128,21 @@
         ~~~csharp
         int [, ,] myIntArr = new int [3, 2, 4];
         ~~~
+
+## Exemplos
+
+- Convertendo String em Array de Char
+
+    ~~~csharp
+    string myStr = "This is String example";
+    char[] myCharArr = myStr.ToCharArray();        
+    ~~~
+
+- Convertendo Array de Char em String
+
+    ~~~csharp
+    myStr = string.Join("", myCharArr);    
+    ~~~
+
+
+
