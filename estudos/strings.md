@@ -81,38 +81,38 @@
         myBool = myStr.Equals(myStr);
         ```
 
-- Exemplos
+## Exemplos
 
-    - Obtendo ASCII a partir de char
+- Obtendo ASCII a partir de char
 
-        ```csharp
-        myChar = 'c'; 
-        myInt = (int)myChar;
-        ```
+    ```csharp
+    myChar = 'c'; 
+    myInt = (int)myChar;
+    ```
 
-    - Convertendo string em array de char
+- Convertendo string em array de char
 
-        ```csharp
-        myStr = "This is String example.";
-        char[] myCharArray = myStr.ToCharArray();
-        ```
+    ```csharp
+    myStr = "This is String example.";
+    char[] myCharArray = myStr.ToCharArray();
+    ```
 
-    - Modificando um caractere de uma string em um determinado índice
+- Modificando um caractere de uma string em um determinado índice
 
-        ```csharp
-        myStr = "Mauricio";
-        char[] myCharArray = myStr.ToCharArray();
-        myCharArray[0] = 'X';
-        myStr = new string(myCharArray);
-        ```
+    ```csharp
+    myStr = "Mauricio";
+    char[] myCharArray = myStr.ToCharArray();
+    myCharArray[0] = 'X';
+    myStr = new string(myCharArray);
+    ```
 
-    - Modificando um caractere de uma string em um determinado índice - usando StringBuilder
+- Modificando um caractere de uma string em um determinado índice - usando StringBuilder
 
-        > Namespace: System.Text - ``` using System.Text; ```
+    > Namespace: System.Text - ``` using System.Text; ```
 
-        ```csharp
-        myStr = "Mauricio";
-        StringBuilder sb = new StringBuilder(myStr);
-        sb[0] = 'X';
-        myStr = sb.ToString();
-        ```
+    ```csharp
+    myStr = "Mauricio";
+    StringBuilder sb = new StringBuilder(myStr);
+    sb[0] = 'X';
+    myStr = sb.ToString();
+    ```
