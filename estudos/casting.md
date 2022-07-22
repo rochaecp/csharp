@@ -34,6 +34,15 @@
 
 ## Métodos de Conversão
 
+- ToString:
+
+    ```csharp
+    myStr = myDouble.ToString();
+    myStr = myInt.ToString();
+    myStr = myLong.ToString();
+    myStr = myBool.ToString();
+    ```
+
 - Convert:
 
     ```csharp 
@@ -50,15 +59,6 @@
     myDouble = Double.Parse(myString);
     myInt = Int32.Parse(myString);
     myLong = Int64.Parse(myString);    
-    ```
-    
-- ToString:
-
-    ```csharp
-    myStr = myDouble.ToString();
-    myStr = myInt.ToString();
-    myStr = myLong.ToString();
-    myStr = myBool.ToString();
     ```
 
 - TryParse:
