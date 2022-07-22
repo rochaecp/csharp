@@ -1,6 +1,6 @@
 # C# - Switch
 
-- Comando Switch
+- Switch
 
     ~~~csharp
     switch (myInt)
