@@ -1,22 +1,33 @@
 # C# - Math
 
-## Exemplo
+> Namespace: System - ``` using System; ```
 
-~~~csharp
-using System;
+- Math.Max
 
-namespace Classe_Math
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int myMax = Math.Max(2, 5);
-            int myMin = Math.Min(2, 5);
-            double mySqrt = Math.Sqrt(64);
-            int myAbs = Math.Abs(-10);
-            double myRound = Math.Round(9.99); // 10
-        }
-    }
-}
-~~~
+    ```csharp
+    myInt = Math.Max(2, 5);
+    ```
+
+- Math.Min
+
+    ```csharp
+    myInt = Math.Min(2, 5);    
+    ```
+    
+- Math.Sqrt
+
+    ```csharp
+    myDouble = Math.Sqrt(64);    
+    ```
+    
+- Math.Abs
+
+    ```csharp
+    myInt = Math.Abs(-10);   
+    ```
+    
+- Math.Round
+
+    ```csharp
+    myDouble = Math.Round(9.99); // 10        
+    ```    
