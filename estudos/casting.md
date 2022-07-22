@@ -37,19 +37,19 @@
 - Convert:
 
     ```csharp 
-    string myStringConv = Convert.ToString(myInt);
-    double myDoubleConv = Convert.ToDouble(myStr);
-    int myIntConv = Convert.ToInt32(myDouble);
-    long myLongConv = Convert.ToInt64(myDouble);
-    bool myBoolConv = Convert.ToBoolean(myInt);
+    myString = Convert.ToString(myInt);
+    myDouble = Convert.ToDouble(myStr);
+    myInt = Convert.ToInt32(myDouble);
+    myLong = Convert.ToInt64(myDouble);
+    myBool = Convert.ToBoolean(myInt);
     ```
     
 - Parse:
 
     ```csharp
-    double myDoubleParse = Double.Parse(myString);
-    int myIntParse = Int32.Parse(myString);
-    long myLongParse = Int64.Parse(myString);    
+    myDouble = Double.Parse(myString);
+    myInt = Int32.Parse(myString);
+    myLong = Int64.Parse(myString);    
     ```
     
 - ToString:
