@@ -1,91 +1,139 @@
 # C# - Arrays
 
-- String
+> Namespace: System - ``` using System; ```  
 
-    ```csharp
-    string[] cores = { "Azul", "Amarelo", "Vermelho" };
-    ```
+## Arrays Unidimensionais
 
-## Exemplo
+- Criação 
 
-~~~csharp
-using System;
-using System.Linq;
+    - Int
 
-namespace Arrays
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+        ```csharp
+        int[] myIntArr = new int[3];
+        int[] myIntArr2 = new int[3] { 10, 20, 30 };
+        int[] myIntArr3 = new int[] { 10, 20, 30 };
+        int[] myIntArr4 = { 10, 20, 30 };
 
-            // *****************************************************************
-            // Criando Arrays
-            // *****************************************************************
+        int[] myIntArr5;
+        myIntArr5 = new int[3] { 10, 20, 30 };
+        ```
 
-            // Array unidimensional de Inteiros
-            int[] myArrayUniInt1 = new int[3];
-            int[] myArrayUniInt2 = new int[3] { 10, 20, 30 };
-            int[] myArrayUniInt3 = new int[] { 10, 20, 30 };
-            int[] myArrayUniInt4 = { 10, 20, 30 }; // easier to read
+    - String
 
-            // Array unidimensional de Strings 
-            string[] myArrayUniString1 = { "Volvo", "BMW", "Ford" };
-            string[] myArrayString2;
-            myArrayString2 = new string[] { "Volvo", "BMW", "Ford" };
+        ```csharp
+        string[] myStrArr = new string[3];
+        string[] myStrArr2 = new string[3] { "aaa", "bbb", "ccc" };
+        string[] myStrArr3 = new string[] { "aaa", "bbb", "ccc" };
+        string[] myStrArr4 = { "aaa", "bbb", "ccc" };
+        
+        string[] myStrArr5;
+        myStrArr5 = new string[3] { "aaa", "bbb", "ccc" };
+        ```
+        
+- Acesso
 
-            // Array bi e tridimensional de Inteiros
-            int[,] myArrayBiInt1 = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
-            int[,] myArrayBiInt2 = new int[10, 5];
-            int[,,] myArrayTriInt1 = new int[10, 5, 2];
+    - Um elemento
 
-            // *****************************************************************
-            // Acessando elementos de um Arrays
-            // *****************************************************************
+        ~~~csharp
+        myItemStr = myStrArr[0];
+        ~~~
+        
+    - Todos elementos - For
 
-            // Acessando um elemento de um array unidimensional
-            string myItemStr1 = myArrayUniString1[0];
+        ~~~csharp
+        for (int i = 0; i < myArrayString2.Length; i++)
+            Console.WriteLine(myStrArr[i]);        
+        ~~~
 
-            // Acessando um elemento de um array bidimensional
-            int myItemInt1 = myArrayBiInt1[0, 0];
+    - Todos elementos - Foreach
 
-            // Acessando todos elementos do Array
-            Console.WriteLine("Acessando todos elementos do Array com for");
-            for (int i = 0; i < myArrayString2.Length; i++)
-                Console.WriteLine(myArrayString2[i]);
+        ~~~csharp
+        foreach (string i in myArrayString2)
+            Console.WriteLine(i);   
+        ~~~
 
-            // Acessando todos elementos do Array com foreach
-            Console.WriteLine("\nAcessando todos elementos do Array com forach");
-            foreach (string i in myArrayString2)
-                Console.WriteLine(i);
+- Modificação
 
-            // *****************************************************************
-            // Modificando elementos de um Array
-            // *****************************************************************
+    - Um elemento
 
-            // Mudando um elemento de um array unidimensional
-            myArrayUniString1[0] = "Opel";
+        ~~~csharp
+        myStrArr[0] = "Mauricio";
+        ~~~
+        
+- Propriedades
 
-            // *****************************************************************
-            // Propriedades de um Array
-            // *****************************************************************
+    - Length
 
-            int myLength = myArrayUniString1.Length;
+        ~~~csharp
+        myInt = myStrArr.Length;
+        ~~~
 
-            // *****************************************************************
-            // Métodos um Array
-            // *****************************************************************
+- Métodos
 
-            Array.Sort(myArrayUniString1); // sort a string
-            Array.Sort(myArrayUniInt2);        // sort a int
-            int myMax = myArrayUniInt2.Max();   // using System.Linq;
-            int myMin = myArrayUniInt2.Min();   // using System.Linq;
-            int mySum = myArrayUniInt2.Sum();   // using System.Linq;
+    - Array.Sort()
 
-            // Convertendo String em Array de Char
-            String myString = "This is String example.";
-            char[] myCharArray = myString.ToCharArray();
-        }
-    }
-}
-~~~
+        ~~~csharp
+        Array.Sort(myStrArr);
+        ~~~
+
+    - Max()
+
+        > Namespace: System.Linq - ``` using System.Linq; ```
+
+        ~~~csharp
+        myInt = myIntArr.Max();
+        ~~~        
+        
+    - Min()
+
+        > Namespace: System.Linq - ``` using System.Linq; ```
+
+        ~~~csharp
+        myInt = myIntArr.Min();
+        ~~~        
+
+    - Sum()
+
+        > Namespace: System.Linq - ``` using System.Linq; ```
+
+        ~~~csharp
+        myInt = myIntArr.Sum();
+        ~~~ 
+
+- Exemplos
+
+    - Convertendo String em Array de Char
+        
+        ~~~csharp
+        String myString = "This is String example.";
+        char[] myCharArray = myString.ToCharArray();        
+        ~~~
+
+## Arrays Bidimensionais        
+
+- Criação
+
+    - Int
+
+        ~~~csharp
+        int [,] myIntArr = new int [3, 2];
+        int [,] myIntArr2 = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+        ~~~
+        
+- Acesso
+
+    - Um elemento
+
+        ~~~csharp
+        myItemStr = myStrArr[0, 0];
+        ~~~        
+
+## Arrays Tridimensionais
+
+- Criação
+
+    - Int
+
+        ~~~csharp
+        int [, ,] myIntArr = new int [3, 2, 4];
+        ~~~
