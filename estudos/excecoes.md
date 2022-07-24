@@ -1,60 +1,61 @@
 # C# - Exceções
 
-## Exemplos
+> Algumas classes de Exceção:
+> - ArithmeticException
+> - FileNotFoundException
+> - IndexOutOfRangeException
+> - TimeOutException
 
-- Index Outside 
+- Criação
 
-    - Arquivo: Program.cs
-
-        ~~~csharp
-        using System;
-
-        namespace MyApplication
-        {
-            class Program
-            {
-                static void Main(string[] args)
-                {
-                    try
-                    {
-                        int[] myNumbers = { 1, 2, 3 };
-                        Console.WriteLine(myNumbers[10]);
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
-                }
-            }
-        }
-        ~~~
-
-- ArithmeticException
-
-    - Arquivo: Program.cs
+    - Try .. Catch
 
         ~~~csharp
-        using System;
-
-        namespace MyApplication
+        try
         {
-            class Program
-            {
-                static void checkAge(int age)
-                {
-                    if (age < 18)
-                    {
-                        throw new ArithmeticException("Access denied - You must be at least 18 years old.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Access granted - You are old enough!");
-                    }
-                }
-                static void Main(string[] args)
-                {
-                    checkAge(20);
-                }
-            }
+            Console.WriteLine(myIntArr[10]); // mas myIntArr.Length == 4
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }        
         ~~~
+        
+    - Try .. Catch (com mensagem personalizada)
+
+        ~~~csharp
+        try
+        {
+            Console.WriteLine(myIntArr[10]); // mas myIntArr.Length == 4
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Índice do Array fora do limite.");
+        }
+        ~~~        
+        
+    - Try .. Catch .. Finaly
+
+        ~~~csharp
+        try
+        {
+            Console.WriteLine(myIntArr[10]); // mas myIntArr.Length == 4
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Índice do Array fora do limite.");
+        }
+        finally
+        {
+            Console.WriteLine("Fim");
+        }        
+        ~~~
+        
+    - Throw (para exceção personalizada)
+
+        ~~~csharp
+        if (myInt < 18)
+            throw new ArithmeticException("Acesso Negado");
+        else
+            Console.WriteLine("Ok");        
+        ~~~      
