@@ -37,7 +37,7 @@
         }
         ~~~        
         
-    - Try .. Catch .. Finaly
+    - Try .. Catch .. Finally
 
         ~~~csharp
         try
@@ -51,6 +51,37 @@
         finally
         {
             Console.WriteLine("Fim");
+        }        
+        ~~~
+        
+    - Try .. Catch .. Finally     
+
+        ~~~csharp
+        try
+        {
+            int x = Convert.ToInt32(Console.ReadLine());
+            int result = 100 / x;
+            Console.WriteLine(result);
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine("Divisão por zero. Error Info: {0}", ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine("Operação inválida. Error Info: {0}", ex.Message);
+        }
+        catch (FormatException ex)
+        {
+            Console.WriteLine("Operação inválida. Error Info: {0}", ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Um erro ocorreu. Error Info: {0}", ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Bloco finalizado.");
         }        
         ~~~
         
