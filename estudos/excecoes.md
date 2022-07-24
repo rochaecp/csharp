@@ -85,7 +85,7 @@
         }        
         ~~~
         
-    - Throw (para exceção personalizada)
+    - Throw (lançar exceção manualmente)
 
         ~~~csharp
         if (myInt < 18)
@@ -107,7 +107,39 @@
         
 ## Exemplos
 
-- Exceção capturada por método
+- Throw
+    
+    - Arquivo: Program.cs
+        
+        ~~~csharp
+        using System;
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static void PrintMyStr(string? str)
+                {
+                    if (str == null)
+                        throw new NullReferenceException("String não pode ser nula");
+                    Console.WriteLine(str);
+                }
+                static void Main(string[] args)
+                {
+                    try
+                    {
+                        PrintMyStr(null);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error info: {0}", ex.Message);
+                    }
+                }
+            }
+        }
+        ~~~
+
+- Throw
     
     - Arquivo: Program.cs
         
@@ -199,6 +231,57 @@
             }
         }
         ~~~    
+        
+- Exceção personalizada
+    
+    - Arquivo: InvalidStudentNameException.cs
+        
+        ~~~csharp
+        namespace MyApplication
+        {
+            [Serializable]
+            public class InvalidStudentNameException : Exception
+            {
+                public InvalidStudentNameException(string name)
+                    : base(string.Format("Nome inválido para o estudante: {0}", name))
+                {
+                }
+            }
+        }
+        ~~~          
+        
+    - Arquivo: Program.cs
+        
+        ~~~csharp
+        using System;
+        using System.Text.RegularExpressions;
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static bool ValidateStudent(string name)
+                {
+                    Regex regex = new Regex("^[a-zA-Z]+$");
+                    if (!regex.IsMatch(name))
+                        throw new InvalidStudentNameException(name);
+                    return true;
+                }
+
+                static void Main(string[] args)
+                {
+                    try
+                    {
+                        ValidateStudent("Mauricio1234");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+        }
+        ~~~           
         
 - Exceção personalizada - Temperatura negativa
     
