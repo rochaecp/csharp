@@ -167,6 +167,70 @@
                 }
             }
         }
-        ~~~        
+        ~~~    
+        
+- Exceção personalizada - Temperatura negativa
+    
+    - Arquivo: TempIsNegativeException
+        
+        ~~~csharp
+        namespace MyApplication
+        {
+            public class TempIsNegativeException : Exception
+            {
+                public TempIsNegativeException(string message)
+                    : base(message)
+                {
+                }
+            }
+        }
+        ~~~    
+        
+    - Arquivo: Temperature.cs
+        
+        ~~~csharp
+        using System;
+
+        namespace MyApplication
+        {
+            public class Temperature
+            {
+                int Temp { get; set; } = -10;
+
+                public void showTemperature()
+                {
+                    if (Temp < 0)
+                        throw new TempIsNegativeException("Temperatura não pode ser negativa");
+                    else
+                        Console.WriteLine($"Temperatura = {Temp}");
+                }
+            }
+        }
+        ~~~      
+        
+    - Arquivo: Program.cs
+        
+        ~~~csharp
+        using System;   
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static void Main(string[] Args)
+                {
+                    Temperature t = new Temperature();
+                    try
+                    {
+                        t.showTemperature();
+                    }
+                    catch (TempIsNegativeException ex)
+                    {
+                        Console.WriteLine($"TempIsNegativeException: {ex.Message}");
+                    }
+                }
+            }
+        }
+        ~~~             
 
 
