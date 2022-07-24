@@ -1,10 +1,13 @@
 # C# - Exceções
 
+> Exceções são tipos que derivam da classe ``` System.Exception ```  
 > Algumas classes de Exceção:
 > - ArithmeticException
 > - FileNotFoundException
 > - IndexOutOfRangeException
 > - TimeOutException
+> - NotImplementedException
+>   - ``` throw new NotImplementedException (); ```
 
 - Criação
 
@@ -58,4 +61,112 @@
             throw new ArithmeticException("Acesso Negado");
         else
             Console.WriteLine("Ok");        
-        ~~~      
+        ~~~   
+        
+- Classes
+
+    - NotImplementedException
+
+        ~~~csharp
+        static int MetodoParaDesenvolver ()
+        {
+            throw new NotImplementedException();
+        }        
+        ~~~
+        
+## Exemplos
+
+- Exceção capturada por método
+    
+    - Arquivo: Program.cs
+        
+        ~~~csharp
+        using System;
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static double DivisaoSegura (double x, double y)
+                {
+                    if (y == 0)
+                        throw new DivideByZeroException();
+                    return x / y;                
+                }
+
+                static void Main(string[] Args)
+                {
+                    double a = 10, b = 0;
+                    double result;
+
+                    try
+                    {
+                        result = DivisaoSegura(a, b);
+                        Console.WriteLine(result);
+                    }
+                    catch (DivideByZeroException)
+                    {
+                        Console.WriteLine("Atenção: divisão por zero");
+                    }
+                }
+            }
+        }
+        ~~~
+        
+- Exceção personalizada
+    
+    - Arquivo: CustomException.cs
+        
+        ~~~csharp
+        namespace MyApplication
+        {
+            public class CustomException : Exception
+            {
+                public CustomException()
+                {
+                }
+                public CustomException(string message)
+                    : base(message)
+                {
+                }
+                public CustomException(string message, Exception innerException)
+                    : base(message, innerException)
+                {
+                }
+            }
+        }
+        ~~~  
+
+    - Arquivo: Program.cs
+        
+        ~~~csharp
+        using System;   
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                public static bool MelhorPresidente(string name)
+                {
+                    if (name.ToLower().Equals("bozo"))
+                        throw new CustomException("Minha exceção personalizada!");
+                    return true;
+                }
+
+                static void Main(string[] Args)
+                {
+                    bool result = false;
+                    try
+                    {
+                        result = MelhorPresidente("Bozo");
+                    }
+                    catch (CustomException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+        }
+        ~~~        
+
+
