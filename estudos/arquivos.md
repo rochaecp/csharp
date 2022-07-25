@@ -1,18 +1,38 @@
 # C# - Arquivos
 
-> Namespace: System.IO - ``` System.IO ```
+> Namespace: System.IO - ``` using System.IO; ```
+> - Classe File:
+>   - Métodos:
+>       - Create()
+>       - WriteAllText()
+>       - AppendText()
+>       - ReadAllText()
+>       - Exists()
+>       - Replace()
+>       - Copy()
+>       - Delete()
+> - Classe FileStream:
+>   - Métodos:
+>       - WriteByte()
+>       - 
+
+## Classe File
 
 - Métodos
 
-    - CreateText()
+    - WriteAllText()
 
         ~~~csharp
-        using (System.IO.TextWriter w = System.IO.File.CreateText("arquivo.txt")) 
-        {
-            w.WriteLine("Line 1");
-            w.WriteLine("Line 2");
-            w.WriteLine("Line 3");
-        }
+        File.WriteAllText("fileName.txt", "Ola mundo");
+        ~~~
+        
+## Classe FileStream
+
+- Métodos
+
+    - WriteByte()
+
+        ~~~csharp
         ~~~
 
 ## Exemplos
@@ -22,21 +42,5 @@
     - Arquivo: Program.cs
 
         ~~~csharp
-        using System;
-        using System.IO;
-
-        namespace MyProject
-        {
-            class Program
-            {
-                static void Main(string[] args)
-                {
-                    string writeText = "Escrevendo e lendo em Arquivos em C#";  // Create a text string
-                    File.WriteAllText("filename.txt", writeText);  // Create a file and write the contents of writeText to it
-
-                    string readText = File.ReadAllText("filename.txt"); // Read the contents of the file
-                    Console.WriteLine(readText); // Output the content
-                }
-            }
-        }
+        
         ~~~
