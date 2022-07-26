@@ -47,6 +47,46 @@
         ~~~csharp
         File.Delete("arquivo2.txt");
         ~~~  
+        
+## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
+
+- Métodos
+
+    - WriteLine()
+
+        > using fecha arquivo após uso
+
+        ~~~csharp
+        using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
+        {
+            myStreamWriter.WriteLine("Maurício");
+        }
+        ~~~
+  
+## Classe StreamReader (herda das classes abstratas Stream e TextReader)
+
+- Métodos
+
+    - ReadLine()
+
+        > using fecha arquivo após uso
+
+        ~~~csharp
+        try
+        {
+            using (StreamReader myStreamReader = new StreamReader("arquivo.txt"))
+            {
+                string? myStr = string.Empty;
+
+                while((myStr = myStreamReader.ReadLine()) != null)
+                    Console.WriteLine(myStr);
+            }
+        } 
+        catch(Exception ex)
+        {
+            Console.WriteLine("Arquivo não pode ser lido: {0}", ex.Message);
+        }        
+        ~~~        
 
         
 ## Classe FileStream (herda da classe abstrata Stream)
@@ -119,47 +159,6 @@
                 }
             }
 
-        }        
-        ~~~
-
-## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
-
-- Exemplos
-
-    - WriteLine()
-
-        ~~~csharp
-        string[] myStrList = new string[] { "Maurício", "Maria", "Joana" };
-
-        using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
-        {
-            foreach(string myStr in myStrList)
-                myStreamWriter.WriteLine(myStr);
-        }
-        ~~~
-  
-## Classe StreamReader (herda das classes abstratas Stream e TextReader)
-
-- Exemplos
-
-    - ReadLine()
-
-        > using fecha arquivo após uso
-
-        ~~~csharp
-        try
-        {
-            using (StreamReader myStreamReader = new StreamReader("arquivo.txt"))
-            {
-                string? myStr = string.Empty;
-
-                while((myStr = myStreamReader.ReadLine()) != null)
-                    Console.WriteLine(myStr);
-            }
-        } 
-        catch(Exception ex)
-        {
-            Console.WriteLine("Arquivo não pode ser lido: {0}", ex.Message);
         }        
         ~~~
 
