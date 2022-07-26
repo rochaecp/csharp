@@ -9,13 +9,13 @@
     - WriteAllText()
 
         ~~~csharp
-        File.WriteAllText("arquivo.txt", "Ola mundo");
+        File.WriteAllText("arquivo.txt", "Ola mundo" + Environment.NewLine);
         ~~~
         
     - AppendAllText()
 
         ~~~csharp
-        File.AppendAllText("arquivo.txt", Environment.NewLine + "Linha 2");
+        File.AppendAllText("arquivo.txt", "Linha 2" + Environment.NewLine);
         ~~~
     
     - ReadAllText()
@@ -121,7 +121,23 @@
 
         }        
         ~~~
-        
+
+## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
+
+- Exemplos
+
+    - WriteLine()
+
+        ~~~csharp
+        string[] myStrList = new string[] { "Maurício", "Maria", "Joana" };
+
+        using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
+        {
+            foreach(string myStr in myStrList)
+                myStreamWriter.WriteLine(myStr);
+        }
+        ~~~
+  
 ## Classe StreamReader (herda das classes abstratas Stream e TextReader)
 
 - Exemplos
@@ -147,22 +163,6 @@
         }        
         ~~~
 
-## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
-
-- Exemplos
-
-    - WriteLine()
-
-        ~~~csharp
-        string[] myStrList = new string[] { "Maurício", "Maria", "Joana" };
-
-        using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
-        {
-            foreach(string myStr in myStrList)
-                myStreamWriter.WriteLine(myStr);
-        }
-        ~~~
-        
 ## Classe BinaryWriter
 
 - Exemplos
