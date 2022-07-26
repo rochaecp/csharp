@@ -56,7 +56,7 @@
     - Construtor
 
         ~~~csharp
-        FileStream myFileStream = new FileStream("arquivo.txt", FileMode.Open, FileAccess.Read, FileShare.Read);
+        FileStream myFileStream = new FileStream("arquivo.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
         /*
          *  FileMode:
          *      Open, OpenOrCreate, Append, Create, CreateNew, Truncate
@@ -128,6 +128,8 @@
 
     - ReadLine()
 
+        > using fecha arquivo após uso
+
         ~~~csharp
         try
         {
@@ -145,4 +147,134 @@
         }        
         ~~~
 
-## Classe StreamWriter (herda da classe abstrata Stream)
+## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
+
+- Exemplos
+
+    - WriteLine()
+
+        ~~~csharp
+        string[] myStrList = new string[] { "Maurício", "Maria", "Joana" };
+
+        using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
+        {
+            foreach(string myStr in myStrList)
+                myStreamWriter.WriteLine(myStr);
+        }
+        ~~~
+        
+## Classe BinaryWriter
+
+- Exemplos
+
+    - WriteLine()
+        
+        ~~~csharp
+        using System;
+        using System.IO;
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    BinaryWriter myBinaryWriter;
+
+                    int myInt = 10;
+                    double myDouble = 10D;
+                    bool myBool = true;
+                    string myStr = "Olá Mundo";
+
+                    // cria o arquivo
+                    try
+                    {
+                        myBinaryWriter = new BinaryWriter(new FileStream("myData", FileMode.Create));  
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine("Não foi possível Criar o arquivo: {0}", ex.Message);
+                        return;
+                    }
+
+                    // escreve no arquivo
+                    try
+                    {
+                        myBinaryWriter.Write(myInt);
+                        myBinaryWriter.Write(myDouble);
+                        myBinaryWriter.Write(myBool);
+                        myBinaryWriter.Write(myStr);
+                    }
+                    catch(IOException ex)
+                    {
+                        Console.WriteLine("Não foi possível escrever no arquivo ", ex.Message);
+                        return;
+                    }
+                }
+            }
+        }        
+        ~~~
+
+## Classe BinaryReader 
+
+- Exemplos
+
+    - ReadInt32(), ReadDouble(), ReadBoolean(), ReadString() 
+        
+        ~~~csharp
+        using System;
+        using System.IO;
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    BinaryReader myBinaryReader;
+
+                    try
+                    {
+                        myBinaryReader = new BinaryReader(new FileStream("myData", FileMode.Open));
+                    }
+                    catch (IOException ex)
+                    {   
+                        Console.WriteLine("Não foi possível abrir o arquivo: {0}", ex.Message);
+                        return;
+                    }
+
+                    try
+                    {
+                        int myInt = myBinaryReader.ReadInt32();
+                        double myDouble = myBinaryReader.ReadDouble(); 
+                        bool myBool = myBinaryReader.ReadBoolean();
+                        string myString = myBinaryReader.ReadString();
+                    }
+                    catch(IOException ex)
+                    {
+                        Console.WriteLine("Não foi possível ler o arquivo: {0}", ex.Message);
+                    }
+                }
+            }
+        }
+        ~~~
+
+## Classe DirectoryInfo 
+
+- Exemplos
+
+    - Metodo()
+        
+        ~~~csharp
+        
+        ~~~
+
+## Classe FileInfo 
+
+- Exemplos
+
+    - Metodo()
+        
+        ~~~csharp
+        
+        ~~~
