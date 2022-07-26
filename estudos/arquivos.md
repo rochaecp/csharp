@@ -259,22 +259,30 @@
         }
         ~~~
 
-## Classe DirectoryInfo 
+## Classe DirectoryInfo e FileInfo (ambas derivam da classe FileSystemInfo)
 
 - Exemplos
 
-    - Metodo()
+    - GetFiles()
         
         ~~~csharp
-        
+        using System;
+        using System.IO;
+
+        namespace MyApplication
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    DirectoryInfo myDirectoryInfo = new DirectoryInfo(@"c:\Windows");
+
+                    FileInfo[] myFileInfoArr = myDirectoryInfo.GetFiles();
+
+                    foreach(FileInfo file in myFileInfoArr)
+                        Console.WriteLine(file.Name + " " + file.Length + " " + file.FullName);
+                }
+            }
+        }        
         ~~~
 
-## Classe FileInfo 
-
-- Exemplos
-
-    - Metodo()
-        
-        ~~~csharp
-        
-        ~~~
