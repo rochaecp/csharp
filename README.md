@@ -36,6 +36,7 @@
 1. [Sobrescrita de Métodos](estudos/metodos-sobrescrita.md)
 1. [Herança](estudos/heranca.md)
 1. [Polimorfismo](estudos/polimorfismo.md)
+1. [Classes Static](estudos/static-class.md)
 1. [Atributos e Métodos Static](estudos/atributos-metodos-static.md)
 1. [Abstração](estudos/abstracao.md)
 1. [Interfaces](estudos/interfaces.md)
