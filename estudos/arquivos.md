@@ -57,9 +57,16 @@
         > using fecha arquivo após uso
 
         ~~~csharp
-        using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
+        try
         {
-            myStreamWriter.WriteLine("Maurício");
+            using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
+            {
+                myStreamWriter.WriteLine("Maurício");
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.ToString());
         }
         ~~~
   
