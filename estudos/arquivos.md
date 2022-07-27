@@ -54,24 +54,6 @@
 
 - Métodos
 
-    - WriteLine() - sobrescrevendo o conteúdo do arquivo
-
-        > using fecha arquivo após uso
-
-        ~~~csharp
-        try
-        {
-            using (StreamWriter myStreamWriter = new StreamWriter("arquivo.txt"))
-            {
-                myStreamWriter.WriteLine("Maurício");
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
-        }
-        ~~~
-        
 - Métodos
 
     - WriteLine() - anexando conteúdo ao fim do arquivo
@@ -79,7 +61,7 @@
         ~~~csharp
         try
         {
-            using (StreamWriter sw = new StreamWriter("arquivo.txt", true)) // true = anexar
+            using (StreamWriter sw = new StreamWriter("arquivo.txt", true)) // true = anexar, false = sobrescrever
             {
                 sw.WriteLine("Linha 1");
                 sw.WriteLine("Linha 2");
