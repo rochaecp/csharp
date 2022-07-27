@@ -50,12 +50,11 @@
         
 ## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
 
-> - Escreve caracteres / strings de arquivos
-> - Converte caracteres em bytes
+> - Converte caracteres em bytes e escreve em um arquivo
 
 - Métodos
 
-    - WriteLine()
+    - WriteLine() - sobrescrevendo o conteúdo do arquivo
 
         > using fecha arquivo após uso
 
@@ -72,11 +71,31 @@
             Console.WriteLine(e.ToString());
         }
         ~~~
+        
+- Métodos
+
+    - WriteLine() - anexando conteúdo ao fim do arquivo
+
+        ~~~csharp
+        try
+        {
+            using (StreamWriter sw = new StreamWriter("arquivo.txt", true)) // true = anexar
+            {
+                sw.WriteLine("Linha 1");
+                sw.WriteLine("Linha 2");
+            }
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        ~~~        
   
 ## Classe StreamReader (herda das classes abstratas Stream e TextReader)
 
 > - Lê caracteres / strings de arquivos
-> - Converte bytes em caracteres
+> - Converte bytes em caracteres 
 
 - Métodos
 
