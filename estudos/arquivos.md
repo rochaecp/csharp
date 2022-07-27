@@ -74,8 +74,7 @@
   
 ## Classe StreamReader (herda das classes abstratas Stream e TextReader)
 
-> - Lê caracteres / strings de arquivos
-> - Converte bytes em caracteres 
+> - Lê bytes de um arquivo e converte em caracteres
 
 - Métodos
 
