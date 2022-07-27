@@ -54,8 +54,6 @@
 
 - Métodos
 
-- Métodos
-
     - WriteLine() - anexando conteúdo ao fim do arquivo
 
         ~~~csharp
