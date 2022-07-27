@@ -50,6 +50,9 @@
         
 ## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
 
+> - Escreve caracteres / strings de arquivos
+> - Converte caracteres em bytes
+
 - Métodos
 
     - WriteLine()
@@ -71,6 +74,9 @@
         ~~~
   
 ## Classe StreamReader (herda das classes abstratas Stream e TextReader)
+
+> - Lê caracteres / strings de arquivos
+> - Converte bytes em caracteres
 
 - Métodos
 
@@ -94,9 +100,10 @@
             Console.WriteLine("Arquivo não pode ser lido: {0}", ex.Message);
         }        
         ~~~        
-
         
 ## Classe FileStream (herda da classe abstrata Stream)
+
+> - Lê / grava bytes de / para um arquivo físico, ex.: txt, exe, jpg, ...
 
 - Métodos
 
@@ -171,6 +178,8 @@
 
 ## Classe BinaryWriter
 
+> - Escreve tipos primitivos em binário
+
 - Exemplos
 
     - WriteLine()
@@ -222,6 +231,8 @@
         ~~~
 
 ## Classe BinaryReader 
+
+> - Lê tipos primitivos em binário
 
 - Exemplos
 
