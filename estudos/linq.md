@@ -1,6 +1,7 @@
 # C# - LINQ (Language-Integrated Query)
 
 > Namespace: System.Linq - ``` using System.Linq; ``` 
+>  - Permite fazer consultas em qualquer coleção que implemente a interface IEnumerable<T> como por exemplo: arrays, listas, etc.
 
 - Métodos
 
@@ -35,14 +36,6 @@
             // remove strings nulas ou vazias        
         ~~~     
         
-        ~~~csharp
-        int[] numeros = new int[] { 10, 20, 30, 40, 50, 60 };
-
-        var result = from numero in numeros
-                     where numero > 20
-                     select numero;        
-        ~~~
-
     - Count()
 
         ~~~csharp
@@ -53,4 +46,23 @@
         ~~~csharp
         int[] notas = { 10, 9, 10, 5, 3 };
         int totAcimaMedia = notas.Count(x => x >= 6);  
-        ~~~        
+        ~~~     
+    
+    - Encadeando Operadores de Consulta
+    
+        ~~~csharp
+        int[] numeros = new int[] { 10, 20, 30, 40, 50, 60 };
+
+        var result = from numero in numeros
+                     where numero > 20
+                     select numero;        
+        ~~~
+    
+        ~~~csharp
+        string[] nomes = { "Geise", "Maurício", "Maria", "Gaby", "Jennifer" };
+
+        IEnumerable<string> result = nomes
+            .Where(x => x.Contains('a'))
+            .OrderBy(x => x.Length)
+            .Select(x => x.ToUpper());    
+        ~~~
