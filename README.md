@@ -22,6 +22,7 @@
 1. [Exceções](estudos/excecoes.md)
 1. [Arquivos](estudos/arquivos.md)
 1. [LINQ](estudos/linq.md)
+1. [Expressões Lambda](estudos/expressoes-lambda.md)
 1. [Regex](estudos/regex.md)
 1. [CLI](estudos/cli.md)
 
