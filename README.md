@@ -44,3 +44,14 @@
 1. [Abstração](estudos/abstracao.md)
 1. [Interfaces](estudos/interfaces.md)
 1. [Repositórios](estudos/repositorios.md)
+
+## Soluções de Problemas
+
+1. [Beecrowd - 1000 a 1009](estudos/solucoes-beecrowd-1000-1009.md)
+1. [Beecrowd - 1010 a 1019](estudos/solucoes-beecrowd-1010-1019.md)
+1. [Beecrowd - 1020 a 1029](estudos/solucoes-beecrowd-1010-1019.md)
+
+## Projetos
+
+1. [Cadastro de Séries](estudos/projeto-cadastro-series.md)
+
