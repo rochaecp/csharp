@@ -1,4 +1,4 @@
-# C# - problemas do Beecrowd
+# C# - Soluções Beecrowd
 
 ## 1020
 
