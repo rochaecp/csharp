@@ -3,7 +3,7 @@
 > Métodos são blocos de códigos que só são executados quando chamados.   
 > Métodos Static pertencem à classe.
 
-## Métodos Getters e Setters
+## Métodos Get e Set
 
 > São utilizados para obtermos e modificarmos atributos privados, são sempre public e pode-se utilizar um ou outro ou ambos.
 
