@@ -4,57 +4,57 @@
 > - Nomes de classe iniciam com letra maiúscula.
 > - Classes possuem campos/atributos e métodos
 
-- Criando uma Classe
+## Criando uma Classe e Instanciando um Objeto a partir dela
 
-    - Arquivo: Carro.cs
+- Arquivo: Carro.cs
 
-        ~~~csharp
-        using System;
+    ~~~csharp
+    using System;
 
-        namespace MyApplication
+    namespace MyApplication
+    {
+        class Carro
         {
-            class Carro
-            {
-                // campo ou atributo
-                public string cor; 
+            // campo ou atributo
+            public string cor; 
 
-                // método construtor
-                public Carro(string cor)
-                { 
-                    this.cor = cor;
-                }
+            // método construtor
+            public Carro(string cor)
+            { 
+                this.cor = cor;
+            }
 
-                // método construtor sobrecarregado
-                public Carro()
-                { 
-                    this.cor = "azul";
-                }
+            // método construtor sobrecarregado
+            public Carro()
+            { 
+                this.cor = "azul";
+            }
 
-                // método
-                public void printCor()
-                { 
-                    Console.WriteLine($"Cor = {cor}");
-                }
+            // método
+            public void printCor()
+            { 
+                Console.WriteLine($"Cor = {cor}");
             }
         }
-        ~~~
+    }
+    ~~~
 
-    - Arquivo: Program.cs
+- Arquivo: Program.cs
 
-        ~~~csharp
-        using System;
-        namespace MyApplication
+    ~~~csharp
+    using System;
+    namespace MyApplication
+    {
+        class Program
         {
-            class Program
+            static void Main(string[] args)
             {
-                static void Main(string[] args)
-                {
-                    Carro c = new Carro("vermelho");
-                    c.printCor();
-                }
+                Carro c = new Carro("vermelho");
+                c.printCor();
             }
         }
-        ~~~
+    }
+    ~~~
         
         
         
