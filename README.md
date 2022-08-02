@@ -49,7 +49,7 @@
 
 1. [Beecrowd - 1000 a 1009](estudos/solucoes-beecrowd-1000-1009.md)
 1. [Beecrowd - 1010 a 1019](estudos/solucoes-beecrowd-1010-1019.md)
-1. [Beecrowd - 1020 a 1029](estudos/solucoes-beecrowd-1010-1019.md)
+1. [Beecrowd - 1020 a 1029](estudos/solucoes-beecrowd-1020-1029.md)
 
 ## Projetos
 
