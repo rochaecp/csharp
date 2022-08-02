@@ -1,95 +1,60 @@
 # C# - Classes e Objetos
 
-- Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
-- Nomes de classe iniciam com letra maiúscula.
+> - Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
+> - Nomes de classe iniciam com letra maiúscula.
+> - Classes possuem campos/atributos e métodos
 
-## Exemplo
+- Criando uma Classe
 
-- Arquivo: Pessoa.cs
+    - Arquivo: Carro.cs
 
-~~~csharp
-using System;
+        ~~~csharp
+        using System;
 
-namespace MeuProjeto
-{
-    public class Pessoa
-    {
-        // atributos
-        public string nome;
-        public int idade;
-
-        // metodos
-        public void mensagem()
+        namespace MyApplication
         {
-            Console.WriteLine("Ola " + nome + " você tem " + idade + " anos.");
+            class Carro
+            {
+                // campo ou atributo
+                public string cor; 
+
+                // método construtor
+                public Carro(string cor)
+                { 
+                    this.cor = cor;
+                }
+
+                // método construtor sobrecarregado
+                public Carro()
+                { 
+                    this.cor = "azul";
+                }
+
+                // método
+                public void printCor()
+                { 
+                    Console.WriteLine($"Cor = {cor}");
+                }
+            }
         }
-    }
-}
-~~~
+        ~~~
 
-- Arquivo: Program.cs
+    - Arquivo: Program.cs
 
-~~~csharp
-using System;
-
-namespace MeuProjeto
-{
-    class Program
-    {
-        static void Main(string[] args)
+        ~~~csharp
+        using System;
+        namespace MyApplication
         {
-            // instanciar um objeto
-            Pessoa obj = new Pessoa();
-            obj.nome = "Mauricio";
-            obj.idade = 29;
-
-            obj.mensagem();
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    Carro c = new Carro("vermelho");
+                    c.printCor();
+                }
+            }
         }
-    }
-}
-~~~
-
-## Exemplo
-
-- Arquivo: Car.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    class Car
-    {
-        public string color; // field (or attribute)
-        public Car(string color)
-        { // constructor
-            this.color = color;
-        }
-        public Car()
-        { // overloaded constructor 
-            this.color = "blue";
-        }
-        public void printColor()
-        { // method
-            Console.WriteLine($"Color: {color}");
-        }
-    }
-}
-~~~
-
-- Arquivo: Program.cs
-
-~~~csharp
-using System;
-namespace MyApplication
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Car myObj = new Car("red");
-            myObj.printColor();
-        }
-    }
-}
-~~~    
+        ~~~
+        
+        
+        
