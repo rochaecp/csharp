@@ -170,11 +170,8 @@ namespace MyApplication
 
         static void Main(string[] args)
         {
-            int x = 10, y = 20;
-
-            Console.WriteLine($"x = {x}, y = {y}");
+            int x = 1, y = 2;
             swapInt(ref x, ref y);
-            Console.WriteLine($"x = {x}, y = {y}");
         }
     }
 }
@@ -189,16 +186,16 @@ namespace MyApplication
 {
     class Program
     {
-        static void divide(int x, int y, out int result, out int rest)
+        static void Soma(int x, int y, out int result)
         {
-            result = x / y;
-            rest = x % y;
+            result = x + y;
         }
+
         static void Main(string[] args)
         {
-            int result, rest;
-            divide(10, 3, out result, out rest);
-            Console.WriteLine($"result = {result}, rest = {rest}");
+            int resultado;
+            Soma(1, 2, out resultado);
+
         }
     }
 }
