@@ -161,17 +161,15 @@ namespace MyApplication
 {
     class Program
     {
-        static void swapInt(ref int x, ref int y)
+        static void Soma(ref int x)
         {
-            int temp = x;
-            x = y;
-            y = temp;
+            x += 10;
         }
 
         static void Main(string[] args)
         {
-            int x = 1, y = 2;
-            swapInt(ref x, ref y);
+            int x = 0;
+            Soma(ref x);
         }
     }
 }
