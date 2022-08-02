@@ -1,33 +1,26 @@
 # C# - Métodos
 
-- **Métodos**:
-    - Métodos são blocos de códigos que só são executados quando chamados.
+> Métodos são blocos de códigos que só são executados quando chamados.   
+> Métodos Static pertencem à classe.
 
-## Exemplo
+## Métodos Getters e Setters
+
+> São utilizados para obtermos e modificarmos atributos privados, são sempre public e pode-se utilizar um ou outro ou ambos.
 
 - Arquivo: Pessoa.cs
 
 ~~~csharp
-using System;
-
-namespace MeuProjeto
+namespace MyApplication
 {
-    public class Pessoa
+    class Pessoa
     {
-        // metodo 1
-        public void apresentar()
+        private string nome;
+
+        // propriedade
+        public string Nome
         {
-            Console.WriteLine("Olá");
-        }
-        // metodo 2
-        public void apresentar(string nome)
-        {
-            Console.WriteLine("Olá " + nome);
-        }
-        // metodo 3
-        public void apresentar(string nome, int idade)
-        {
-            Console.WriteLine("Olá " + nome + " Idade é " + idade);
+            get { return nome; }
+            set { nome = value; }
         }
     }
 }
@@ -38,137 +31,133 @@ namespace MeuProjeto
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Pessoa obj = new Pessoa();
-            obj.apresentar();
-            obj.apresentar("Mauricio");
-            obj.apresentar("Mauricio", 29);
+            Pessoa p = new Pessoa();
+            p.Nome = "Maurício";            // p.Nome usando set
+            Console.WriteLine(p.Nome);      // p.Nome usando get
         }
     }
 }
 ~~~
 
-## Exemplo
+## Sobrecarga de Métodos
 
 ~~~csharp
 using System;
-namespace Treinos
+
+namespace MyApplication
 {
     class Program
     {
-        /* name is a parameter, static means that the method belongs 
-        to the Program class and not an object of the Program class. */
-        static string sayHello(string name)
-        { 
-            return $"Hello {name}";
-        }
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine(sayHello("Mauricio")); // "Mauricio" is an argument
-        }
-    }
-}
-~~~
-
-## Exemplo - Parâmetro opcional e argumentos nomeados
-
-~~~csharp
-using System;
-namespace Treinos
-{
-    class Program
-    {
-        // country é um parâmetro opcional
-        static void MyMethod(string country = "Brasil")
-        {
-            Console.WriteLine(country);
-        }
-
-        static void MyMethod2(string child1, string child2, string child3)
-        {
-            Console.WriteLine("The youngest child is: " + child3);
-        }
-
-        static void MyMethod3(string child1 = "Liam", string child2 = "Jenny", string child3 = "John")
-        {
-            Console.WriteLine(child3);
-        }
-
-        static void Main(string[] args)
-        {
-            MyMethod();
-            MyMethod("Uruguai");
-
-            // argumentos nomeados
-            MyMethod2(child3: "John", child1: "Liam", child2: "Liam"); // call
-
-            MyMethod3();
-        }
-    }
-}
-~~~
-
-## Exemplo - Sobrecarga de métodos
-
-~~~csharp
-using System;
-namespace Treinos
-{
-    class Program
-    {
-        static int PlusMethod(int x, int y)
+        static int Soma(int x, int y)
         {
             return x + y;
         }
-        static double PlusMethod(double x, double y)
+
+        static double Soma(double x, double y)
         {
             return x + y;
         }
+
         static void Main(string[] args)
         {
-            Console.WriteLine(PlusMethod(2, 3));
-            Console.WriteLine(PlusMethod(2.3, 3.2));
+            int myInt = Soma(1, 2);
+            double myFloat = Soma(1.3, 2.4);
         }
     }
 }
 ~~~
 
-## Exemplo - Strings e Arrays como argumentos
+## Sobrescrita de Métodos
+
+> Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*.   
+> Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.    
+
+## Argumentos Nomeados        
 
 ~~~csharp
 using System;
-namespace Treinos
+
+namespace MyApplication
 {
     class Program
     {
-        static void printArgs(string[] myArgs)
+        static void MyMethod2(string pessoa1, string pessoa2, string pessoa3)
+        {
+            Console.WriteLine(pessoa1);
+        }
+
+        static void Main(string[] args)
+        {
+            MyMethod2(pessoa3: "Maurício", pessoa2: "Maria", pessoa1: "Joana"); // argumentos nomeados
+        }
+    }
+}
+~~~
+
+## Parâmetros Opcionais
+
+~~~csharp
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static void MeuMetodo(string meuParametro = "Maurício") // parametro opcional
+        {
+            Console.WriteLine(meuParametro);
+        }
+
+        static void Main(string[] args)
+        {
+            MeuMetodo();
+        }
+    }
+}
+~~~
+        
+## Arrays como Argumento
+
+~~~csharp
+using System;
+namespace MyApplication
+{
+    class Program
+    {
+
+        static void printArgsLen(string[] myArgs)
         {
             if (myArgs.Length == 0)
                 Console.WriteLine("no argument");
             else
-                Console.WriteLine($"{myArgs.Length} arguments");
+            {
+                Console.WriteLine(myArgs.Length);
+                foreach(string s in myArgs)    
+                    Console.WriteLine(s);
+            }
         }
 
         static void Main(string[] args)
         {
-            string[] names = new string[3] { "Mauricio", "Maria", "Jose" };
-            printArgs(names);
+            string[] names = new string[] { "Maurício", "Maria", "Joana" };
+            printArgsLen(names);
         }
     }
 }
 ~~~
 
-## Exemplo - Parâmetros ref
+## Parâmetros ref
 
 ~~~csharp
 using System;
-namespace Treinos
+
+namespace MyApplication
 {
     class Program
     {
@@ -191,11 +180,12 @@ namespace Treinos
 }
 ~~~
 
-## Exemplo - Parâmetros out
+## Parâmetros out
 
 ~~~csharp
 using System;
-namespace Treinos
+
+namespace MyApplication
 {
     class Program
     {
@@ -213,3 +203,5 @@ namespace Treinos
     }
 }
 ~~~
+    
+
