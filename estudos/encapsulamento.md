@@ -1,6 +1,7 @@
 # C# - Encapsulamento
 
-> É o processo de ocultar membros de uma classe do acesso exterior utilizando modificadores de acesso.
+> É o processo de ocultar membros de uma classe do acesso exterior utilizando modificadores de acesso.   
+> Se não definirmos o método set a propriedade será somente de leitura.
 
 ## Criando uma classe com campos privados e propriedades públicas
 
