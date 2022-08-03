@@ -18,4 +18,4 @@
 - ``` private protected ```
     - Código acessível dentro do mesmo assembly ou em classes que derivam da mesma (somente no mesmo assembly).
 
-> Por padrão, todos os membros de uma classe são privados se você não especificar um modificador de acesso.
+> Por padrão, todos os membros de uma classe são ``` private ``` se você não especificar um modificador de acesso.
