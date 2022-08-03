@@ -1,24 +1,20 @@
 # C# - Herança
 
-> - Herança:
->   - Classe base (pai): classe cujos membros são herdados.
->   - Classe derivada (filha): classe que herda, estende ou modifica o comportamento de uma classe base.
->   - Em C# não existe herança múltipla: uma classe só pode estender uma única classe por vez.
->   - Impedir herança com ```sealed ```
->   - Tipos de Herança:
->       - Simples: Uma classe base e uma classe derivada.
->       - Hierárquica: Mais de uma classe deriva de uma mesma classe base.
->       - Multinível: Uma classe deriva de uma classe que deriva de outra.
->       - Múltipla: Não suportada em C# (usamos interfaces)
-> - Sobrescrita de Métodos:
->   - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*.   
->   - Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.    
-
+> - **Classe base (pai)**: classe cujos membros são herdados.
+> - **Classe derivada (filha)**: classe que herda, estende ou modifica o comportamento de uma classe base.
+> - Em C# não existe herança múltipla: uma classe só pode estender uma única classe por vez.
+> - Impedir herança com ```sealed ```
+> - Tipos de Herança:
+>   - **Simples**: Uma classe base e uma classe derivada.
+>   - **Hierárquica**: Mais de uma classe deriva de uma mesma classe base.
+>   - **Multinível**: Uma classe deriva de uma classe que deriva de outra.
+>   - **Múltipla**: Não suportada em C# (usamos interfaces)
+  
 ## Herança Simples
 
-> Observar os membros ``` protected ``` da classe Pessoa
+> Observar os membros ``` protected ``` da classe Pessoa  
 
-- Arquivo: Pessoa.cs
+- Arquivo Pessoa.cs
 
 ~~~csharp
 using System;
@@ -27,8 +23,14 @@ namespace MyApplication
 {
     public class Pessoa
     {
-        protected string nome;
-        protected int idade;
+        private string nome;
+        private int idade;
+
+        public Pessoa(string n, int i)
+        {
+            this.nome = n;
+            this.idade = i;
+        }
 
         protected void MensagemPessoa()
         {
@@ -39,7 +41,7 @@ namespace MyApplication
 }
 ~~~
 
-- Arquivo: Colaborador.cs
+- Arquivo Colaborador.cs
 
 ~~~csharp
 using System;
@@ -51,9 +53,8 @@ namespace MyApplication
         private double salario;
 
         public Colaborador(string nome, int idade, double salario)
+            : base (nome, idade)
         {
-            this.nome = nome;
-            this.idade = idade;
             this.salario = salario;
         }
 
@@ -66,7 +67,7 @@ namespace MyApplication
 }
 ~~~
 
-- Arquivo: Program.cs
+- Arquivo Program.cs
 
 ~~~csharp
 using System;
