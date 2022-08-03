@@ -36,11 +36,9 @@
 1. [Encapsulamento](estudos/encapsulamento.md)
 1. [Herança](estudos/heranca.md)
 1. [Polimorfismo](estudos/polimorfismo.md)
-1. [Classes Static](estudos/static-class.md)
-1. [Atributos e Métodos Static](estudos/atributos-metodos-static.md)
 1. [Abstração](estudos/abstracao.md)
 1. [Interfaces](estudos/interfaces.md)
-1. [Repositórios](estudos/repositorios.md)
+1. [Classes, Atributos e Métodos Static](estudos/atributos-metodos-static.md)
 
 ## Soluções de Problemas
 
