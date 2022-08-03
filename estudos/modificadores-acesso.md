@@ -18,6 +18,5 @@
 - ``` private protected ```
     - Código acessível dentro do mesmo assembly ou em classes que derivam da mesma (somente no mesmo assembly).
 
-> Se você não especificar um modificador de acesso:
-> - Por padrão, todos os **membros** de uma classe (métodos, campos e propriedades) são ``` private ```.   
-> - Por padrão todos os **tipos** (classes, estruturas, delegados, enumerações) são ``` internal ```. 
+> Por padrão, todos os **membros** de uma classe (métodos, campos e propriedades) são ``` private ```.      
+> Por padrão todos os **tipos** (classes, estruturas, delegados, enumerações) são ``` internal ```.    
