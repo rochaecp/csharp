@@ -1,39 +1,51 @@
 # C# - Encapsulamento
 
-- Restringir o acesso aos membros da classe.
+> É o processo de ocultar membros de uma classe do acesso exterior utilizando modificadores de acesso.
 
-- Modificadores de acesso:
-    - public: The code is accessible for all classes.
-    - private: The code is only accessible within the same class.
-    - protected: The code is accessible within the same class, or in a class that is inherited from that class. 
-    - internal: The code is only accessible within its own assembly, but not from another assembly. 
-    - protected Internal: The code is only accessible within the same class or in a class that is inherited from that class or in its own assembly.
+## Criando uma classe com campos privados e propriedades públicas
 
-> There's also two combinations: protected internal and private protected.
-> By default, all members of a class are private if you don't specify an access modifier
-
-## Exemplo
-
-- Arquivo: Aluno.cs
+- Arquivo: Retangulo.cs
 
 ~~~csharp
 using System;
 
-namespace Encapsulamento
+namespace MyApplication
 {
-    public class Aluno
+    public class Retangulo
     {
-        private double nota1, nota2;
-        private double media()
+        // campos privados
+        private double largura;
+        private double comprimento;
+
+        // propriedade pública
+        public double Largura
         {
-            return (nota1 + nota2) / 2;
+            get { return largura; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Largura não pode ser menor do que zero");
+                else
+                    largura = value;
+            }
         }
-        public void mensagem()
+
+        // propriedade pública
+        public double Comprimento
         {
-            Console.WriteLine("Digite as 2 notas");
-            nota1 = Convert.ToDouble(Console.ReadLine());
-            nota2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Media = " + media());
+            get { return comprimento; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Comprimento não pode ser menor do que zero");
+                else
+                    comprimento = value;
+            }
+        }
+
+        public double GetArea()
+        {
+            return largura * comprimento;
         }
     }
 }
@@ -44,14 +56,25 @@ namespace Encapsulamento
 ~~~csharp
 using System;
 
-namespace Encapsulamento
+namespace MyApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Aluno a = new Aluno();
-            a.mensagem();
+            var r = new Retangulo();
+
+            try
+            {
+                r.Comprimento = Convert.ToDouble(Console.ReadLine());
+                r.Largura = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine($"Area = {r.GetArea()}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
