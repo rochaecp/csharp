@@ -5,7 +5,9 @@
 
 ## Métodos Get e Set
 
-> São utilizados para obtermos e modificarmos atributos privados, são sempre public e pode-se utilizar um ou outro ou ambos.
+> São utilizados para obtermos e modificarmos atributos privados.  
+> São sempre public.    
+> Pode-se utilizar um ou outro ou ambos.  
 
 - Arquivo: Pessoa.cs
 
@@ -66,8 +68,8 @@ namespace MyApplication
 
         static void Main(string[] args)
         {
-            int myInt = Soma(1, 2);
-            double myFloat = Soma(1.3, 2.4);
+            int myInt = Soma(1, 1);
+            double myDouble = Soma(1.2, 1.3);
         }
     }
 }
@@ -125,7 +127,6 @@ namespace MyApplication
 {
     class Program
     {
-
         static void printArgsLen(string[] myArgs)
         {
             if (myArgs.Length == 0)
