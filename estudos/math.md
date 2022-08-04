@@ -2,48 +2,48 @@
 
 > Namespace: System - ``` using System; ```
 
-- Propriedades
+## Propriedades
 
-    - Math.PI
+### Math.PI
 
-        ```csharp
-        myDouble = Math.PI;
-        ```
+```csharp
+myDouble = Math.PI;
+```
+
+### Math.E
+
+```csharp
+myDouble = Math.PI;
+```        
         
-    - Math.E
+## Métodos
 
-        ```csharp
-        myDouble = Math.PI;
-        ```        
-        
-- Métodos
+### Math.Max
 
-    - Math.Max
+```csharp
+myInt = Math.Max(2, 5);
+```
 
-        ```csharp
-        myInt = Math.Max(2, 5);
-        ```
+### Math.Min
 
-    - Math.Min
+```csharp
+myInt = Math.Min(2, 5);    
+```
 
-        ```csharp
-        myInt = Math.Min(2, 5);    
-        ```
+### Math.Sqrt
 
-    - Math.Sqrt
+```csharp
+myDouble = Math.Sqrt(64);    
+```
 
-        ```csharp
-        myDouble = Math.Sqrt(64);    
-        ```
+### Math.Abs
 
-    - Math.Abs
+```csharp
+myInt = Math.Abs(-10);   
+```
 
-        ```csharp
-        myInt = Math.Abs(-10);   
-        ```
+### Math.Round
 
-    - Math.Round
-
-        ```csharp
-        myDouble = Math.Round(9.99); // 10        
-        ```    
+```csharp
+myDouble = Math.Round(9.99); // 10        
+```    
