@@ -1,6 +1,6 @@
 # C# - Strings 
 
-> Namespace: System - ``` using System; ```
+- Namespace: System - ``` using System; ```
 
 ## Geral
 
@@ -111,7 +111,7 @@ myStr = new string(myCharArray);
 
 ### Modificando um caractere de uma string em um determinado índice - usando StringBuilder
 
-> Namespace: System.Text - ``` using System.Text; ```
+- Namespace: System.Text - ``` using System.Text; ```
 
 ```csharp
 myStr = "Mauricio";
