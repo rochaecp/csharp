@@ -1,73 +1,67 @@
 # C# - Abstração
 
 - Classes abstratas:
-    - Classe que pode conter métodos obrigatórios para todas as classes que a herdarem.
-    - Métodos obrigatórios podem ser públicos ou protegidos.
-    - Podem conter também métodos convencionais (não obrigatórios) para que as classes que a herdam possam utilizar.
-    - Não se pode instanciar um objeto a partir de uma classe abstrata.
-    - Garante uma estrutura pré moldada de métodos que devem ser implementados.
-    - É uma forma de criar um padrão para os projetos.
+    - Uma classe abstrata é uma classe que não pode ser instanciada. 
+    - Uma classe abstrata pode ser herdada e geralmente serve como classe base para outras classes.
+    - Uma classe abstrata pode conter métodos abstratos e métodos comuns. 
+    - Uma classe abastrata também pode possuir construtores, propriedades, indexadores e eventos.
+    - Uma classe abstrata não pode ser ``` static ``` nem ``` sealed ```.
+    - Uma classe abstrata pode herdar de outra classe abstrata.
     - Cada classe pode herdar apenas de uma classe abstrata.
-
 - Métodos abstratos:
-    - É um método obrigatório de uma classe abstrata.
-    - Precisa obrigatóriamente ser sobrescrito na classe que herdar da classe abstrata que o contém.
+    - Um método abstrato é um método que não possui implementação na classe abstrata.
+    - Um método abstrato é um método ``` virtual ``` e deve ser implementado usando o modificador ``` override ```.
+    - Um método abstrato somente pode existir em uma classe abstrata.
+    - Um método abstrato não pode usar os modificadores ``` static ``` nem ``` virtual ```.
 
-## Exemplo
+## Classes Abstratas
 
-- Arquivo: Padrao.cs
+- Arquivo: Forma.cs
 
 ~~~csharp
-using System;
-
-namespace MeuProjeto
+namespace MyApplication
 {
-    // classe abstrata
-    public abstract class Padrao
+    public abstract class Forma
     {
-        // metodo obrigatorio
-        public abstract void taxaEmprestimo(double valor); // quem implementar a classe padrão precisa implementar esse método.
+        // propriedades
 
-        // metodo opcional
-        public void calculoPoupanca(double valor, double taxa)
+        public string Cor { get; set; }
+        public double Perimetro { get; set; }
+        public double Area { get; set; }
+
+        // metodos abstratos
+
+        public abstract void CalcularPerimetro();
+        public abstract void CalcularArea();
+
+        // metodo publico
+        public string Descricao()
         {
-            Console.WriteLine("Ganho poupança: " + valor * taxa);
+            return "Sou a classe abstrata Forma";
         }
     }
 }
 ~~~
 
-- Arquivo: PessoaFisica.cs
+- Arquivo: Quadrado.cs
 
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
-    public class PessoaFisica : Padrao
+    public class Quadrado : Forma
     {
-        // metodo obrigatorio
-        public override void taxaEmprestimo(double valor)
+        public double Lado { get; set; }
+        
+        public override void CalcularPerimetro()
         {
-            Console.WriteLine("Taxa Emprestimo PF = " + valor * 0.1);
+            this.Perimetro = 4 * Lado;
         }
-    }
-}
-~~~
 
-- Arquivo: PessoaJuridica.cs
-
-~~~csharp
-using System;
-
-namespace MeuProjeto
-{
-    public class PessoaJuridica : Padrao
-    {
-        // metodo obrigatorio
-        public override void taxaEmprestimo(double valor)
+        public override void CalcularArea()
         {
-            Console.WriteLine("Taxa Emprestimo PJ = " + valor * 0.2);
+            this.Area = Lado * Lado;
         }
     }
 }
@@ -78,55 +72,21 @@ namespace MeuProjeto
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            PessoaFisica pf = new PessoaFisica();
-            PessoaJuridica pj = new PessoaJuridica();
+            Quadrado q = new Quadrado();
+            q.Lado = 10;
+            q.CalcularPerimetro();
+            q.CalcularArea();
 
-            pf.taxaEmprestimo(1000);
-            pf.calculoPoupanca(1000, 0.1);
+            Console.WriteLine(q.Descricao());
 
-            pj.taxaEmprestimo(1000);
-            pj.calculoPoupanca(1000, 0.1);
+            Console.WriteLine($"{q.Perimetro} - {q.Area}");
         }
     }
 }
 ~~~
-
-## Exemplo
-
-~~~csharp
-// file Program.cs, dir MyApplication
-using System;
-namespace MyApplication {
-  // Abstract class
-  abstract class Animal {
-    // Abstract method (does not have a body)
-    public abstract void animalSound();
-    // Regular method
-    public void sleep() {
-      Console.WriteLine("Zzz");
-    }
-  }
-
-  // Derived class (inherit from Animal)
-  class Pig : Animal {
-    public override void animalSound() {
-      // The body of animalSound() is provided here
-      Console.WriteLine("The pig says: wee wee");
-    }
-  }
-
-  class Program {
-    static void Main(string[] args) {
-      Pig myPig = new Pig();  // Create a Pig object
-      myPig.animalSound();
-      myPig.sleep();
-    }
-  }
-}
-~~~    
