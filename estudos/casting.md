@@ -8,13 +8,14 @@
     - int -> long
     - long -> float
     - float -> double
-- Exemplo:
 
-    ```csharp 
-    int myInt = 10;
-    double myDouble = 10D;
-    myDouble = myInt;
-    ```
+### Exemplo:
+
+```csharp 
+int myInt = 10;
+double myDouble = 10D;
+myDouble = myInt;
+```
 
 ## Casting Explícito
 
@@ -24,51 +25,52 @@
     - float -> long 
     - long -> int -
     - int -> char
-- Exemplo:
 
-    ```csharp 
-    int myInt = 10;
-    double myDouble = 10D;
-    myInt = (int)myDouble;
-    ```
+### Exemplo:
+
+```csharp 
+int myInt = 10;
+double myDouble = 10D;
+myInt = (int)myDouble;
+```
 
 ## Métodos de Conversão
 
-- ToString:
+### ToString:
 
-    ```csharp
-    myStr = myDouble.ToString();
-    myStr = myInt.ToString();
-    myStr = myLong.ToString();
-    myStr = myBool.ToString();
-    ```
+```csharp
+myStr = myDouble.ToString();
+myStr = myInt.ToString();
+myStr = myLong.ToString();
+myStr = myBool.ToString();
+```
 
-- Convert:
+### Convert:
 
-    ```csharp 
-    myString = Convert.ToString(myInt);
-    myDouble = Convert.ToDouble(myStr);
-    myInt = Convert.ToInt32(myDouble);
-    myLong = Convert.ToInt64(myDouble);
-    myBool = Convert.ToBoolean(myInt);
-    ```
+```csharp 
+myString = Convert.ToString(myInt);
+myDouble = Convert.ToDouble(myStr);
+myInt = Convert.ToInt32(myDouble);
+myLong = Convert.ToInt64(myDouble);
+myBool = Convert.ToBoolean(myInt);
+```
     
-- Parse:
+### Parse:
 
-    ```csharp
-    myDouble = Double.Parse(myString);
-    myInt = Int32.Parse(myString);
-    myLong = Int64.Parse(myString);    
-    ```
+```csharp
+myDouble = Double.Parse(myString);
+myInt = Int32.Parse(myString);
+myLong = Int64.Parse(myString);    
+```
 
-- TryParse:
+### TryParse:
 
-    ```csharp
-    float notaAluno = 0F;
-    string myString = Console.ReadLine();
+```csharp
+float notaAluno = 0F;
+string myString = Console.ReadLine();
 
-    if (float.TryParse(myString, out float myFloat))
-        notaAluno = myFloat;
-    else
-        throw new ArgumentException("O valor da nota deve ser float");
-    ```
+if (float.TryParse(myString, out float myFloat))
+    notaAluno = myFloat;
+else
+    throw new ArgumentException("O valor da nota deve ser float");
+```
