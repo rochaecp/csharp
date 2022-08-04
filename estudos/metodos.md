@@ -46,36 +46,6 @@ namespace MyApplication
 }
 ~~~
 
-## Sobrecarga de Métodos
-
-- Arquivo: Program.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    class Program
-    {
-        static int Soma(int x, int y)
-        {
-            return x + y;
-        }
-
-        static double Soma(double x, double y)
-        {
-            return x + y;
-        }
-
-        static void Main(string[] args)
-        {
-            int myInt = Soma(1, 1);
-            double myDouble = Soma(1.2, 1.3);
-        }
-    }
-}
-~~~
-
 ## Argumentos Nomeados      
 
 - Arquivo: Program.cs
