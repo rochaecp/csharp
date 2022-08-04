@@ -4,145 +4,137 @@
 
 ## Arrays Unidimensionais
 
-- Criação 
+### Criação 
 
-    - Int
+```csharp
+int[] myIntArr = new int[3];
+int[] myIntArr2 = new int[3] { 10, 20, 30 };
+int[] myIntArr3 = new int[] { 10, 20, 30 };
+int[] myIntArr4 = { 10, 20, 30 };
 
-        ```csharp
-        int[] myIntArr = new int[3];
-        int[] myIntArr2 = new int[3] { 10, 20, 30 };
-        int[] myIntArr3 = new int[] { 10, 20, 30 };
-        int[] myIntArr4 = { 10, 20, 30 };
+int[] myIntArr5;
+myIntArr5 = new int[3] { 10, 20, 30 };
+```
 
-        int[] myIntArr5;
-        myIntArr5 = new int[3] { 10, 20, 30 };
-        ```
+```csharp
+string[] myStrArr = new string[3];
+string[] myStrArr2 = new string[3] { "aaa", "bbb", "ccc" };
+string[] myStrArr3 = new string[] { "aaa", "bbb", "ccc" };
+string[] myStrArr4 = { "aaa", "bbb", "ccc" };
 
-    - String
+string[] myStrArr5;
+myStrArr5 = new string[3] { "aaa", "bbb", "ccc" };
+```
 
-        ```csharp
-        string[] myStrArr = new string[3];
-        string[] myStrArr2 = new string[3] { "aaa", "bbb", "ccc" };
-        string[] myStrArr3 = new string[] { "aaa", "bbb", "ccc" };
-        string[] myStrArr4 = { "aaa", "bbb", "ccc" };
-        
-        string[] myStrArr5;
-        myStrArr5 = new string[3] { "aaa", "bbb", "ccc" };
-        ```
-        
-- Acesso
+### Acesso
 
-    - Um elemento
+#### Um elemento
 
-        ~~~csharp
-        myItemStr = myStrArr[0];
-        ~~~
-        
-    - Todos elementos - For
+~~~csharp
+myItemStr = myStrArr[0];
+~~~
 
-        ~~~csharp
-        for (int i = 0; i < myArrayString2.Length; i++)
-            Console.WriteLine(myStrArr[i]);        
-        ~~~
+#### Todos elementos - For
 
-    - Todos elementos - Foreach
+~~~csharp
+for (int i = 0; i < myArrayString2.Length; i++)
+    Console.WriteLine(myStrArr[i]);        
+~~~
 
-        ~~~csharp
-        foreach (string i in myArrayString2)
-            Console.WriteLine(i);   
-        ~~~
+#### Todos elementos - Foreach
 
-- Modificação
+~~~csharp
+foreach (string i in myArrayString2)
+    Console.WriteLine(i);   
+~~~
 
-    - Um elemento
+### Modificação
 
-        ~~~csharp
-        myStrArr[0] = "Mauricio";
-        ~~~
-        
-- Propriedades
+#### Um elemento
 
-    - Length
+~~~csharp
+myStrArr[0] = "Mauricio";
+~~~
 
-        ~~~csharp
-        myInt = myStrArr.Length;
-        ~~~
+### Propriedades
 
-- Métodos
+#### Length
 
-    - Array.Sort()
+~~~csharp
+myInt = myStrArr.Length;
+~~~
 
-        ~~~csharp
-        Array.Sort(myStrArr);
-        ~~~
+### Métodos
 
-    - Max()
+#### Array.Sort()
 
-        > Namespace: System.Linq - ``` using System.Linq; ```
+~~~csharp
+Array.Sort(myStrArr);
+~~~
 
-        ~~~csharp
-        myInt = myIntArr.Max();
-        ~~~        
-        
-    - Min()
+#### Max()
 
-        > Namespace: System.Linq - ``` using System.Linq; ```
+> Namespace: System.Linq - ``` using System.Linq; ```
 
-        ~~~csharp
-        myInt = myIntArr.Min();
-        ~~~        
+~~~csharp
+myInt = myIntArr.Max();
+~~~        
 
-    - Sum()
+#### Min()
 
-        > Namespace: System.Linq - ``` using System.Linq; ```
+> Namespace: System.Linq - ``` using System.Linq; ```
 
-        ~~~csharp
-        myInt = myIntArr.Sum();
-        ~~~ 
+~~~csharp
+myInt = myIntArr.Min();
+~~~        
+
+#### Sum()
+
+> Namespace: System.Linq - ``` using System.Linq; ```
+
+~~~csharp
+myInt = myIntArr.Sum();
+~~~ 
 
 ## Arrays Bidimensionais        
 
-- Criação
+### Criação
 
-    - Int
+~~~csharp
+int [,] myIntArr = new int [3, 2];
+int [,] myIntArr2 = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+~~~
 
-        ~~~csharp
-        int [,] myIntArr = new int [3, 2];
-        int [,] myIntArr2 = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
-        ~~~
-        
-- Acesso
+### Acesso
 
-    - Um elemento
+#### Um elemento
 
-        ~~~csharp
-        myItemStr = myStrArr[0, 0];
-        ~~~        
+~~~csharp
+myItemStr = myStrArr[0, 0];
+~~~        
 
 ## Arrays Tridimensionais
 
-- Criação
+### Criação
 
-    - Int
-
-        ~~~csharp
-        int [, ,] myIntArr = new int [3, 2, 4];
-        ~~~
+~~~csharp
+int [, ,] myIntArr = new int [3, 2, 4];
+~~~
 
 ## Exemplos
 
-- Convertendo String em Array de Char
+### Convertendo String em Array de Char
 
-    ~~~csharp
-    string myStr = "This is String example";
-    char[] myCharArr = myStr.ToCharArray();        
-    ~~~
+~~~csharp
+string myStr = "This is String example";
+char[] myCharArr = myStr.ToCharArray();        
+~~~
 
-- Convertendo Array de Char em String
+### Convertendo Array de Char em String
 
-    ~~~csharp
-    myStr = string.Join("", myCharArr);    
-    ~~~
+~~~csharp
+myStr = string.Join("", myCharArr);    
+~~~
 
 
 
