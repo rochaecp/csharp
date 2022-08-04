@@ -2,117 +2,120 @@
 
 > Namespace: System - ``` using System; ```
 
-- Criação
+## Geral
 
-    ```csharp
-    string myStr = "";
-    ```
+### Criação
 
-- Concatenação 
+```csharp
+string myStr = "";
+```
 
-    ```csharp 
-    myStr = myStr2 + "  " + myStr3;
-    myStr = string.Concat(myStr2, myStr3);
-    ```
-    
-- Interpolação - versão 6 do C#
+### Concatenação 
 
-    ```csharp
-    myStr = $"Meu nome completo é: {myStr2} {myStr3}";
-    ```
+```csharp 
+myStr = myStr2 + "  " + myStr3;
+myStr = string.Concat(myStr2, myStr3);
+```
 
-- Acessar caracteres - read only
+### Interpolação - versão 6 do C#
 
-    ```csharp
-    myChar = myStr[0];
-    ```
+```csharp
+myStr = $"Meu nome completo é: {myStr2} {myStr3}";
+```
 
-- Caracteres de Escape
+### Acessar caracteres - read only
 
-    ``` \' ``` 
-    ``` \" ```
-    ``` \n ```
-    ``` \t ```
-    ``` \b ```
-    ``` \\ ```
-    
-- Propriedades
+```csharp
+myChar = myStr[0];
+```
 
-    - Length
+### Caracteres de Escape
 
-        ```csharp
-        myInt = myStr.Length;
-        ```
-    
-- Métodos    
+``` \' ``` 
+``` \" ```
+``` \n ```
+``` \t ```
+``` \b ```
+``` \\ ```
 
-    - IndexOf()
+## Propriedades
 
-        ```csharp
-        myInt = myStr.IndexOf("M"); // -1 == not find
-        ```
-    - Substring()
+### Length
 
-        ```csharp
-        myStr = myStr2.Substring(2); // do inicio ate posicao 2    
-        ```
+```csharp
+myInt = myStr.Length;
+```
 
-    - ToUpper()
+## Métodos    
 
-        ```csharp
-        myStr = myStr2.ToUpper();
-        ```
+### IndexOf()
 
-    - ToLower()
+```csharp
+myInt = myStr.IndexOf("M"); // -1 == not find
+```
 
-        ```csharp
-        myStr = myStr2.ToLower();
-        ```
+### Substring()
 
-    - IsNullOfEmpty()
+```csharp
+myStr = myStr2.Substring(2); // do inicio ate posicao 2    
+```
 
-        ```csharp
-        myBool = string.IsNullOrEmpty(myStr);
-        ```
+### ToUpper()
 
-    - Equals()
+```csharp
+myStr = myStr2.ToUpper();
+```
 
-        ```csharp
-        myBool = myStr.Equals(myStr);
-        ```
+### ToLower()
+
+```csharp
+myStr = myStr2.ToLower();
+```
+
+### IsNullOfEmpty()
+
+```csharp
+myBool = string.IsNullOrEmpty(myStr);
+```
+
+### Equals()
+
+```csharp
+myBool = myStr.Equals(myStr);
+```
 
 ## Exemplos
 
-- Obtendo ASCII a partir de char
+### Obtendo ASCII a partir de char
 
-    ```csharp
-    myChar = 'c'; 
-    myInt = (int)myChar;
-    ```
+```csharp
+myChar = 'c'; 
+myInt = (int)myChar;
+```
 
-- Convertendo string em array de char
+### Convertendo string em array de char
 
-    ```csharp
-    myStr = "This is String example.";
-    char[] myCharArray = myStr.ToCharArray();
-    ```
+```csharp
+myStr = "This is String example.";
+char[] myCharArray = myStr.ToCharArray();
+```
 
-- Modificando um caractere de uma string em um determinado índice
+### Modificando um caractere de uma string em um determinado índice
 
-    ```csharp
-    myStr = "Mauricio";
-    char[] myCharArray = myStr.ToCharArray();
-    myCharArray[0] = 'X';
-    myStr = new string(myCharArray);
-    ```
+```csharp
+myStr = "Mauricio";
+char[] myCharArray = myStr.ToCharArray();
+myCharArray[0] = 'X';
+myStr = new string(myCharArray);
+```
 
-- Modificando um caractere de uma string em um determinado índice - usando StringBuilder
+### Modificando um caractere de uma string em um determinado índice - usando StringBuilder
 
-    > Namespace: System.Text - ``` using System.Text; ```
+> Namespace: System.Text - ``` using System.Text; ```
 
-    ```csharp
-    myStr = "Mauricio";
-    StringBuilder sb = new StringBuilder(myStr);
-    sb[0] = 'X';
-    myStr = sb.ToString();
-    ```
+```csharp
+myStr = "Mauricio";
+StringBuilder sb = new StringBuilder(myStr);
+sb[0] = 'X';
+myStr = sb.ToString();
+```
