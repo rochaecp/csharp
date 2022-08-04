@@ -1,6 +1,6 @@
 # C# - Dicionários
 
-> Namespace: System.Collections.Generic - ``` using System.Collections.Generic; ```
+- Namespace: System.Collections.Generic - ``` using System.Collections.Generic; ```
 
 ## Criação
 
