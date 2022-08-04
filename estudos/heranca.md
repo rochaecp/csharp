@@ -1,18 +1,16 @@
 # C# - Herança
 
-> - **Classe base (pai)**: classe cujos membros são herdados.
-> - **Classe derivada (filha)**: classe que herda, estende ou modifica o comportamento de uma classe base.
-> - Em C# não existe herança múltipla: uma classe só pode estender uma única classe por vez.
-> - Impedir herança com ```sealed ```
-> - Tipos de Herança:
->   - **Simples**: Uma classe base e uma classe derivada.
->   - **Hierárquica**: Mais de uma classe deriva de uma mesma classe base.
->   - **Multinível**: Uma classe deriva de uma classe que deriva de outra.
->   - **Múltipla**: Não suportada em C# (usamos interfaces)
+- **Classe base (pai)**: classe cujos membros são herdados.
+- **Classe derivada (filha)**: classe que herda, estende ou modifica o comportamento de uma classe base.
+- Em C# não existe herança múltipla: uma classe só pode estender uma única classe por vez.
+- Impedir herança com ```sealed ```
+- Tipos de Herança:
+  - **Simples**: Uma classe base e uma classe derivada.
+  - **Hierárquica**: Mais de uma classe deriva de uma mesma classe base.
+  - **Multinível**: Uma classe deriva de uma classe que deriva de outra.
+  - **Múltipla**: Não suportada em C# (usamos interfaces)  
   
 ## Herança Simples
-
-> Observar os membros ``` protected ``` da classe Pessoa  
 
 - Arquivo Pessoa.cs
 
@@ -31,7 +29,8 @@ namespace MyApplication
             this.nome = n;
             this.idade = i;
         }
-
+        
+        // observar modificador protected
         protected void MensagemPessoa()
         {
             Console.WriteLine(nome);
