@@ -1,6 +1,6 @@
 # C# - Arrays
 
-> Namespace: System - ``` using System; ```  
+- Namespace: System - ``` using System; ```  
 
 ## Arrays Unidimensionais
 
@@ -74,7 +74,7 @@ Array.Sort(myStrArr);
 
 #### Max()
 
-> Namespace: System.Linq - ``` using System.Linq; ```
+- Namespace: System.Linq - ``` using System.Linq; ```
 
 ~~~csharp
 myInt = myIntArr.Max();
@@ -82,7 +82,7 @@ myInt = myIntArr.Max();
 
 #### Min()
 
-> Namespace: System.Linq - ``` using System.Linq; ```
+- Namespace: System.Linq - ``` using System.Linq; ```
 
 ~~~csharp
 myInt = myIntArr.Min();
@@ -90,7 +90,7 @@ myInt = myIntArr.Min();
 
 #### Sum()
 
-> Namespace: System.Linq - ``` using System.Linq; ```
+- Namespace: System.Linq - ``` using System.Linq; ```
 
 ~~~csharp
 myInt = myIntArr.Sum();
