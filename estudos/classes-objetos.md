@@ -1,8 +1,8 @@
 # C# - Classes e Objetos
 
-> - Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
-> - Nomes de classe iniciam com letra maiúscula.
-> - Classes possuem campos/atributos e métodos
+- Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
+- Nomes de classe iniciam com letra maiúscula.
+- Classes possuem membros (campos/atributos, propriedades e métodos)
 
 ## Criando uma Classe e Instanciando um Objeto a partir dela
 
