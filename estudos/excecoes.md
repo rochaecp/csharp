@@ -1,17 +1,17 @@
 # C# - Exceções
 
-> Exceções são tipos que derivam da classe ``` System.Exception ```  
-> Algumas classes de Exceção:
-> - ArithmeticException
-> - FileNotFoundException
-> - IndexOutOfRangeException
-> - TimeOutException
-> - NotImplementedException
->   - ``` throw new NotImplementedException (); ```
+Exceções são tipos que derivam da classe ``` System.Exception ```  
+Algumas classes de Exceção:
+- ArithmeticException
+- FileNotFoundException
+- IndexOutOfRangeException
+- TimeOutException
+- NotImplementedException
+    - ``` throw new NotImplementedException (); ```
 
-- Criação
+## Criação
 
-- Try .. Catch
+### Try .. Catch
 
 ~~~csharp
 try
@@ -24,7 +24,7 @@ catch (Exception e)
 }        
 ~~~
 
-- Try .. Catch (com mensagem personalizada)
+### Try .. Catch (com mensagem personalizada)
 
 ~~~csharp
 try
@@ -37,7 +37,7 @@ catch (Exception e)
 }
 ~~~        
 
-- Try .. Catch .. Finally
+### Try .. Catch .. Finally
 
 ~~~csharp
 try
@@ -54,7 +54,7 @@ finally
 }        
 ~~~
 
-- Try .. Catch .. Finally     
+### Try .. Catch .. Finally     
 
 ~~~csharp
 try
@@ -85,7 +85,7 @@ finally
 }        
 ~~~
 
-- Throw (lançar exceção manualmente)
+### Throw (lançar exceção manualmente)
 
 ~~~csharp
 if (myInt < 18)
@@ -94,9 +94,9 @@ else
     Console.WriteLine("Ok");        
 ~~~   
 
-- Classes
+## Classes
 
-- NotImplementedException
+### NotImplementedException
 
 ~~~csharp
 static int MetodoParaDesenvolver ()
@@ -105,9 +105,7 @@ static int MetodoParaDesenvolver ()
 }        
 ~~~
 
-## Exemplos
-
-- Throw
+## Utilizando Throw
 
 - Arquivo: Program.cs
 
@@ -139,7 +137,7 @@ namespace MyApplication
 }
 ~~~
 
-- Throw
+## Utilizando Throw
 
 - Arquivo: Program.cs
 
@@ -176,7 +174,7 @@ namespace MyApplication
 }
 ~~~
 
-- Exceção personalizada
+## Exceção personalizada
 
 - Arquivo: CustomException.cs
 
@@ -232,7 +230,7 @@ namespace MyApplication
 }
 ~~~    
 
-- Exceção personalizada
+## Exceção personalizada
 
 - Arquivo: InvalidStudentNameException.cs
 
@@ -283,7 +281,7 @@ namespace MyApplication
 }
 ~~~           
 
-- Exceção personalizada - Temperatura negativa
+## Exceção personalizada - Temperatura negativa
 
 - Arquivo: TempIsNegativeException
 
