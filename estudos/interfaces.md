@@ -1,11 +1,14 @@
 # C# - Interfaces
 
 - Uma interface é um tipo de classe que contém apenas assinaturas de métodos, propriedades, eventos e indexadores.
+- A interface define operações obrigatórias (contrato).
 - Por padrão todos os membros de uma interface são ``` public ``` e ``` abstract ```.
 - Por convenção iniciamos o nome de interfaces com a letra 'I'.
 - Em C# uma classe pode implementar várias interfaces.
+- É obrigatório implementar todos os métodos da interface.
 - Interfaces não podem:
     - Ser instanciadas.
+    - Conter implementações dos seus métodos (corpo dos métodos).
     - Conter constantes, construtores, variáveis de instância, destrutores, membros estáticos ou interfaces aninhada.
 - Interfaces podem:
     - Herdar de um ou mais interfaces.
