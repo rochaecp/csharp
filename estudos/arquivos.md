@@ -1,303 +1,295 @@
 # C# - Arquivos
 
-> Namespace: System.IO - ``` using System.IO; ```
+- Namespace: System.IO - ``` using System.IO; ```
 
 ## Classe File (static)
 
-- Métodos
+### Métodos
 
-    - WriteAllText()
+#### WriteAllText()
 
-        ~~~csharp
-        File.WriteAllText("arquivo.txt", "Ola mundo" + Environment.NewLine);
-        ~~~
-        
-    - AppendAllText()
+~~~csharp
+File.WriteAllText("arquivo.txt", "Ola mundo" + Environment.NewLine);
+~~~
 
-        ~~~csharp
-        File.AppendAllText("arquivo.txt", "Linha 2" + Environment.NewLine);
-        ~~~
-    
-    - ReadAllText()
+#### AppendAllText()
 
-        ~~~csharp
-        myStr = File.ReadAllText("arquivo.txt");
-        ~~~
-        
-    - Create()
+~~~csharp
+File.AppendAllText("arquivo.txt", "Linha 2" + Environment.NewLine);
+~~~
 
-        ~~~csharp
-        File.Create("arquivo.txt");
-        ~~~
-        
-    - Exists()
+#### ReadAllText()
 
-        ~~~csharp
-        myBool = File.Exists("arquivo.txt");
-        ~~~        
-        
-    - Copy()
+~~~csharp
+myStr = File.ReadAllText("arquivo.txt");
+~~~
 
-        ~~~csharp
-        File.Copy("arquivo.txt", "arquivoDestino.txt");
-        ~~~         
-       
-    - Delete()
+#### Create()
 
-        ~~~csharp
-        File.Delete("arquivo2.txt");
-        ~~~  
+~~~csharp
+File.Create("arquivo.txt");
+~~~
+
+#### Exists()
+
+~~~csharp
+myBool = File.Exists("arquivo.txt");
+~~~        
+
+#### Copy()
+
+~~~csharp
+File.Copy("arquivo.txt", "arquivoDestino.txt");
+~~~         
+
+#### Delete()
+
+~~~csharp
+File.Delete("arquivo2.txt");
+~~~  
         
 ## Classe StreamWriter (herda das classes abstratas Stream e TextWriter)
 
-> - Converte caracteres em bytes e escreve em um arquivo
+- Converte caracteres em bytes e escreve em um arquivo
 
-- Métodos
+### Métodos
 
-    - WriteLine() - anexando conteúdo ao fim do arquivo
+#### WriteLine() - anexando conteúdo ao fim do arquivo
 
-        ~~~csharp
-        try
-        {
-            using (StreamWriter sw = new StreamWriter("arquivo.txt", true)) // true = anexar, false = sobrescrever
-            {
-                sw.WriteLine("Linha 1");
-                sw.WriteLine("Linha 2");
-            }
+~~~csharp
+try
+{
+    using (StreamWriter sw = new StreamWriter("arquivo.txt", true)) // true = anexar, false = sobrescrever
+    {
+        sw.WriteLine("Linha 1");
+        sw.WriteLine("Linha 2");
+    }
 
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-        ~~~        
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+~~~        
   
 ## Classe StreamReader (herda das classes abstratas Stream e TextReader)
 
-> - Lê bytes de um arquivo e converte em caracteres
+- Lê bytes de um arquivo e converte em caracteres
 
-- Métodos
+### Métodos
 
-    - ReadLine()
+#### ReadLine()
 
-        > using fecha arquivo após uso
+- using fecha arquivo após uso
 
-        ~~~csharp
-        try
-        {
-            using (StreamReader myStreamReader = new StreamReader("arquivo.txt"))
-            {
-                string? myStr = string.Empty;
+~~~csharp
+try
+{
+    using (StreamReader myStreamReader = new StreamReader("arquivo.txt"))
+    {
+        string? myStr = string.Empty;
 
-                while((myStr = myStreamReader.ReadLine()) != null)
-                    Console.WriteLine(myStr);
-            }
-        } 
-        catch(Exception ex)
-        {
-            Console.WriteLine("Arquivo não pode ser lido: {0}", ex.Message);
-        }        
-        ~~~        
+        while((myStr = myStreamReader.ReadLine()) != null)
+            Console.WriteLine(myStr);
+    }
+} 
+catch(Exception ex)
+{
+    Console.WriteLine("Arquivo não pode ser lido: {0}", ex.Message);
+}        
+~~~        
         
 ## Classe FileStream (herda da classe abstrata Stream)
 
-> - Lê / grava bytes de / para um arquivo físico, ex.: txt, exe, jpg, ...
+- Lê / grava bytes de / para um arquivo físico, ex.: txt, exe, jpg, ...
 
-- Métodos
+### Métodos
 
-    - Construtor
+#### Construtor
 
-        ~~~csharp
-        FileStream myFileStream = new FileStream("arquivo.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
-        /*
-         *  FileMode:
-         *      Open, OpenOrCreate, Append, Create, CreateNew, Truncate
-         *  FileAccess:
-         *      Read, ReadWrite, Write
-         *  FileShare:
-         *      Inheritable, None, Read, ReadWrite, Write
-         */        
-        ~~~
+~~~csharp
+FileStream myFileStream = new FileStream("arquivo.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
+/*
+ *  FileMode:
+ *      Open, OpenOrCreate, Append, Create, CreateNew, Truncate
+ *  FileAccess:
+ *      Read, ReadWrite, Write
+ *  FileShare:
+ *      Inheritable, None, Read, ReadWrite, Write
+ */        
+~~~
 
-    - WriteByte()
+#### WriteByte()
 
-        ~~~csharp
-        FileStream myFileStream = new FileStream("arquivo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-        myFileStream.WriteByte((byte)myInt);
-        myFileStream.Close();
-        ~~~
-            
-    - ReadByte()
+~~~csharp
+FileStream myFileStream = new FileStream("arquivo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+myFileStream.WriteByte((byte)myInt);
+myFileStream.Close();
+~~~
 
-        ~~~csharp
-        FileStream myFileStream = new FileStream("arquivo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-        myInt = myFileStream.ReadByte();
-        myFileStream.Close();        
-        ~~~
+#### ReadByte()
+
+~~~csharp
+FileStream myFileStream = new FileStream("arquivo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+myInt = myFileStream.ReadByte();
+myFileStream.Close();        
+~~~
         
-- Atributos
+### Atributos
 
-    - Position
+#### Position
 
-        ~~~csharp
-        myFileStream.Position = 0;
-        ~~~
+~~~csharp
+myFileStream.Position = 0;
+~~~
 
-- Exemplos
+### Utilizando a WriteByte() e a ReadByte()
 
-    - WriteByte() e ReadByte()
+~~~csharp
+using System;
+using System.IO;
 
-        ~~~csharp
-        using System;
-        using System.IO;
-
-        namespace MyApplication
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            class Program
-            {
-                static void Main(string[] args)
-                {
-                    FileStream myFileStream = new FileStream("arquivo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            FileStream myFileStream = new FileStream("arquivo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
 
-                    for(int i = 1; i <= 10; i++)
-                        myFileStream.WriteByte((byte)i);
+            for(int i = 1; i <= 10; i++)
+                myFileStream.WriteByte((byte)i);
 
-                    myFileStream.Position = 0;
+            myFileStream.Position = 0;
 
-                    for (int i = 1; i <= 10; i++)
-                        Console.WriteLine(myFileStream.ReadByte());
+            for (int i = 1; i <= 10; i++)
+                Console.WriteLine(myFileStream.ReadByte());
 
-                    myFileStream.Close();
-                }
-            }
+            myFileStream.Close();
+        }
+    }
 
-        }        
-        ~~~
+}        
+~~~
 
 ## Classe BinaryWriter
 
-> - Escreve tipos primitivos em binário
+- Escreve tipos primitivos em binário
 
-- Exemplos
+### Utilizando a WriteLine()
 
-    - WriteLine()
-        
-        ~~~csharp
-        using System;
-        using System.IO;
+~~~csharp
+using System;
+using System.IO;
 
-        namespace MyApplication
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            class Program
+            BinaryWriter myBinaryWriter;
+
+            int myInt = 10;
+            double myDouble = 10D;
+            bool myBool = true;
+            string myStr = "Olá Mundo";
+
+            // cria o arquivo
+            try
             {
-                static void Main(string[] args)
-                {
-                    BinaryWriter myBinaryWriter;
-
-                    int myInt = 10;
-                    double myDouble = 10D;
-                    bool myBool = true;
-                    string myStr = "Olá Mundo";
-
-                    // cria o arquivo
-                    try
-                    {
-                        myBinaryWriter = new BinaryWriter(new FileStream("myData", FileMode.Create));  
-                    }
-                    catch (IOException ex)
-                    {
-                        Console.WriteLine("Não foi possível Criar o arquivo: {0}", ex.Message);
-                        return;
-                    }
-
-                    // escreve no arquivo
-                    try
-                    {
-                        myBinaryWriter.Write(myInt);
-                        myBinaryWriter.Write(myDouble);
-                        myBinaryWriter.Write(myBool);
-                        myBinaryWriter.Write(myStr);
-                    }
-                    catch(IOException ex)
-                    {
-                        Console.WriteLine("Não foi possível escrever no arquivo ", ex.Message);
-                        return;
-                    }
-                }
+                myBinaryWriter = new BinaryWriter(new FileStream("myData", FileMode.Create));  
             }
-        }        
-        ~~~
+            catch (IOException ex)
+            {
+                Console.WriteLine("Não foi possível Criar o arquivo: {0}", ex.Message);
+                return;
+            }
+
+            // escreve no arquivo
+            try
+            {
+                myBinaryWriter.Write(myInt);
+                myBinaryWriter.Write(myDouble);
+                myBinaryWriter.Write(myBool);
+                myBinaryWriter.Write(myStr);
+            }
+            catch(IOException ex)
+            {
+                Console.WriteLine("Não foi possível escrever no arquivo ", ex.Message);
+                return;
+            }
+        }
+    }
+}        
+~~~
 
 ## Classe BinaryReader 
 
-> - Lê tipos primitivos em binário
+- Lê tipos primitivos em binário
 
-- Exemplos
+### Utilizando a ReadInt32(), ReadDouble(), ReadBoolean(), ReadString() 
 
-    - ReadInt32(), ReadDouble(), ReadBoolean(), ReadString() 
-        
-        ~~~csharp
-        using System;
-        using System.IO;
+~~~csharp
+using System;
+using System.IO;
 
-        namespace MyApplication
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            class Program
+            BinaryReader myBinaryReader;
+
+            try
             {
-                static void Main(string[] args)
-                {
-                    BinaryReader myBinaryReader;
+                myBinaryReader = new BinaryReader(new FileStream("myData", FileMode.Open));
+            }
+            catch (IOException ex)
+            {   
+                Console.WriteLine("Não foi possível abrir o arquivo: {0}", ex.Message);
+                return;
+            }
 
-                    try
-                    {
-                        myBinaryReader = new BinaryReader(new FileStream("myData", FileMode.Open));
-                    }
-                    catch (IOException ex)
-                    {   
-                        Console.WriteLine("Não foi possível abrir o arquivo: {0}", ex.Message);
-                        return;
-                    }
-
-                    try
-                    {
-                        int myInt = myBinaryReader.ReadInt32();
-                        double myDouble = myBinaryReader.ReadDouble(); 
-                        bool myBool = myBinaryReader.ReadBoolean();
-                        string myString = myBinaryReader.ReadString();
-                    }
-                    catch(IOException ex)
-                    {
-                        Console.WriteLine("Não foi possível ler o arquivo: {0}", ex.Message);
-                    }
-                }
+            try
+            {
+                int myInt = myBinaryReader.ReadInt32();
+                double myDouble = myBinaryReader.ReadDouble(); 
+                bool myBool = myBinaryReader.ReadBoolean();
+                string myString = myBinaryReader.ReadString();
+            }
+            catch(IOException ex)
+            {
+                Console.WriteLine("Não foi possível ler o arquivo: {0}", ex.Message);
             }
         }
-        ~~~
+    }
+}
+~~~
 
 ## Classe DirectoryInfo e FileInfo (ambas derivam da classe FileSystemInfo)
 
-- Exemplos
+### Utilizando a GetFiles()
 
-    - GetFiles()
-        
-        ~~~csharp
-        using System;
-        using System.IO;
+~~~csharp
+using System;
+using System.IO;
 
-        namespace MyApplication
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            class Program
-            {
-                static void Main(string[] args)
-                {
-                    DirectoryInfo myDirectoryInfo = new DirectoryInfo(@"c:\Windows");
+            DirectoryInfo myDirectoryInfo = new DirectoryInfo(@"c:\Windows");
 
-                    FileInfo[] myFileInfoArr = myDirectoryInfo.GetFiles();
+            FileInfo[] myFileInfoArr = myDirectoryInfo.GetFiles();
 
-                    foreach(FileInfo file in myFileInfoArr)
-                        Console.WriteLine(file.Name + " " + file.Length + " " + file.FullName);
-                }
-            }
-        }        
-        ~~~
+            foreach(FileInfo file in myFileInfoArr)
+                Console.WriteLine(file.Name + " " + file.Length + " " + file.FullName);
+        }
+    }
+}        
+~~~
 
