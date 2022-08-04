@@ -20,3 +20,9 @@
 
 > Por padrão, todos os **membros** de uma classe (métodos, campos e propriedades) são ``` private ```.      
 > Por padrão todos os **tipos** (classes, estruturas, delegados, enumerações) são ``` internal ```.    
+
+
+## Outros
+
+- ``` virtual ```
+    - Indica que o método pode ser sobrescrito na classe derivada.
