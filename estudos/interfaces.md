@@ -1,45 +1,87 @@
 # C# - Interfaces
 
-- Utilizada para criarmos exclusivamente métodos obrigatórios.
-- Uma classe pode implementar várias interfaces.
-- Os métodos da interface não possuem implementação na interface.
-- A implementação dos métodos da interface fica na classe que implementa a mesma.
-- No C# um método criado na interface é por padrão público e abstrato.
-- No C# por convenção iniciamos o nome de interfaces com a letra 'I', ex.: IProductService.
+- Uma interface é um tipo de classe que contém apenas as assinaturas de métodos, propriedades, eventos e indexadores.
+- Usar interface é uma forma de criar e definir um contrato que ajuda na organização do código.
+- "Programe para uma interface e não para uma implementação." (Erich Gamma).
+- Permitem criar sistemas fracamente acoplados e mais flexível a mudanças.
+- Uma interface não pode ser instanciada.
+- Uma interface não pode conter um construtor.
+- Uma interface pode herdar de um ou mais interfaces.
+- Ao criar uma classe usando uma interface devem ser implementados todos os métodos da interface, caso contrario deverá ser criada uma classe abstrata.
+- A implementação dos membros é feita por uma classe concreta ou struct que implementa a interface.
+- Em C# por convenção iniciamos o nome de interfaces com a letra 'I', ex.: IProductService.
+- Em C# uma classe pode implementar várias interfaces.
+- Em C# um método criado na interface é por padrão público e abstrato e não possui corpo.
 
-## Exemplo
+## Utilizando Interfaces
 
-- Arquivo: IPadrao.cs
+- Arquivo: ICalculadora.cs
 
 ~~~csharp
-namespace MeuProjeto
+namespace MyApplication
 {
-    public interface IPadrao
+    public interface ICalculadora
     {
-        // metodo obrigatorio
-        void somar(int n1, int n2); // obrigatoriamente abstract e public
-        void subtrair(int n1, int n2);
+        public int Soma(int x, int y);
+        public int Subtracao(int x, int y);
     }
 }
 ~~~
 
-- Arquivo: Calculo.cs
+- Arquivo: ICalculadoraCientifica.cs
+
+~~~csharp
+namespace MyApplication
+{
+    public interface ICalculadoraCientifica
+    {
+        public double Potencia(int x, int y);
+    }
+}
+~~~
+
+- Arquivo: Calculadora.cs
+
+~~~csharp
+namespace MyApplication
+{
+    public class Calculadora : ICalculadora // implementa a interface ICalculadora
+    {
+        public int Soma(int x, int y)
+        {
+            return x + y;
+        }
+
+        public int Subtracao(int x, int y)
+        {
+            return x - y;
+        }
+    }
+}
+~~~
+
+- Arquivo: CalculadoraCientifica.cs
 
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
-    public class Calculo : IPadrao // Calculo implementa a interface IPadrao, é do mesmo jeito que herança
+    public class CalculadoraCientifica : ICalculadora, ICalculadoraCientifica // implementa 2 interfaces
     {
-        public void somar(int n1, int n2) // poderia ser privado se quisesse
+        public int Soma(int x, int y)
         {
-            Console.WriteLine(n1 + n2);
+            return x + y;
         }
 
-        public void subtrair(int n1, int n2)
+        public int Subtracao(int x, int y)
         {
-            Console.WriteLine(n1 - n2);
+            return x - y;
+        }
+
+        public double Potencia(int x, int y)
+        {
+            return Math.Pow(x, y);
         }
     }
 }
@@ -50,80 +92,18 @@ namespace MeuProjeto
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Calculo obj = new Calculo();
-            obj.somar(1, 1);
-            obj.subtrair(11, 10);
+            ICalculadora calc = new Calculadora();
+            Console.WriteLine(calc.Soma(90, 10));
+
+            calc = new CalculadoraCientifica();
+            Console.WriteLine(calc.Soma(90, 10));
         }
     }
-}
-~~~
-
-## Exemplo
-
-~~~csharp
-// file Program.cs, dir MyApplication
-using System;
-namespace MyApplication {
-  // Interface
-  interface IAnimal {
-    void animalSound(); // interface method (does not have a body)
-  }
-
-  // Pig "implements" the IAnimal interface
-  class Pig : IAnimal {
-    public void animalSound() {
-      // The body of animalSound() is provided here
-      Console.WriteLine("The pig says: wee wee");
-    }
-  }
-
-  class Program {
-    static void Main(string[] args) {
-      Pig myPig = new Pig();  // Create a Pig object
-      myPig.animalSound();
-    }
-  }
-}
-~~~
-
-## Exemplo
-
-~~~csharp
-// Interfaces múltiplas
-// file Program.cs, dir MyApplication
-using System;
-
-namespace MyApplication {
-  interface IFirstInterface {
-    void myMethod(); // interface method
-  }
-
-  interface ISecondInterface {
-    void myOtherMethod(); // interface method
-  }
-
-  // Implement multiple interfaces
-  class DemoClass : IFirstInterface, ISecondInterface {
-    public void myMethod() {
-      Console.WriteLine("Some text..");
-    }
-    public void myOtherMethod() {
-      Console.WriteLine("Some other text...");
-    }
-  }
-
-  class Program {
-    static void Main(string[] args) {
-      DemoClass myObj = new DemoClass();
-      myObj.myMethod();
-      myObj.myOtherMethod();
-    }
-  }
 }
 ~~~
