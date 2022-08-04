@@ -1,5 +1,6 @@
 # C# - Herança
 
+- Herança é um mecanismo que permite que características comuns a diversas classes sejam agrupadas em uma classe base, ou superclasse. 
 - **Classe base (pai)**: classe cujos membros são herdados.
 - **Classe derivada (filha)**: classe que herda, estende ou modifica o comportamento de uma classe base.
 - Em C# não existe herança múltipla: uma classe só pode estender uma única classe por vez.
