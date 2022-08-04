@@ -26,3 +26,5 @@
 
 - ``` virtual ```
     - Indica que o método pode ser sobrescrito na classe derivada.
+- ``` override ```
+    - Indica que o método sobrescreve o da superclasse.     
