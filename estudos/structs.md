@@ -1,7 +1,7 @@
 # C# - Structs
 
-> - Structs são alocadas na pilha
-> - Structs não permitem herança.
+- Structs são alocadas na pilha
+- Structs não permitem herança.
 
 ## Struct em um arquivo
 
