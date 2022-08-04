@@ -2,6 +2,7 @@
 
 - Classes abstratas:
     - Uma classe abstrata é uma classe que não pode ser instanciada. 
+    - Uma classe abstrata define um comportamento básico mas não auto-suficiente.
     - Uma classe abstrata pode ser herdada e geralmente serve como classe base para outras classes.
     - Uma classe abstrata pode conter métodos abstratos e métodos comuns. 
     - Uma classe abastrata também pode possuir construtores, propriedades, indexadores e eventos.
