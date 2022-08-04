@@ -2,83 +2,79 @@
 
 > Namespace: System.Collections.Generic - ``` using System.Collections.Generic; ```
 
-- Criação
+## Criação
 
-    - Int
+~~~csharp
+List<int> myIntList = new List<int>();
+List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
+~~~
 
-        ~~~csharp
-        List<int> myIntList = new List<int>();
-        List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
-        ~~~
-        
-- Inclusão
+## Inclusão
 
-    - Int
+~~~csharp
+myIntList.Add(10);
+~~~
 
-        ~~~csharp
-        myIntList.Add(10);
-        ~~~
-        
-- Remoção
+## Remoção
 
-    - Primeiro Elemento
+### Primeiro Elemento
 
-        ~~~csharp
-        myBool = myIntList.Remove(0);
-        ~~~
-        
-- Acesso
+~~~csharp
+myBool = myIntList.Remove(0);
+~~~
 
-    - Um elemento
+## Acesso
 
-        ~~~csharp
-        myInt = myIntList[0];
-        ~~~
-        
-    - Todos Elementos - For
+### Um elemento
 
-        ~~~csharp
-        for (int i = 0; i < myIntList.Count; i++)
-            Console.WriteLine(myIntList[i]);
-        ~~~
-        
-    - Todos Elementos - Foreach
+~~~csharp
+myInt = myIntList[0];
+~~~
 
-        ~~~csharp
-        foreach (int myInt in myIntList)
-            Console.WriteLine(myInt);
-        ~~~  
-        
-    - Todos Elementos - Foreach        
+### Todos Elementos - For
 
-        ~~~csharp
-        myIntList.ForEach(delegate (int myInt)
-        {
-            Console.WriteLine(myInt);
-        });
-        ~~~
-        
-- Propriedades
+~~~csharp
+for (int i = 0; i < myIntList.Count; i++)
+    Console.WriteLine(myIntList[i]);
+~~~
 
-    - Count
+### Todos Elementos - Foreach
 
-        ~~~csharp
-        myInt = myIntList.Count;
-        ~~~
-      
-        
-- Métodos
+~~~csharp
+foreach (int myInt in myIntList)
+    Console.WriteLine(myInt);
+~~~  
 
-    - Sort()
+### Todos Elementos - Foreach        
 
-        ~~~csharp
-        myIntList.Sort();
-        ~~~
+~~~csharp
+myIntList.ForEach(delegate (int myInt)
+{
+    Console.WriteLine(myInt);
+});
+~~~
+
+## Propriedades
+
+### Count
+
+~~~csharp
+myInt = myIntList.Count;
+~~~
+
+
+## Métodos
+
+### Sort()
+
+~~~csharp
+myIntList.Sort();
+~~~
 
 ## Exemplos
 
-- Covertendo listas em arrays
+### Covertendo listas em arrays
 
-    ~~~csharp
-    int[] meuArray = minhaLista.ToArray();
-    ~~~
+~~~csharp
+int[] meuArray = minhaLista.ToArray();
+~~~
