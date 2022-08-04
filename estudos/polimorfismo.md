@@ -1,16 +1,17 @@
 # C# - Polimorfismo
 
-- Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma assinatura mas comportamentos diferentes e especializados para cada classe derivada.
 - Permite que classes forneçam diferentes implementações para métodos que possuem o mesmo nome.
-- **Tipos de Polimorfismo**
-    - Polimorfismo em tempo de compilação (Overloading/Sobrecarga) - usa sobrecarga de métodos e de operadores
+- Tipos:
     - Polimorfismo em tempo de execução (Overriding/Sobrescrita) - usa herança e métodos virtuais
+    - Polimorfismo em tempo de compilação (Overloading/Sobrecarga) - usa sobrecarga de métodos e de operadores
 - Sobrescrita de Métodos:
     - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*. 
         - O modificador de acesso virtual indica que o método pode ser sobrescrito na classe derivada.
     - Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.  
+- Sobrecarga de Métodos:
+    - Usamos o mesmo nome de método (mas com parâmetros diferenes) duas ou mais vezes numa mesma classe
 
-## Polimorfismo com herança e métodos virtuais
+## Polimorfismo com Herança e Métodos Virtuais
 
 - Arquivo: Veiculo.cs
     - Em uma implementação mais robusta teríamos a classe ```Veiculo``` como abstrata e os métodos ```Mover()``` e ```Parar()``` seriam abstratos.
@@ -121,6 +122,36 @@ namespace MyApplication
 
             veiculos[0].Mover();
             veiculos[1].Mover();
+        }
+    }
+}
+~~~
+
+## Polimorfismo com Sobrecarga de Métodos
+
+- Arquivo: Program.cs
+
+~~~csharp
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static int Soma(int x, int y)
+        {
+            return x + y;
+        }
+
+        static double Soma(double x, double y)
+        {
+            return x + y;
+        }
+
+        static void Main(string[] args)
+        {
+            int myInt = Soma(1, 1);
+            double myDouble = Soma(1.2, 1.3);
         }
     }
 }
