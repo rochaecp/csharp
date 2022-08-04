@@ -1,13 +1,12 @@
 # C# - Métodos
 
-> Métodos são blocos de códigos que só são executados quando chamados.   
-> Métodos Static pertencem à classe.
+- Métodos são blocos de códigos que só são executados quando chamados.   
+- Métodos Get e Set:
+    - São utilizados para obtermos e modificarmos atributos privados.  
+    - São sempre public.    
+    - Pode-se utilizar um ou outro ou ambos.  
 
 ## Métodos Get e Set
-
-> São utilizados para obtermos e modificarmos atributos privados.  
-> São sempre public.    
-> Pode-se utilizar um ou outro ou ambos.  
 
 - Arquivo: Pessoa.cs
 
@@ -49,6 +48,8 @@ namespace MyApplication
 
 ## Sobrecarga de Métodos
 
+- Arquivo: Program.cs
+
 ~~~csharp
 using System;
 
@@ -75,7 +76,9 @@ namespace MyApplication
 }
 ~~~
 
-## Argumentos Nomeados        
+## Argumentos Nomeados      
+
+- Arquivo: Program.cs
 
 ~~~csharp
 using System;
@@ -99,6 +102,8 @@ namespace MyApplication
 
 ## Parâmetros Opcionais
 
+- Arquivo: Program.cs
+
 ~~~csharp
 using System;
 
@@ -120,6 +125,8 @@ namespace MyApplication
 ~~~
         
 ## Arrays como Argumento
+
+- Arquivo: Program.cs
 
 ~~~csharp
 using System;
@@ -150,6 +157,8 @@ namespace MyApplication
 
 ## Parâmetros ref
 
+- Arquivo: Program.cs
+
 ~~~csharp
 using System;
 
@@ -172,6 +181,8 @@ namespace MyApplication
 ~~~
 
 ## Parâmetros out
+
+- Arquivo: Program.cs
 
 ~~~csharp
 using System;
