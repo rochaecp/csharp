@@ -1,27 +1,27 @@
 # C# - Tuplas
 
-- Criação
+## Criação
 
-    - Int, String
+### Int, String
 
-        ~~~csharp
-        (int, string) myTuple = (10, "Maurício");
-        ~~~
-        
-- Acesso   
+~~~csharp
+(int, string) myTuple = (10, "Maurício");
+~~~
 
-    - Int, String
+## Acesso   
 
-        ~~~csharp
-        myInt = myTuple.Item1;
-        myString = myTuple.Item2;
-        ~~~    
-        
-- Modificação      
+### Int, String
 
-    - Int, String
+~~~csharp
+myInt = myTuple.Item1;
+myString = myTuple.Item2;
+~~~    
 
-        ~~~csharp
-        myTuple.Item1 = 1;
-        myTuple.Item2 = "Maria";
-        ~~~     
+## Modificação      
+
+### Int, String
+
+~~~csharp
+myTuple.Item1 = 1;
+myTuple.Item2 = "Maria";
+~~~     
