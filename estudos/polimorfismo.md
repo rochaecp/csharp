@@ -1,8 +1,8 @@
 # C# - Polimorfismo
 
-> - Sobrescrita de Métodos:
->   - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*.   
->   - Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.  
+- Sobrescrita de Métodos:
+    - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*.   
+    - Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.  
 
 ## Exemplo
 
@@ -102,52 +102,4 @@ namespace MeuProjeto
     }
 }
 
-~~~
-
-## Exemplo
-
-- Arquivo: Program.cs
-
-~~~csharp
-using System;
-namespace MyApplication
-{
-    class Animal
-    { // Base class (parent) 
-        public virtual void animalSound()
-        { // note virtual keyword
-            Console.WriteLine("The animal makes a sound");
-        }
-    }
-
-    class Pig : Animal
-    { // Derived class (child) 
-        public override void animalSound()
-        {
-            Console.WriteLine("The pig says: wee wee");
-        }
-    }
-
-    class Dog : Animal
-    { // Derived class (child) 
-        public override void animalSound()
-        {
-            Console.WriteLine("The dog says: bow wow");
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Animal myAnimal = new Animal(); // Create a Animal object
-            Animal myPig = new Pig();  // Create a Pig object
-            Animal myDog = new Dog();  // Create a Dog object
-
-            myAnimal.animalSound();
-            myPig.animalSound();
-            myDog.animalSound();
-        }
-    }
-}
 ~~~
