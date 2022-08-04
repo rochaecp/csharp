@@ -1,6 +1,6 @@
 # C# - Console
 
-> Namespace: System - ``` using System; ```
+- Namespace: System - ``` using System; ```
 
 ## Métodos 
 
