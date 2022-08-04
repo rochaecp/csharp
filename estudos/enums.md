@@ -4,38 +4,36 @@
 > - Por padrão o primeiro elemento da enum tem valor 0, o segundo tem valor 1 e etc.  
 > - Para obter o valor inteiro da enum é necessário realizar uma conversão explícita para int.  
 
-## Exemplos
+## Enum em arquivo
 
-- Exemplo: enum em arquivo
+- Arquivo Level.cs
 
-    - Arquivo Level.cs
+~~~csharp
+namespace MyProject
+{
+    public enum Level: sbyte 
+    {
+        Low = 10,
+        Medium = 20, 
+        High = 30 
+    }
+}
+~~~
 
-        ~~~csharp
-        namespace MyProject
+- Arquivo Program.cs
+
+~~~csharp
+using System;
+
+namespace MyProject
+{
+    public class Program
+    {
+        static void Main(string[] args)
         {
-            public enum Level: sbyte 
-            {
-                Low = 10,
-                Medium = 20, 
-                High = 30 
-            }
+            Level myVar = Level.Medium;
+            Console.WriteLine(myVar);
         }
-        ~~~
-
-    - Arquivo Program.cs
-
-        ~~~csharp
-        using System;
-
-        namespace MyProject
-        {
-            public class Program
-            {
-                static void Main(string[] args)
-                {
-                    Level myVar = Level.Medium;
-                    Console.WriteLine(myVar);
-                }
-            }
-        }
-        ~~~
+    }
+}
+~~~
