@@ -1,76 +1,104 @@
 # C# - Polimorfismo
 
+- Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma assinatura mas comportamentos diferentes e especializados para cada classe derivada.
+- Permite que classes forneçam diferentes implementações para métodos que possuem o mesmo nome.
+- **Tipos de Polimorfismo**
+    - Polimorfismo em tempo de compilação (Overloading/Sobrecarga) - usa sobrecarga de métodos e de operadores
+    - Polimorfismo em tempo de execução (Overriding/Sobrescrita) - usa herança e métodos virtuais
 - Sobrescrita de Métodos:
-    - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*.   
+    - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*. 
+        - O modificador de acesso virtual indica que o método pode ser sobrescrito na classe derivada.
     - Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.  
 
-## Exemplo
+## Polimorfismo com herança e métodos virtuais
 
-- Arquivo: Imposto.cs
+- Arquivo: Veiculo.cs
+    - Em uma implementação mais robusta teríamos a classe ```Veiculo``` como abstrata e os métodos ```Mover()``` e ```Parar()``` seriam abstratos.
+
+~~~csharp
+namespace MyApplication
+{
+    public class Veiculo
+    {
+        // atributo
+        private string tipo;
+
+        // propriedade
+        public string Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
+
+        // construtor
+        public Veiculo(string tipoVeiculo)
+        {
+            this.Tipo = tipoVeiculo;
+        }
+
+        // metodo a ser sobrescrito
+        public virtual void Mover()
+        { }
+
+        // metodo a ser sobrescrito
+        public virtual void Parar()
+        { }
+    }
+}
+~~~
+
+- Arquivo: Automovel.cs
 
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
-    public class Imposto
+    public class Automovel : Veiculo // herda de veículo
     {
-        public virtual void valeAlimentacao(double salario)
+        public Automovel(string tipoVeiculo)
+            : base(tipoVeiculo)
+        { }
+
+        // sobrescreve o metodo Mover()
+        public override void Mover()
         {
-            Console.WriteLine("Desconto VA: " + salario * 0.1);
+            Console.WriteLine("Acelerando o carro");
         }
-        public void valeTransporte(double salario)
+
+        // sobrescreve o metodo Parar()
+        public override void Parar()
         {
-            Console.WriteLine("Desconto VT: " + salario * 0.06);
+            Console.WriteLine("Parando o carro");
         }
     }
 }
 ~~~
 
-- Arquivo: Gerente.cs
+- Arquivo: Aeronave.cs
 
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
-    public class Gerente : Imposto
+    public class Aeronave : Veiculo // herda de veículo
     {
-        public override void valeAlimentacao(double salario)
+        public Aeronave(string tipoVeiculo)
+            : base(tipoVeiculo)
+        { }
+
+        // sobrescreve o metodo Mover()
+        public override void Mover()
         {
-            Console.WriteLine("Desconto gerente VA: " + salario * 0.15);
+            Console.WriteLine("Acelerando a aeronave");
         }
-    }
-}
-~~~
 
-- Arquivo: Atendente.cs
-
-~~~csharp
-using System;
-
-namespace MeuProjeto
-{
-    public class Atendente : Imposto
-    {
-        public override void valeAlimentacao(double salario)
+        // sobrescreve o metodo Parar()
+        public override void Parar()
         {
-            Console.WriteLine("Desconto atendente VA: " + salario * 0.12);
+            Console.WriteLine("Parando a aeronave");
         }
-    }
-}
-~~~
-
-- Arquivo: Estagiário.cs
-
-~~~csharp
-using System;
-
-namespace MeuProjeto
-{
-    public class Estagiario : Imposto
-    {
-
     }
 }
 ~~~
@@ -80,26 +108,20 @@ namespace MeuProjeto
 ~~~csharp
 using System;
 
-namespace MeuProjeto
+namespace MyApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Instanciando objetos
-            Imposto objE = new Estagiario();
-            objE.valeAlimentacao(1000);
-            objE.valeTransporte(1000);
+            Veiculo[] veiculos = new Veiculo[2];
 
-            Imposto objA = new Atendente();
-            objA.valeAlimentacao(2000);
-            objA.valeTransporte(2000);
+            veiculos[0] = new Automovel("Ferrari");
+            veiculos[1] = new Aeronave("A29 Super Tucano");
 
-            Imposto objG = new Gerente();
-            objG.valeAlimentacao(5000);
-            objG.valeTransporte(5000);
+            veiculos[0].Mover();
+            veiculos[1].Mover();
         }
     }
 }
-
 ~~~
