@@ -72,7 +72,7 @@ myStr = myStr2.ToUpper();
 myStr = myStr2.ToLower();
 ```
 
-### IsNullOfEmpty()
+### IsNullOrEmpty()
 
 ```csharp
 myBool = string.IsNullOrEmpty(myStr);
