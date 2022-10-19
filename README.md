@@ -1,33 +1,48 @@
 # C#
 
+## Introdução
+
+1. [Sobre o C#](estudos/about.md)
+1. [CLI](estudos/cli.md)
 1. [Olá Mundo](estudos/ola-mundo.md)
 1. [Tipos](estudos/tipos.md)
 1. [Modificadores de Acesso](estudos/modificadores-acesso.md)
-3. [Casting](estudos/casting.md)
-4. [Operadores](estudos/operadores.md)
-5. [Console](estudos/console.md)
-6. [Math](estudos/math.md)
-7. [Random](estudos/random.md)
-8. [Strings](estudos/strings.md)
-9. [Datas](estudos/datas.md)
-10. [If .. Else](estudos/if-else.md)
-11. [Switch](estudos/switch.md)
-12. [While e Do .. While](estudos/while.md)
-13. [For e Foreach](estudos/for-foreach.md)
-14. [Break e Continue](estudos/break-continue.md)
-15. [Arrays](estudos/arrays.md)
-16. [Structs](estudos/structs.md)
-17. [Enums](estudos/enums.md)
-18. [Listas](estudos/listas.md)
-19. [Dicionários](estudos/dicionarios.md)
-20. [Tuplas](estudos/tuplas.md)
-21. [Exceções](estudos/excecoes.md)
-22. [Arquivos](estudos/arquivos.md)
-23. [LINQ](estudos/linq.md)
-24. [Expressões Lambda](estudos/expressoes-lambda.md)
-25. [Regex](estudos/regex.md)
-26. [Delegates](estudos/delegates.md)
-27. [CLI](estudos/cli.md)
+1. [Casting](estudos/casting.md)
+1. [Operadores](estudos/operadores.md)
+1. [Console](estudos/console.md)
+1. [Math](estudos/math.md)
+1. [Random](estudos/random.md)
+1. [Strings](estudos/strings.md)
+1. [Datas](estudos/datas.md)
+
+## Comandos Condicionais
+
+1. [If .. Else](estudos/if-else.md)
+1. [Switch](estudos/switch.md)
+
+## Comandos de Repetição
+
+1. [While e Do .. While](estudos/while.md)
+1. [For e Foreach](estudos/for-foreach.md)
+1. [Break e Continue em comandos de repetição](estudos/break-continue.md)
+
+## Estruturas de Dados
+
+1. [Arrays](estudos/arrays.md)
+1. [Structs](estudos/structs.md)
+1. [Enums](estudos/enums.md)
+1. [Listas](estudos/listas.md)
+1. [Dicionários](estudos/dicionarios.md)
+1. [Tuplas](estudos/tuplas.md)
+
+## Outros
+
+1. [Exceções](estudos/excecoes.md)
+1. [Arquivos](estudos/arquivos.md)
+1. [LINQ](estudos/linq.md)
+1. [Expressões Lambda](estudos/expressoes-lambda.md)
+1. [Regex](estudos/regex.md)
+1. [Delegates](estudos/delegates.md)
 
 ## POO
 
