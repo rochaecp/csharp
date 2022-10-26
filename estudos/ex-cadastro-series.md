@@ -1,4 +1,4 @@
-# Projeto: Cadastro de Séries em .NET 
+# Cadastro de Séries em .NET 
 
 ## Alguns conceitos aplicados
 
