@@ -17,13 +17,10 @@
 1. [Strings](estudos/strings.md)
 1. [Datas](estudos/datas.md)
 
-## Comandos Condicionais
+## Comandos Condicionais e de Repetição
 
 1. [If .. Else](estudos/if-else.md)
 1. [Switch](estudos/switch.md)
-
-## Comandos de Repetição
-
 1. [While e Do .. While](estudos/while.md)
 1. [For e Foreach](estudos/for-foreach.md)
 1. [Break e Continue em comandos de repetição](estudos/break-continue.md)
