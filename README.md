@@ -1,10 +1,12 @@
 # C#
 
+## Úteis
+
+1. [CLI](estudos/cli.md)
+
 ## Introdução
 
 1. [Sobre o C#](estudos/about.md)
-1. [CLI](estudos/cli.md)
-1. [Olá Mundo](estudos/ola-mundo.md)
 1. [Tipos](estudos/tipos.md)
 1. [Modificadores de Acesso](estudos/modificadores-acesso.md)
 1. [Casting](estudos/casting.md)
@@ -61,7 +63,8 @@
 1. [Beecrowd - 1010 a 1019](estudos/solucoes-beecrowd-1010-1019.md)
 1. [Beecrowd - 1020 a 1029](estudos/solucoes-beecrowd-1020-1029.md)
 
-## Projetos
+## Exemplos
 
-1. [Cadastro de Séries](estudos/projeto-cadastro-series.md)
+1. [Olá Mundo](estudos/ola-mundo.md)
+1. [Cadastro de Séries](estudos/ex-cadastro-series.md)
 
