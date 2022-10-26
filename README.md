@@ -2,7 +2,7 @@
 
 ## Úteis
 
-1. [CLI](estudos/cli.md)
+- [CLI](estudos/cli.md)
 
 ## Introdução
 
