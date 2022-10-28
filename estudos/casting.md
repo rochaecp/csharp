@@ -21,10 +21,10 @@ myDouble = myInt;
 
 - Ocorre de modo manual.
 - Converte um "tipo maior" em um "tipo menor":
-    - double -> float 
-    - float -> long 
-    - long -> int -
-    - int -> char
+    - float <- double
+    - long <- float
+    - int <- long
+    - char <- int
 
 ### Exemplo:
 
