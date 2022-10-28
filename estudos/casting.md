@@ -4,10 +4,10 @@
 
 - Ocorre automaticamente.
 - Converte um "tipo menor" em um "tipo maior":
-    - char -> int 
-    - int -> long
-    - long -> float
-    - float -> double
+    - int <- char
+    - long <- int
+    - float <- long
+    - double <- float
 
 ### Exemplo:
 
