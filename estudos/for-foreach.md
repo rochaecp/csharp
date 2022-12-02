@@ -10,7 +10,7 @@ for (int i = 0; i < 5; i++)
 ## Foreach
 
 ~~~csharp
-string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
-foreach (string i in cars)
-    Console.WriteLine(i);
+string[] cores = { "Vermelho", "Azul", "Amarelo", "Verde" };
+foreach (string cor in cores)
+    Console.WriteLine(cor);
 ~~~
