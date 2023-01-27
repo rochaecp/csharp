@@ -7,11 +7,10 @@
 ## Introdução
 
 1. [Sobre o C#](estudos/about.md)
-1. [Tipos](estudos/tipos.md)
-1. [Modificadores de Acesso](estudos/modificadores-acesso.md)
-1. [Casting](estudos/casting.md)
-1. [Operadores](estudos/operadores.md)
 1. [Console](estudos/console.md)
+1. [Variáveis, constantes e Tipos](estudos/tipos.md)
+1. [Operadores](estudos/operadores.md)
+1. [Casting](estudos/casting.md)
 1. [Math](estudos/math.md)
 1. [Random](estudos/random.md)
 1. [Strings](estudos/strings.md)
@@ -21,8 +20,8 @@
 
 1. [If .. Else](estudos/if-else.md)
 1. [Switch](estudos/switch.md)
-1. [While e Do .. While](estudos/while.md)
 1. [For e Foreach](estudos/for-foreach.md)
+1. [While e Do .. While](estudos/while.md)
 1. [Break e Continue em comandos de repetição](estudos/break-continue.md)
 
 ## Estruturas de Dados
@@ -45,6 +44,7 @@
 
 ## POO
 
+1. [Modificadores de Acesso](estudos/modificadores-acesso.md)
 1. [Classes e Objetos](estudos/classes-objetos.md)
 1. [Métodos](estudos/metodos.md)
 1. [Encapsulamento](estudos/encapsulamento.md)
