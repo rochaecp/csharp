@@ -764,12 +764,6 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-### 1021 - Notas e Moedas
-
-~~~csharp
-
-~~~
-
 ### 1035 - Teste de Seleção 1
 
 ~~~csharp
