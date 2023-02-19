@@ -767,7 +767,33 @@ namespace TreinosBeecrowd
 ### 1035 - Teste de Seleção 1
 
 ~~~csharp
+using System;
+//using System.Globalization;
 
+namespace ConsoleApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-US");
+
+            string line = Console.ReadLine();
+            string inputStr = " ";
+            if (!string.IsNullOrEmpty(line))
+                inputStr = line;
+            string[] inputArray = inputStr.Split(' ');
+            int a = Convert.ToInt32(inputArray[0]);
+            int b = Convert.ToInt32(inputArray[1]);
+            int c = Convert.ToInt32(inputArray[2]);
+            int d = Convert.ToInt32(inputArray[3]);
+            if (b > c && d > a && (c + d) > (a + b) && c > 0 && d > 0 && a % 2 == 0)
+                Console.WriteLine("Valores aceitos");
+            else
+                Console.WriteLine("Valores nao aceitos");    
+        }
+    }
+}
 ~~~
 
 ### 1036 - Fórmula de Bhaskara

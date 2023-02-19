@@ -1,35 +1,35 @@
 # C# - Strings 
 
-- Namespace: System - ``` using System; ```
+Namespace: System
 
-## Geral
-
-### Criação
+## Criar uma string
 
 ```csharp
 string myStr = "";
 ```
 
-### Concatenação 
+## Concatenar strings 
 
 ```csharp 
 myStr = myStr2 + "  " + myStr3;
 myStr = string.Concat(myStr2, myStr3);
 ```
 
-### Interpolação - versão 6 do C#
+## Interpolar 2 ou mais strings 
+
+Utiliza a versão 6 do C#  
 
 ```csharp
 myStr = $"Meu nome completo é: {myStr2} {myStr3}";
 ```
 
-### Acessar caracteres - read only
+## Acessar um caractere de uma string - read only
 
 ```csharp
 myChar = myStr[0];
 ```
 
-### Caracteres de Escape
+## Caracteres de Escape
 
 ``` \' ``` 
 ``` \" ```
@@ -38,69 +38,63 @@ myChar = myStr[0];
 ``` \b ```
 ``` \\ ```
 
-## Propriedades
-
-### Length
+## Obter o tamanho de uma string
 
 ```csharp
 myInt = myStr.Length;
 ```
 
-## Métodos    
-
-### IndexOf()
+## Obter o índice de um caractere de uma string
 
 ```csharp
 myInt = myStr.IndexOf("M"); // -1 == not find
 ```
 
-### Substring()
+## Obter uma fatia da string
 
 ```csharp
 myStr = myStr2.Substring(2); // do inicio ate posicao 2    
 ```
 
-### ToUpper()
+## Converter uma string em maiúsculo
 
 ```csharp
 myStr = myStr2.ToUpper();
 ```
 
-### ToLower()
+## Converter uma string em minúsculo
 
 ```csharp
 myStr = myStr2.ToLower();
 ```
 
-### IsNullOrEmpty()
+## Verificar se uma string é vazia
 
 ```csharp
 myBool = string.IsNullOrEmpty(myStr);
 ```
 
-### Equals()
+## Verificar se duas strings são iguais
 
 ```csharp
 myBool = myStr.Equals(myStr);
 ```
 
-## Exemplos
-
-### Obtendo ASCII a partir de char
+## Obter o ASCII a partir de um char
 
 ```csharp
 myChar = 'c'; 
 myInt = (int)myChar;
 ```
 
-### Convertendo string em array de char
+## Converter string em array de char
 
 ```csharp
 myStr = "This is String example.";
 char[] myCharArray = myStr.ToCharArray();
 ```
 
-### Modificando um caractere de uma string em um determinado índice
+## Modificar um caractere de uma string em um determinado índice
 
 ```csharp
 myStr = "Mauricio";
@@ -109,7 +103,7 @@ myCharArray[0] = 'X';
 myStr = new string(myCharArray);
 ```
 
-### Modificando um caractere de uma string em um determinado índice - usando StringBuilder
+## Modificar um caractere de uma string em um determinado índice - usando StringBuilder
 
 - Namespace: System.Text - ``` using System.Text; ```
 
@@ -119,3 +113,14 @@ StringBuilder sb = new StringBuilder(myStr);
 sb[0] = 'X';
 myStr = sb.ToString();
 ```
+
+## Converter uma string em um array
+
+~~~csharp
+string minhaString = "Sejam bem vindos";
+string [] minhaStringArray = minhaString.Split(' ');
+foreach (string str in minhaStringArray)
+    Console.WriteLine(str); // sejam
+                            // bem
+                            // vindos
+~~~
