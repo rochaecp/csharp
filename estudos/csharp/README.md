@@ -7,21 +7,22 @@
 ## Introdução
 
 1. [Sobre o C#](estudos/about.md)
-1. [Console](estudos/console.md)
-1. [Variáveis, constantes e Tipos](estudos/tipos.md)
+1. [Tipos de Dados](estudos/tipos.md)
+1. [Variáveis e Constantes](estudos/variaveis-constantes.md)
 1. [Operadores](estudos/operadores.md)
 1. [Casting](estudos/casting.md)
-1. [Math](estudos/math.md)
-1. [Random](estudos/random.md)
+1. [Inputs e outputs pelo console](estudos/console.md)
 1. [Strings](estudos/strings.md)
+1. [Math](estudos/math.md)
+1. [Gerar Números Aleatórios](estudos/random.md)
 1. [Datas](estudos/datas.md)
 
 ## Comandos Condicionais e de Repetição
 
 1. [If .. Else](estudos/if-else.md)
 1. [Switch](estudos/switch.md)
-1. [For e Foreach](estudos/for-foreach.md)
 1. [While e Do .. While](estudos/while.md)
+1. [For e Foreach](estudos/for-foreach.md)
 1. [Break e Continue em comandos de repetição](estudos/break-continue.md)
 
 ## Estruturas de Dados
