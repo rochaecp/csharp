@@ -2,47 +2,49 @@
 
 - Namespace: System - ``` using System; ```
 
-## Propriedades
-
-### Math.PI
+## Constante PI
 
 ```csharp
 myDouble = Math.PI;
 ```
 
-### Math.E
+## Constante E
 
 ```csharp
 myDouble = Math.PI;
 ```        
         
-## Métodos
-
-### Math.Max
+## Valor máximo entre 2 valores
 
 ```csharp
 myInt = Math.Max(2, 5);
 ```
 
-### Math.Min
+## Valor mínimo entre 2 valores
 
 ```csharp
 myInt = Math.Min(2, 5);    
 ```
 
-### Math.Sqrt
+## Raiz quadrada de um número
 
 ```csharp
 myDouble = Math.Sqrt(64);    
 ```
 
-### Math.Abs
+## Potência de um número
+
+```csharp
+myDouble = Math.Pow(2, 3); // 8
+```
+
+## Módulo de um número
 
 ```csharp
 myInt = Math.Abs(-10);   
 ```
 
-### Math.Round
+## Arredondamento de um número
 
 ```csharp
 myDouble = Math.Round(9.99); // 10        
