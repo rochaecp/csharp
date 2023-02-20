@@ -799,7 +799,34 @@ namespace ConsoleApp
 ### 1036 - Fórmula de Bhaskara
 
 ~~~csharp
+using System;
+using System.Globalization;
 
+namespace ConsoleApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            string[] input = Console.ReadLine().Split(' ');
+            double a = Convert.ToDouble(input[0]);
+            double b = Convert.ToDouble(input[1]);
+            double c = Convert.ToDouble(input[2]);
+            double r1 = 0, r2 = 0;
+            double delta = Math.Pow(b, 2) - 4 * a * c;
+
+            if (delta < 0 || a == 0)
+                Console.WriteLine("Impossivel calcular");
+            else {
+                r1 = (-b + Math.Sqrt(delta)) / (2 * a);
+                r2 = (-b - Math.Sqrt(delta)) / (2 * a);
+                Console.WriteLine($"R1 = {r1:F5}");
+                Console.WriteLine($"R2 = {r2:F5}");
+            }
+        }
+    }
+}
 ~~~
 
 ### 1037 - Intervalo
