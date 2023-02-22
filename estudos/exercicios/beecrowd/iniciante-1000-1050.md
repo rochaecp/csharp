@@ -832,7 +832,35 @@ namespace ConsoleApp
 ### 1037 - Intervalo
 
 ~~~csharp
+using System;
+using System.Globalization;
 
+namespace ConsoleApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+
+            Double valor = Convert.ToDouble(Console.ReadLine());
+            String mensagem = "";
+
+            if (valor >= 0 && valor <= 25)
+                mensagem = "Intervalo [0,25]";
+            else if (valor > 25 && valor <= 50)    
+                mensagem = "Intervalo (25,50]";
+            else if (valor > 50 && valor <= 75)
+                mensagem = "Intervalo (50,75]";
+            else if (valor > 75 && valor <= 100)    
+                mensagem = "Intervalo (75,100]";
+            else
+                mensagem = "Fora de intervalo";    
+            
+            Console.WriteLine(mensagem);
+        }
+    }
+}
 ~~~
 
 ### 1038 - Lanche
