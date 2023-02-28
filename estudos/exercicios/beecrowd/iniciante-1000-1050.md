@@ -863,10 +863,39 @@ namespace ConsoleApp
 }
 ~~~
 
-### 1038 - Lanche
+### 1038 - Lanche (solução com dicionários)
 
 ~~~csharp
+using System;
+using System.Globalization;
+using System.Collections.Generic;
 
+namespace ConsoleApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            string[] linha = Console.ReadLine().Split(' ');
+            int codProd = Convert.ToInt32(linha[0]);
+            int quantProd = Convert.ToInt32(linha[1]);
+            double total = 0;
+            
+            Dictionary<int, double> produtos = new Dictionary<int, double>() 
+            {
+                {1, 4.00},
+                {2, 4.50},
+                {3, 5.0},
+                {4, 2.0},
+                {5, 1.5},
+            };
+            
+            total = produtos[codProd] * quantProd;
+            Console.WriteLine($"Total: R$ {total:F2}");
+        }
+    }
+}
 ~~~
 
 ### 1040 - Média 3
