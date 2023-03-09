@@ -901,7 +901,52 @@ namespace ConsoleApp
 ### 1040 - Média 3
 
 ~~~csharp
+using System;
+using System.Globalization;
+using System.Collections.Generic;
 
+namespace ConsoleApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+        
+            string [] line1 = Console.ReadLine().Split(' ');
+            string line2 = Console.ReadLine();
+            
+            double n1 = Convert.ToDouble(line1[0]);
+            double n2 = Convert.ToDouble(line1[1]);
+            double n3 = Convert.ToDouble(line1[2]);
+            double n4 = Convert.ToDouble(line1[3]);
+            double media = (n1 * 2 + n2 * 3 + n3 * 4 + n4 * 1) / (10);
+            double notaExame = 0, media2 = 0;
+
+            Console.WriteLine($"Media: {Math.Round(media, 1):F1}");
+
+            if (media >= 7) {
+                Console.WriteLine("Aluno aprovado.");
+            }
+            else if (media >= 5) {
+                Console.WriteLine("Aluno em exame.");
+                notaExame = Convert.ToDouble(line2);
+                Console.WriteLine($"Nota do exame: {Math.Round(notaExame, 1):F1}");
+                media2 = (media + notaExame) / 2;
+
+                if (media2 >= 5) 
+                    Console.WriteLine("Aluno aprovado.");
+                else 
+                    Console.WriteLine("Aluno reprovado.");
+                
+                Console.WriteLine($"Media final: {Math.Round(media2, 1):F1}");
+            }
+            else if (media < 5) {
+                Console.WriteLine("Aluno reprovado.");
+            }            
+        }
+    }
+}
 ~~~
 
 ### 1041 - Coordenadas de um Ponto
