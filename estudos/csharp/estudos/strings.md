@@ -1,6 +1,6 @@
 # C# - Strings 
 
-Namespace: System
+Namespace: System.  
 
 ## Criar uma string
 
@@ -17,13 +17,13 @@ myStr = string.Concat(myStr2, myStr3);
 
 ## Interpolar 2 ou mais strings 
 
-Utiliza a versão 6 do C#  
+Utiliza a versão 6 do C#.    
 
 ```csharp
 myStr = $"Meu nome completo é: {myStr2} {myStr3}";
 ```
 
-## Acessar um caractere de uma string - read only
+## Acessar um caractere de uma string - readonly
 
 ```csharp
 myChar = myStr[0];
@@ -105,7 +105,7 @@ myStr = new string(myCharArray);
 
 ## Modificar um caractere de uma string em um determinado índice - usando StringBuilder
 
-- Namespace: System.Text - ``` using System.Text; ```
+Namespace: System.Text.  
 
 ```csharp
 myStr = "Mauricio";
