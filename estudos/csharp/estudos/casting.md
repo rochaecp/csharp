@@ -2,14 +2,12 @@
 
 ## Casting Implícito
 
-- Ocorre automaticamente.
-- Converte um "tipo menor" em um "tipo maior":
-    - int <- char
-    - long <- int
-    - float <- long
-    - double <- float
-
-### Exemplo:
+Ocorre automaticamente.  
+Converte um "tipo menor" em um "tipo maior":
+- int <- char
+- long <- int
+- float <- long
+- double <- float
 
 ```csharp 
 int myInt = 10;
@@ -19,14 +17,12 @@ myDouble = myInt;
 
 ## Casting Explícito
 
-- Ocorre de modo manual.
-- Converte um "tipo maior" em um "tipo menor":
-    - float <- double
-    - long <- float
-    - int <- long
-    - char <- int
-
-### Exemplo:
+Ocorre de modo manual.  
+Converte um "tipo maior" em um "tipo menor":
+- float <- double
+- long <- float
+- int <- long
+- char <- int
 
 ```csharp 
 int myInt = 10;
@@ -34,9 +30,7 @@ double myDouble = 10D;
 myInt = (int)myDouble;
 ```
 
-## Métodos de Conversão
-
-### ToString:
+## Converter para strings - ToString():
 
 ```csharp
 myStr = myDouble.ToString();
@@ -45,7 +39,7 @@ myStr = myLong.ToString();
 myStr = myBool.ToString();
 ```
 
-### Convert:
+## Convert()
 
 ```csharp 
 myString = Convert.ToString(myInt);
@@ -55,7 +49,7 @@ myLong = Convert.ToInt64(myDouble);
 myBool = Convert.ToBoolean(myInt);
 ```
     
-### Parse:
+## Parse()
 
 ```csharp
 myDouble = Double.Parse(myString);
@@ -63,7 +57,7 @@ myInt = Int32.Parse(myString);
 myLong = Int64.Parse(myString);    
 ```
 
-### TryParse:
+## TryParse()
 
 ```csharp
 float notaAluno = 0F;
