@@ -1,30 +1,28 @@
 # C# - Console
 
-- Namespace: System - ``` using System; ```
+Namespace: System.  
 
-## Métodos 
-
-### Console.Read() - Le próximo caractere
+## Ler o próximo caractere - Console.Read()
 
 ```csharp
 myInt = Console.Read();
 myChar = (char)Console.Read();
 ```
 
-### Console.ReadLine() - Lê próxima linha
+## Ler a próxima linha - Console.ReadLine()
 
 ```csharp
 myStr = Console.ReadLine();
 myInt = Convert.ToInt32(Console.ReadLine());
 ```
 
-### Console.Write()
+## Escrever sem quebrar a linha - Console.Write()
 
 ```csharp
 Console.Write("Olá Mundo");
 ```
 
-### Console.WriteLine()
+## Escrever quebrando a linha - Console.WriteLine()
 
 ```csharp
 Console.WriteLine("Olá Mundo");
