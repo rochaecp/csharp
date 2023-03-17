@@ -1,6 +1,6 @@
 # C# - Math
 
-- Namespace: System - ``` using System; ```
+Namespace: System.  
 
 ## Constante PI
 

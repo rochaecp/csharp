@@ -1,19 +1,17 @@
-# C# - Random
+# C# - Classe Random
 
-## Métodos
+Namespace System.  
 
-### Construtor
+## Gerar 10 números inteiros aleatórios de 0 a 9
 
 ~~~csharp
-Random myRandom = new Random();        
+Random random = new Random();
+int numeroAleatorio = random.Next(10); // inteiro de 0 a 9
 ~~~
     
-### Next()
+## Gerar 10 números inteiros aleatórios de 1 a 10
 
 ~~~csharp
-myInt = myRandom.Next(10);
-    // gera aleatorio de 0 a 9
-
-myInt = myRandom.Next(1, 10);
-    // gera aleatorio de 1 a 10
+Random random = new Random();
+int numeroAleatorio = random.Next(1, 11); // inteiro de 1 a 10
 ~~~
