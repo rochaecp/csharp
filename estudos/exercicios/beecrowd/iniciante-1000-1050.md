@@ -952,7 +952,37 @@ namespace ConsoleApp
 ### 1041 - Coordenadas de um Ponto
 
 ~~~csharp
+using System;
+using System.Globalization;
 
+namespace ConsoleApp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            string[] entrada = Console.ReadLine().Split(' ');
+            double coordX = Convert.ToDouble(entrada[0]);
+            double coordY = Convert.ToDouble(entrada[1]);
+
+            if (coordX == 0 && coordY == 0)
+                Console.WriteLine("Origem");
+            else if (coordX != 0 && coordY == 0)    
+                Console.WriteLine("Eixo X");
+            else if (coordX == 0 && coordY != 0)    
+                Console.WriteLine("Eixo Y");    
+            else if (coordX > 0 && coordY > 0)    
+                Console.WriteLine("Q1");
+            else if (coordX < 0 && coordY > 0)    
+                Console.WriteLine("Q2");
+            else if (coordX < 0 && coordY < 0)    
+                Console.WriteLine("Q3");
+            else if (coordX > 0 && coordY < 0)    
+                Console.WriteLine("Q4");          
+        }
+    }
+}
 ~~~
 
 ### 1042 - Sort Simples
