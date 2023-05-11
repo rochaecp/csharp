@@ -1,5 +1,5 @@
 # C#
 
-1. [C#](estudos/csharp/README.md)
-1. [ASP.NET](estudos/asp/README.md)
-1. [Exercícios](estudos/exercicios/README.md)
+1. [C#](csharp/README.md)
+1. [ASP.NET](asp/README.md)
+1. [Exercícios](exercicios/README.md)
