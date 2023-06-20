@@ -1,9 +1,7 @@
 # C#
 
-- Úteis
-    - [CLI](estudos/cli.md)
 - Introdução
-    - [Sobre o C#](estudos/about.md)
+    - [CLI](estudos/cli.md)
     - [Tipos de Dados](estudos/tipos.md)
     - [Variáveis e Constantes](estudos/variaveis-constantes.md)
     - [Operadores](estudos/operadores.md)
