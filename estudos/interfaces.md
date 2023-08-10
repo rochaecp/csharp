@@ -1,111 +1,105 @@
 # C# - Interfaces
 
-- Uma interface é um tipo de classe que contém apenas assinaturas de métodos, propriedades, eventos e indexadores.
-- A interface define operações obrigatórias (contrato).
-- Por padrão todos os membros de uma interface são ``` public ``` e ``` abstract ```.
-- Por convenção iniciamos o nome de interfaces com a letra 'I'.
-- Em C# uma classe pode implementar várias interfaces.
-- É obrigatório implementar todos os métodos da interface.
-- Interfaces não podem:
-    - Ser instanciadas.
-    - Conter implementações dos seus métodos (corpo dos métodos).
-    - Conter constantes, construtores, variáveis de instância, destrutores, membros estáticos ou interfaces aninhada.
-- Interfaces podem:
-    - Herdar de um ou mais interfaces.
-    - Ter constantes ``` static ```
-- "Programe para uma interface e não para uma implementação." (Erich Gamma).
+    Uma interface é um tipo de classe que contém apenas assinaturas de métodos, propriedades, eventos e indexadores.
+    A interface define operações obrigatórias (contrato).
+    Por padrão todos os membros de uma interface são ``` public ``` e ``` abstract ```.
+    Por convenção iniciamos o nome de interfaces com a letra 'I'.
+    Em C# uma classe pode implementar várias interfaces.
+    É obrigatório implementar todos os métodos da interface.
+    Interfaces não podem:
+        Ser instanciadas.
+        Conter implementações dos seus métodos (corpo dos métodos).
+        Conter constantes, construtores, variáveis de instância, destrutores, membros estáticos ou interfaces aninhada.
+    Interfaces podem:
+        Herdar de um ou mais interfaces.
+        Ter constantes ``` static ```
+    "Programe para uma interface e não para uma implementação." (Erich Gamma).
 
-## Utilizando Interfaces
-
-- Arquivo: ICalculadora.cs
-
-~~~csharp
-namespace MyApplication
-{
-    public interface ICalculadora
+- Utilizando Interfaces
+    - Arquivo: ICalculadora.cs
+    ~~~csharp
+    namespace MyApplication
     {
-        int Soma(int x, int y);
-        int Subtracao(int x, int y);
-    }
-}
-~~~
-
-- Arquivo: ICalculadoraCientifica.cs
-
-~~~csharp
-namespace MyApplication
-{
-    public interface ICalculadoraCientifica
-    {
-        double Potencia(int x, int y);
-    }
-}
-~~~
-
-- Arquivo: Calculadora.cs
-
-~~~csharp
-namespace MyApplication
-{
-    public class Calculadora : ICalculadora // implementa a interface ICalculadora
-    {
-        public int Soma(int x, int y)
+        public interface ICalculadora
         {
-            return x + y;
-        }
-
-        public int Subtracao(int x, int y)
-        {
-            return x - y;
+            int Soma(int x, int y);
+            int Subtracao(int x, int y);
         }
     }
-}
-~~~
+    ~~~
 
-- Arquivo: CalculadoraCientifica.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    public class CalculadoraCientifica : ICalculadora, ICalculadoraCientifica // implementa 2 interfaces
+    - Arquivo: ICalculadoraCientifica.cs
+    ~~~csharp
+    namespace MyApplication
     {
-        public int Soma(int x, int y)
+        public interface ICalculadoraCientifica
         {
-            return x + y;
-        }
-
-        public int Subtracao(int x, int y)
-        {
-            return x - y;
-        }
-
-        public double Potencia(int x, int y)
-        {
-            return Math.Pow(x, y);
+            double Potencia(int x, int y);
         }
     }
-}
-~~~
+    ~~~
 
-- Arquivo: Program.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    class Program
+    - Arquivo: Calculadora.cs
+    ~~~csharp
+    namespace MyApplication
     {
-        static void Main(string[] args)
+        public class Calculadora : ICalculadora // implementa a interface ICalculadora
         {
-            ICalculadora calc = new Calculadora();
-            Console.WriteLine(calc.Soma(90, 10));
+            public int Soma(int x, int y)
+            {
+                return x + y;
+            }
 
-            calc = new CalculadoraCientifica();
-            Console.WriteLine(calc.Soma(90, 10));
+            public int Subtracao(int x, int y)
+            {
+                return x - y;
+            }
         }
     }
-}
-~~~
+    ~~~
+
+    - Arquivo: CalculadoraCientifica.cs
+    ~~~csharp
+    using System;
+
+    namespace MyApplication
+    {
+        public class CalculadoraCientifica : ICalculadora, ICalculadoraCientifica // implementa 2 interfaces
+        {
+            public int Soma(int x, int y)
+            {
+                return x + y;
+            }
+
+            public int Subtracao(int x, int y)
+            {
+                return x - y;
+            }
+
+            public double Potencia(int x, int y)
+            {
+                return Math.Pow(x, y);
+            }
+        }
+    }
+    ~~~
+
+    - Arquivo: Program.cs
+    ~~~csharp
+    using System;
+
+    namespace MyApplication
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                ICalculadora calc = new Calculadora();
+                Console.WriteLine(calc.Soma(90, 10));
+
+                calc = new CalculadoraCientifica();
+                Console.WriteLine(calc.Soma(90, 10));
+            }
+        }
+    }
+    ~~~

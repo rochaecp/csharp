@@ -1,17 +1,18 @@
-# C# - Console
+# C# - Console  
 
 - Console.Read()
     - Ler o próximo caractere
     ```csharp
-    myInt = Console.Read();
-    myChar = (char)Console.Read();
+    int myInt = Console.Read(); // le o cvalor ASCII do primeiro caracatere
+    char myChar = (char)Console.Read();
     ```
 
 - Console.ReadLine()
     - Ler a próxima linha
     ```csharp
-    myStr = Console.ReadLine();
-    myInt = Convert.ToInt32(Console.ReadLine());
+    string myStr = Console.ReadLine();
+    int myInt = Convert.ToInt32(Console.ReadLine());
+    int numero = Int32.Parse(Console.ReadLine()); // evitar: nem toda entrada poderá ser convertida
     ```
 
 - Console.Write()
@@ -26,6 +27,8 @@
     Console.WriteLine("Olá Mundo");
     Console.WriteLine("Olá: " + myStr);
     Console.WriteLine("Sua idade é: " + myInt);
+
+    Console.WriteLine(string.Format("Idade: {0}", variavel));
 
     Console.WriteLine($"Olá {myStr}");
     Console.WriteLine($"Seu salário é: {myDouble:F2}");

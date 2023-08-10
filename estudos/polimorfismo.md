@@ -1,158 +1,151 @@
-# C# - Polimorfismo
+# C# Polimorfismo
 
-- Permite que classes forneçam diferentes implementações para métodos que possuem o mesmo nome.
-- Tipos:
-    - Polimorfismo em tempo de execução (Overriding/Sobrescrita) - usa herança e métodos virtuais
-    - Polimorfismo em tempo de compilação (Overloading/Sobrecarga) - usa sobrecarga de métodos e de operadores
-- Sobrescrita de Métodos:
-    - Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*. 
-        - O modificador de acesso virtual indica que o método pode ser sobrescrito na classe derivada.
-    - Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.  
-- Sobrecarga de Métodos:
-    - Usamos o mesmo nome de método (mas com parâmetros diferenes) duas ou mais vezes numa mesma classe
+    Permite que classes forneçam diferentes implementações para métodos que possuem o mesmo nome.
+    Tipos:
+        Polimorfismo em tempo de execução (Overriding/Sobrescrita) usa herança e métodos virtuais
+        Polimorfismo em tempo de compilação (Overloading/Sobrecarga) usa sobrecarga de métodos e de operadores
+    Sobrescrita de Métodos:
+        Em C# para um método poder ser sobrescrito ele precisa da palavra reservada *virtual*. 
+            O modificador de acesso virtual indica que o método pode ser sobrescrito na classe derivada.
+        Em C# para um método poder sobrescrever outro precisamos adicionar a palavra reservada *override*.  
+    Sobrecarga de Métodos:
+        Usamos o mesmo nome de método (mas com parâmetros diferenes) duas ou mais vezes numa mesma classe
 
-## Polimorfismo com Herança e Métodos Virtuais
-
-- Arquivo: Veiculo.cs
-    - Em uma implementação mais robusta teríamos a classe ```Veiculo``` como abstrata e os métodos ```Mover()``` e ```Parar()``` seriam abstratos.
-
-~~~csharp
-namespace MyApplication
-{
-    public class Veiculo
+- Polimorfismo com Herança e Métodos Virtuais
+    - Arquivo: Veiculo.cs
+        - Em uma implementação mais robusta teríamos a classe ```Veiculo``` como abstrata e os métodos ```Mover()``` e ```Parar()``` seriam abstratos.
+    ~~~csharp
+    namespace MyApplication
     {
-        // atributo
-        private string tipo;
-
-        // propriedade
-        public string Tipo
+        public class Veiculo
         {
-            get { return tipo; }
-            set { tipo = value; }
-        }
+            // atributo
+            private string tipo;
 
-        // construtor
-        public Veiculo(string tipoVeiculo)
-        {
-            this.Tipo = tipoVeiculo;
-        }
+            // propriedade
+            public string Tipo
+            {
+                get { return tipo; }
+                set { tipo = value; }
+            }
 
-        // metodo a ser sobrescrito
-        public virtual void Mover()
-        { }
+            // construtor
+            public Veiculo(string tipoVeiculo)
+            {
+                this.Tipo = tipoVeiculo;
+            }
 
-        // metodo a ser sobrescrito
-        public virtual void Parar()
-        { }
-    }
-}
-~~~
+            // metodo a ser sobrescrito
+            public virtual void Mover()
+            { }
 
-- Arquivo: Automovel.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    public class Automovel : Veiculo // herda de veículo
-    {
-        public Automovel(string tipoVeiculo)
-            : base(tipoVeiculo)
-        { }
-
-        // sobrescreve o metodo Mover()
-        public override void Mover()
-        {
-            Console.WriteLine("Acelerando o carro");
-        }
-
-        // sobrescreve o metodo Parar()
-        public override void Parar()
-        {
-            Console.WriteLine("Parando o carro");
+            // metodo a ser sobrescrito
+            public virtual void Parar()
+            { }
         }
     }
-}
-~~~
+    ~~~
 
-- Arquivo: Aeronave.cs
+    - Arquivo: Automovel.cs
+    ~~~csharp
+    using System;
 
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    public class Aeronave : Veiculo // herda de veículo
+    namespace MyApplication
     {
-        public Aeronave(string tipoVeiculo)
-            : base(tipoVeiculo)
-        { }
-
-        // sobrescreve o metodo Mover()
-        public override void Mover()
+        public class Automovel : Veiculo // herda de veículo
         {
-            Console.WriteLine("Acelerando a aeronave");
-        }
+            public Automovel(string tipoVeiculo)
+                : base(tipoVeiculo)
+            { }
 
-        // sobrescreve o metodo Parar()
-        public override void Parar()
-        {
-            Console.WriteLine("Parando a aeronave");
+            // sobrescreve o metodo Mover()
+            public override void Mover()
+            {
+                Console.WriteLine("Acelerando o carro");
+            }
+
+            // sobrescreve o metodo Parar()
+            public override void Parar()
+            {
+                Console.WriteLine("Parando o carro");
+            }
         }
     }
-}
-~~~
+    ~~~
+    
+    - Arquivo: Aeronave.cs
+    ~~~csharp
+    using System;
 
-- Arquivo: Program.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    class Program
+    namespace MyApplication
     {
-        static void Main(string[] args)
+        public class Aeronave : Veiculo // herda de veículo
         {
-            Veiculo[] veiculos = new Veiculo[2];
+            public Aeronave(string tipoVeiculo)
+                : base(tipoVeiculo)
+            { }
 
-            veiculos[0] = new Automovel("Ferrari");
-            veiculos[1] = new Aeronave("A29 Super Tucano");
+            // sobrescreve o metodo Mover()
+            public override void Mover()
+            {
+                Console.WriteLine("Acelerando a aeronave");
+            }
 
-            veiculos[0].Mover();
-            veiculos[1].Mover();
+            // sobrescreve o metodo Parar()
+            public override void Parar()
+            {
+                Console.WriteLine("Parando a aeronave");
+            }
         }
     }
-}
-~~~
+    ~~~
 
-## Polimorfismo com Sobrecarga de Métodos
+    - Arquivo: Program.cs
+    ~~~csharp
+    using System;
 
-- Arquivo: Program.cs
-
-~~~csharp
-using System;
-
-namespace MyApplication
-{
-    class Program
+    namespace MyApplication
     {
-        static int Soma(int x, int y)
+        class Program
         {
-            return x + y;
-        }
+            static void Main(string[] args)
+            {
+                Veiculo[] veiculos = new Veiculo[2];
 
-        static double Soma(double x, double y)
-        {
-            return x + y;
-        }
+                veiculos[0] = new Automovel("Ferrari");
+                veiculos[1] = new Aeronave("A29 Super Tucano");
 
-        static void Main(string[] args)
-        {
-            int myInt = Soma(1, 1);
-            double myDouble = Soma(1.2, 1.3);
+                veiculos[0].Mover();
+                veiculos[1].Mover();
+            }
         }
     }
-}
-~~~
+    ~~~
+
+- Polimorfismo com Sobrecarga de Métodos
+    - Arquivo: Program.cs
+    ~~~csharp
+    using System;
+
+    namespace MyApplication
+    {
+        class Program
+        {
+            static int Soma(int x, int y)
+            {
+                return x + y;
+            }
+
+            static double Soma(double x, double y)
+            {
+                return x + y;
+            }
+
+            static void Main(string[] args)
+            {
+                int myInt = Soma(1, 1);
+                double myDouble = Soma(1.2, 1.3);
+            }
+        }
+    }
+    ~~~

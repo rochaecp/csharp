@@ -2,8 +2,10 @@
 
 - Introdução
     - [CLI](estudos/cli.md)
-    - [Tipos de Dados](estudos/tipos.md)
-    - [Variáveis e Constantes](estudos/variaveis-constantes.md)
+    - [Conceitos Gerais](estudos/conceitos.md)
+    - [Regions](estudos/region.md)
+    - [Comentários](estudos\comentarios.md)
+    - [Variáveis, Constantes e Tipos](estudos/variaveis-const-tipos.md)
     - [Operadores](estudos/operadores.md)
     - [Casting](estudos/casting.md)
     - [Inputs e outputs pelo console](estudos/console.md)
