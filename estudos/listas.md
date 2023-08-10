@@ -1,80 +1,54 @@
 # C# - Listas
 
-- Namespace: System.Collections.Generic - ``` using System.Collections.Generic; ```
+- Criar
+    ~~~csharp
+    List<int> myIntList = new List<int>(); // Namespace: System.Collections.Generic
+    List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
+    ~~~
 
-## Criação
+- Incluir
+    ~~~csharp
+    myIntList.Add(10);
+    ~~~
 
-~~~csharp
-List<int> myIntList = new List<int>();
-List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
-~~~
+- Remover
+    ~~~csharp
+    myBool = myIntList.Remove(0); // Primeiro Elemento
+    ~~~
 
-## Inclusão
+- Indexar
+    ~~~csharp
+    myInt = myIntList[0];
+    ~~~
 
-~~~csharp
-myIntList.Add(10);
-~~~
+    ~~~csharp
+    for (int i = 0; i < myIntList.Count; i++)
+        Console.WriteLine(myIntList[i]);
+    ~~~
 
-## Remoção
+    ~~~csharp
+    foreach (int myInt in myIntList)
+        Console.WriteLine(myInt);
+    ~~~  
 
-### Primeiro Elemento
+    ~~~csharp
+    myIntList.ForEach(delegate (int myInt)
+    {
+        Console.WriteLine(myInt);
+    });
+    ~~~
 
-~~~csharp
-myBool = myIntList.Remove(0);
-~~~
+- Count
+    ~~~csharp
+    myInt = myIntList.Count;
+    ~~~
 
-## Acesso
+- Sort()
+    ~~~csharp
+    myIntList.Sort();
+    ~~~
 
-### Um elemento
-
-~~~csharp
-myInt = myIntList[0];
-~~~
-
-### Todos Elementos - For
-
-~~~csharp
-for (int i = 0; i < myIntList.Count; i++)
-    Console.WriteLine(myIntList[i]);
-~~~
-
-### Todos Elementos - Foreach
-
-~~~csharp
-foreach (int myInt in myIntList)
-    Console.WriteLine(myInt);
-~~~  
-
-### Todos Elementos - Foreach        
-
-~~~csharp
-myIntList.ForEach(delegate (int myInt)
-{
-    Console.WriteLine(myInt);
-});
-~~~
-
-## Propriedades
-
-### Count
-
-~~~csharp
-myInt = myIntList.Count;
-~~~
-
-
-## Métodos
-
-### Sort()
-
-~~~csharp
-myIntList.Sort();
-~~~
-
-## Exemplos
-
-### Covertendo listas em arrays
-
-~~~csharp
-int[] meuArray = minhaLista.ToArray();
-~~~
+- Coverter listas em arrays
+    ~~~csharp
+    int[] meuArray = minhaLista.ToArray();
+    ~~~

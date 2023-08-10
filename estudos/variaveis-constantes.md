@@ -1,11 +1,8 @@
 # C# - Variáveis e constantes
 
-## Variáveis
+- Variáveis
 
-## Constantes
-
-#### Criar uma constante
-
-~~~csharp
-const int myConst = 10;
-~~~
+- Constantes
+    ~~~csharp
+    const int myConst = 10;
+    ~~~

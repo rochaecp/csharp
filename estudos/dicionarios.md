@@ -1,94 +1,65 @@
 # C# - Dicionários
 
-- Namespace: System.Collections.Generic - ``` using System.Collections.Generic; ```
+- Criar
+    ~~~csharp
+    Dictionary<string, string> myDict = new Dictionary<string, string>() // String, String
+    {
+        { "txt", "notepad" },
+        { "bmp", "paint" },
+        { "svg", "inkscape"}
+    };    
+    ~~~  
 
-## Criação
+    ~~~csharp
+    Dictionary<int, string> myDict2 = new Dictionary<int, string>() // Int, String
+    {
+        { 1, "Maurício" },
+        { 2, "Maria" },
+        { 3, "Joana"}
+    };    
+    ~~~
 
-### String, String
+- Incluir
+    ~~~csharp
+    myDict.Add("dwg", "autocad"); // String, String
+    ~~~
 
-~~~csharp
-Dictionary<string, string> myDict = new Dictionary<string, string>()
-{
-    { "txt", "notepad" },
-    { "bmp", "paint" },
-    { "svg", "inkscape"}
-};    
-~~~  
+    ~~~csharp
+    myDict2.Add(4, "Bernadete"); // Int, String
+    ~~~
 
-### Int, String
+- Remover
+    ~~~csharp
+    myDict.Remove("dwg"); // String, String - Pela Chave
+    ~~~
 
-~~~csharp
-Dictionary<int, string> myDict2 = new Dictionary<int, string>()
-{
-    { 1, "Maurício" },
-    { 2, "Maria" },
-    { 3, "Joana"}
-};    
-~~~
+- Indexar
+    ~~~csharp
+    myStr = myDict["txt"];
+    myStr2 = myDict2[1]; 
+    ~~~
 
-## Inclusão
+    ~~~csharp
+    for (int i = 0; i < myDict.Count; i++)
+        Console.WriteLine(myDict.Keys.ElementAt(i));
+    ~~~
 
-### String, String
+    ~~~csharp
+    for (int i = 0; i < myDict.Count; i++)
+        Console.WriteLine(myDict[myDict.Keys.ElementAt(i)]);        
+    ~~~
 
-~~~csharp
-myDict.Add("dwg", "autocad");
-~~~
+- Count
+    ~~~csharp
+    myInt = myDict.Count;
+    ~~~
 
-### Int, String
+- Keys.Contains
+    ~~~csharp
+    myBool = myDict.Keys.Contains("txt");
+    ~~~
 
-~~~csharp
-myDict2.Add(4, "Bernadete");
-~~~
-
-## Remoção
-
-### String, String - Pela Chave
-
-~~~csharp
-myDict.Remove("dwg");
-~~~
-
-## Acesso
-
-### Um Valor
-
-~~~csharp
-myStr = myDict["txt"];
-myStr2 = myDict2[1]; 
-~~~
-
-### Todas as Chaves
-
-~~~csharp
-for (int i = 0; i < myDict.Count; i++)
-    Console.WriteLine(myDict.Keys.ElementAt(i));
-~~~
-
-### Todos os Valores        
-
-~~~csharp
-for (int i = 0; i < myDict.Count; i++)
-    Console.WriteLine(myDict[myDict.Keys.ElementAt(i)]);        
-~~~
-
-## Propriedades
-
-### Count
-
-~~~csharp
-myInt = myDict.Count;
-~~~
-
-## Métodos
-
-### Keys.Contains
-
-~~~csharp
-myBool = myDict.Keys.Contains("txt");
-~~~
-
-### Values.Contains
-
-~~~csharp
-myBool = myDict.Values.Contains("notepad");
-~~~
+- Values.Contains
+    ~~~csharp
+    myBool = myDict.Values.Contains("notepad");
+    ~~~

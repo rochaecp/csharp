@@ -12,9 +12,9 @@
     - [Gerar Números Aleatórios](estudos/random.md)
     - [Datas](estudos/datas.md)
 - Comandos Condicionais e de Repetição
-    - [If .. Else](estudos/if-else.md)
+    - [If ... Else](estudos/if-else.md)
     - [Switch](estudos/switch.md)
-    - [While e Do .. While](estudos/while.md)
+    - [While e Do ... While](estudos/while.md)
     - [For e Foreach](estudos/for-foreach.md)
     - [Break e Continue em comandos de repetição](estudos/break-continue.md)
 - Estruturas de Dados
