@@ -10,30 +10,33 @@ dotnet new --help
 dotnet new console --help     
 ~~~
 
-- Criar aplicação console
-    ~~~bash
-    dotnet new console -n meuPrimeiroProjeto 
-    ~~~
+#### Criar aplicação console
+    
+~~~bash
+dotnet new console -n meuPrimeiroProjeto 
+~~~
 
-    ~~~bash
-    dotnet new console # usa nome do dir pai
+~~~bash
+dotnet new console # usa nome do dir pai
 
-    dotnet restore 
-    ~~~
+dotnet restore 
+~~~
 
-- Compilar
-    ~~~bash
-    dotnet build 
-    ~~~
+#### Compilar
 
-- Rodar    
-    ~~~bash
-    dotnet run 
-    ~~~
+~~~bash
+dotnet build 
+~~~
+
+#### Rodar    
+
+~~~bash
+dotnet run 
+~~~
 
 ## Exemplos completos
 
-- Criando aplicação de console
+#### Criar uma aplicação de console
 
 ~~~bash
 # jeito 1
@@ -44,19 +47,19 @@ dotnet new console
 dotnet new console -n nomeProjeto
 ~~~
 
-- Criando solution com api
+#### Criar uma solution com api
 
 ~~~bash
-## criando uma solução
+## criar uma solução
 dotnet new sln
 
-## criando um projeto de testes
+## criar um projeto de testes
 dotnet new xunit -n minhaapi.tests -o tests/minhaapi.tests
 
-## adiciona a api a solution
+## adicionar a api a solution
 dotnet sln add src/minhaapi/
 dotnet sln add tests/minhaapi.tests/
 
-## adiciona referencia dos testes à api
+## adicionar referencia dos testes à api
 dotnet add tests/minhaapi.tests/ reference src/minhaapi/
 ~~~
