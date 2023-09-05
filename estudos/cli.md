@@ -1,29 +1,39 @@
 # .NET - Command-Line Interface (CLI) 
 
-~~~bash
-# geral
-dotnet --version
-dotnet --help 
-dotnet --info
+- Rodar
+    ~~~bash
+    dotnet --version
+    dotnet --help 
+    dotnet --info
+    ~~~
 
-# help
-dotnet new --help 
-dotnet new console --help 
+- Help    
+    ~~~bash
+    dotnet new --help 
+    dotnet new console --help 
+    ~~~
 
-# criando apps console
-dotnet new console -n meuPrimeiroProjeto 
+- Criar aplicação console
+    ~~~bash
+    dotnet new console -n meuPrimeiroProjeto 
+    ~~~
 
-# criando apps console - outra forma
-dotnet new console # usa nome do dir pai
+    ~~~bash
+    # criando apps console - outra forma
+    dotnet new console # usa nome do dir pai
 
-dotnet restore 
+    dotnet restore 
+    ~~~
 
-# compilando
-dotnet build 
+- Compilar
+    ~~~bash
+    dotnet build 
+    ~~~
 
-# rodando
-dotnet run 
-~~~
+- Rodar    
+    ~~~bash
+    dotnet run 
+    ~~~
 
 ## Exemplos completos
 
