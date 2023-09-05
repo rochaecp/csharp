@@ -4,7 +4,7 @@
     - [CLI](estudos/cli.md)
     - [Conceitos Gerais](estudos/conceitos.md)
     - [Regions](estudos/region.md)
-    - [Comentários](estudos\comentarios.md)
+    - [Comentários](estudos/comentarios.md)
     - [Variáveis, Constantes e Tipos](estudos/variaveis-const-tipos.md)
     - [Operadores](estudos/operadores.md)
     - [Casting](estudos/casting.md)

@@ -1,6 +1,6 @@
 # .NET Regions
 
-    Úteis para organizar o código.
+- Úteis para organizar o código.
 
 ~~~csharp
 #region Nome da Minha Region

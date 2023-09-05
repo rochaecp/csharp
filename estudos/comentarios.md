@@ -1,10 +1,16 @@
 # C# - Comentários
 
-~~~csharp
-// Uma linha
+#### Uma linha
 
+~~~csharp
+// Comentário
+~~~
+
+#### Múltiplas linhas
+
+~~~csharp
 /*
-    Múltiplas
-    Linhas
+Comentário
+Comentário
 */
 ~~~

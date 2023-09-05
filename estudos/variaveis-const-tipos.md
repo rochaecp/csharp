@@ -1,52 +1,59 @@
 # C# - Variáveis, constantes e tipos
 
-- Variáveis
-    - C# é estaticamente e fortemente tipado.
+#### Variáveis
 
-- Tipos
-    - Strings
-        - 2 bytes por caractere
-        - são imutáveis
+- C# é estaticamente e fortemente tipado.
 
-- Modificadores Literais
-    - int: 0
-    - uint: 0U
-    - long: 0L
-    - ulong: 0UL
-    - float: 0F
-    - double: 0D
-    - decimal: 0M
+#### Tipos
+    
+- Strings
+    - 2 bytes por caractere
+    - são imutáveis
 
-    ~~~csharp
-    var x = 120F; 
-    ~~~
+#### Modificadores Literais
+    
+- int: 0
+- uint: 0U
+- long: 0L
+- ulong: 0UL
+- float: 0F
+- double: 0D
+- decimal: 0M
 
-- Inferência de tipos
-    - É necessário inicializar na declaração
-    ~~~csharp
-    var idade = 31; // funciona
+~~~csharp
+var x = 120F; 
+~~~
 
-    var idade2; // não funciona
-    idade2 = 31;
-    ~~~    
+#### Inferência de tipos
 
-- Inicialização com valor default (operador default)
-    ~~~csharp
-    int a = default(int); 
-    int b = default; // outra forma
-    ~~~
+- É necessário inicializar na declaração
+~~~csharp
+var idade = 31; // funciona
 
-- Constantes
-    - Precisam ser inicializadas
-    ~~~csharp
-    const int myConst = 10;
-    const var minhaConstante = 10; // erro: não aceita inferência de tipos
-    ~~~   
+var idade2; // não funciona
+idade2 = 31;
+~~~    
 
-- sizeof
-    ~~~csharp
-    int tamanho = sizeof(byte)
-    ~~~    
+#### Inicialização com valor default (operador default)
+
+~~~csharp
+int a = default(int); 
+int b = default; // outra forma
+~~~
+
+#### Constantes
+
+- Precisam ser inicializadas
+~~~csharp
+const int myConst = 10;
+const var minhaConstante = 10; // erro: não aceita inferência de tipos
+~~~   
+
+#### sizeof
+
+~~~csharp
+int tamanho = sizeof(byte)
+~~~    
 
 # Old
 
