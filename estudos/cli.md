@@ -1,17 +1,14 @@
 # .NET - Command-Line Interface (CLI) 
 
-- Rodar
-    ~~~bash
-    dotnet --version
-    dotnet --help 
-    dotnet --info
-    ~~~
+#### Diversos
 
-- Help    
-    ~~~bash
-    dotnet new --help 
-    dotnet new console --help 
-    ~~~
+~~~bash
+dotnet --version
+dotnet --help 
+dotnet --info
+dotnet new --help 
+dotnet new console --help     
+~~~
 
 - Criar aplicação console
     ~~~bash
@@ -19,7 +16,6 @@
     ~~~
 
     ~~~bash
-    # criando apps console - outra forma
     dotnet new console # usa nome do dir pai
 
     dotnet restore 
