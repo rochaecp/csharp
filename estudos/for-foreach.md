@@ -1,13 +1,13 @@
 # C# - For e Foreach
 
-#### For
+## For
 
 ~~~csharp
 for (int i = 0; i < 5; i++)
     Console.WriteLine(i);
 ~~~
 
-#### Foreach
+## Foreach
 
 ~~~csharp
 string[] cores = { "Vermelho", "Azul", "Amarelo", "Verde" };

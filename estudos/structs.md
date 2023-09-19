@@ -3,9 +3,7 @@
 - Structs são alocadas na pilha
 - Structs não permitem herança.
 
-## Exemplos
-
-#### Struct em um arquivo
+## Struct em um arquivo
 
 ~~~csharp
 // Arquivo: Point.cs

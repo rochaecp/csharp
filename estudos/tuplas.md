@@ -1,19 +1,19 @@
 # C# - Tuplas
 
-#### Criar
+## Criar
 
 ~~~csharp
 (int, string) myTuple = (10, "Maurício"); // Int, String
 ~~~
 
-#### Indexar  
+## Indexar  
 
 ~~~csharp
 myInt = myTuple.Item1; // Int, String
 myString = myTuple.Item2;
 ~~~    
 
-#### Alterar  
+## Alterar  
 
 ~~~csharp
 myTuple.Item1 = 1; // Int, String

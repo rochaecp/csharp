@@ -1,6 +1,6 @@
 # C# - Console  
 
-#### Console.Read()
+## Console.Read()
 
 - Ler o próximo caractere
 
@@ -9,7 +9,7 @@ int myInt = Console.Read(); // le o cvalor ASCII do primeiro caracatere
 char myChar = (char)Console.Read();
 ~~~
 
-#### Console.ReadLine()
+## Console.ReadLine()
 
 - Ler a próxima linha
 
@@ -19,14 +19,14 @@ int myInt = Convert.ToInt32(Console.ReadLine());
 int numero = Int32.Parse(Console.ReadLine()); // evitar: nem toda entrada poderá ser convertida
 ~~~
 
-#### Console.Write()
+## Console.Write()
 
 - Escrever sem quebrar a linha
 ~~~csharp
 Console.Write("Olá Mundo");
 ~~~
 
-#### Console.WriteLine()
+## Console.WriteLine()
 
 - Escrever quebrando a linha
 

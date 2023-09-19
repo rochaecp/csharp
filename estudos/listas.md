@@ -1,25 +1,25 @@
 # C# - Listas
 
-#### Criar
+## Criar
 
 ~~~csharp
 List<int> myIntList = new List<int>(); // Namespace: System.Collections.Generic
 List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
 ~~~
 
-#### Incluir
+## Incluir
 
 ~~~csharp
 myIntList.Add(10);
 ~~~
 
-#### Remover
+## Remover
 
 ~~~csharp
 myBool = myIntList.Remove(0); // Primeiro Elemento
 ~~~
 
-#### Indexar
+## Indexar
 
 ~~~csharp
 myInt = myIntList[0];
@@ -42,19 +42,19 @@ myIntList.ForEach(delegate (int myInt)
 });
 ~~~
 
-#### Count
+## Count
 
 ~~~csharp
 myInt = myIntList.Count;
 ~~~
 
-#### Sort()
+## Sort()
 
 ~~~csharp
 myIntList.Sort();
 ~~~
 
-#### Coverter listas em arrays
+## Coverter listas em arrays
 
 ~~~csharp
 int[] meuArray = minhaLista.ToArray();

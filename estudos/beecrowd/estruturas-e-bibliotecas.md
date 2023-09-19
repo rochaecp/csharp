@@ -1,6 +1,6 @@
 # C# - Soluções Beecrowd
 
-#### 1022
+## 1022
 
 ~~~csharp
 /*
@@ -78,7 +78,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1023 - nível 10 de dificuldade
+## 1023 - nível 10 de dificuldade
 
 ~~~csharp
 /* 

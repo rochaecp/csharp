@@ -1,6 +1,6 @@
 # C# - Break e Continue
 
-#### Break
+## Break
 
 ~~~csharp
 for (int i = 0; i < 10; i++)
@@ -11,7 +11,7 @@ Console.WriteLine(i);
 }
 ~~~
 
-#### Continue 
+## Continue 
 
 ~~~csharp
 for (int i = 0; i < 10; i++) 

@@ -1,10 +1,10 @@
 # Conceitos Gerais
 
-#### Solution
+## Solution
 
 - Container para um ou mais projetos relacionados
 
-#### Tipos de Projeto
+## Tipos de Projeto
 
 - Console Application
 - Windows Forms Application
@@ -15,7 +15,7 @@
     - Não é executável
     - Pode ser utilizada em vários projetos
 
-#### Projetos
+## Projetos
 
 - Dentro de um projeto há itens de projeto:
     - Classes

@@ -1,6 +1,6 @@
 # C# - Dicionários
 
-#### Criar
+## Criar
 
 ~~~csharp
 Dictionary<string, string> myDict = new Dictionary<string, string>() // String, String
@@ -20,7 +20,7 @@ Dictionary<int, string> myDict2 = new Dictionary<int, string>() // Int, String
 };    
 ~~~
 
-#### Incluir
+## Incluir
 
 ~~~csharp
 myDict.Add("dwg", "autocad"); // String, String
@@ -30,13 +30,13 @@ myDict.Add("dwg", "autocad"); // String, String
 myDict2.Add(4, "Bernadete"); // Int, String
 ~~~
 
-#### Remover
+## Remover
 
 ~~~csharp
 myDict.Remove("dwg"); // String, String - Pela Chave
 ~~~
 
-#### Indexar
+## Indexar
 
 ~~~csharp
 myStr = myDict["txt"];
@@ -53,19 +53,19 @@ for (int i = 0; i < myDict.Count; i++)
     Console.WriteLine(myDict[myDict.Keys.ElementAt(i)]);        
 ~~~
 
-#### Count
+## Count
 
 ~~~csharp
 myInt = myDict.Count;
 ~~~
 
-#### Keys.Contains
+## Keys.Contains
 
 ~~~csharp
 myBool = myDict.Keys.Contains("txt");
 ~~~
 
-#### Values.Contains
+## Values.Contains
 
 ~~~csharp
 myBool = myDict.Values.Contains("notepad");

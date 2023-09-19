@@ -1,6 +1,6 @@
 # C#
 
-#### Introdução
+## Introdução
 
 - [CLI](estudos/cli.md)
 - [Conceitos Gerais](estudos/conceitos.md)
@@ -15,7 +15,7 @@
 - [Gerar Números Aleatórios](estudos/random.md)
 - [Datas](estudos/datas.md)
 
-#### Comandos Condicionais e de Repetição
+## Comandos Condicionais e de Repetição
 
 - [If ... Else](estudos/if-else.md)
 - [Switch](estudos/switch.md)
@@ -23,7 +23,7 @@
 - [For e Foreach](estudos/for-foreach.md)
 - [Break e Continue em comandos de repetição](estudos/break-continue.md)
 
-#### Estruturas de Dados
+## Estruturas de Dados
 
 - [Arrays](estudos/arrays.md)
 - [Structs](estudos/structs.md)
@@ -32,7 +32,7 @@
 - [Dicionários](estudos/dicionarios.md)
 - [Tuplas](estudos/tuplas.md)
 
-#### Outros
+## Outros
 
 - [Exceções](estudos/excecoes.md)
 - [Arquivos](estudos/arquivos.md)
@@ -41,7 +41,7 @@
 - [Regex](estudos/regex.md)
 - [Delegates](estudos/delegates.md)
 
-#### POO
+## POO
 
 - [Modificadores de Acesso](estudos/modificadores-acesso.md)
 - [Classes e Objetos](estudos/classes-objetos.md)
@@ -53,12 +53,12 @@
 - [Interfaces](estudos/interfaces.md)
 - [Classes, Atributos e Métodos Static](estudos/atributos-metodos-static.md)
 
-#### Exemplos
+## Exemplos
 
 - [Olá Mundo](estudos/ola-mundo.md)
 - [Cadastro de Séries](estudos/ex-cadastro-series.md)
 
-#### Exercícios - Beecrowd
+## Exercícios - Beecrowd
 
 - [Lendo uma entrada](estudos/beecrowd/lendo-entradas.md)
 - [Iniciante - 1000 a 1050](estudos/beecrowd/iniciante-1000-1050.md)

@@ -1,6 +1,6 @@
 # C# - Soluções Beecrowd
 
-#### 1000 - Hello World!
+## 1000 - Hello World!
 
 ~~~csharp
 using System;
@@ -17,7 +17,7 @@ namespace treinoUri
 }
 ~~~
 
-#### 1001 - Extremamente Básico
+## 1001 - Extremamente Básico
 
 ~~~csharp 
 using System;
@@ -42,7 +42,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1002 - Área do Círculo
+## 1002 - Área do Círculo
 
 ~~~csharp
 using System;
@@ -72,7 +72,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1003 - Soma Simples
+## 1003 - Soma Simples
 
 ~~~csharp
 using System;
@@ -98,7 +98,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1004 - Produto Simples
+## 1004 - Produto Simples
 
 ~~~csharp
 using System;
@@ -121,7 +121,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1005 - Média 1
+## 1005 - Média 1
 
 ~~~csharp
 using System;
@@ -146,7 +146,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1006 - Média 2
+## 1006 - Média 2
 
 ~~~csharp
 using System;
@@ -173,7 +173,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1007 - Diferença 
+## 1007 - Diferença 
 
 ~~~csharp
 using System;
@@ -199,7 +199,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1008 - Salário 
+## 1008 - Salário 
 
 ~~~csharp
 using System;
@@ -231,7 +231,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1009 - Salário com Bônus 
+## 1009 - Salário com Bônus 
 
 ~~~csharp
 using System;
@@ -263,7 +263,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1010 - Cálculo simples
+## 1010 - Cálculo simples
 
 ~~~csharp
 /*
@@ -314,7 +314,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1011 - Esfera
+## 1011 - Esfera
 
 ~~~csharp
 using System;
@@ -339,7 +339,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1012 - Área 
+## 1012 - Área 
 
 ~~~csharp
 using System;
@@ -388,7 +388,7 @@ namespace beecrowd
 }
 ~~~
 
-#### 1013 - O Maior
+## 1013 - O Maior
 
 ~~~csharp
 using System;
@@ -427,7 +427,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1014 - Consumo
+## 1014 - Consumo
 
 ~~~csharp
 using System;
@@ -456,7 +456,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1015 - Distância entre dois pontos
+## 1015 - Distância entre dois pontos
 
 ~~~csharp
 /*
@@ -499,7 +499,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1016 - Distância 
+## 1016 - Distância 
 
 ~~~csharp
 using System;
@@ -517,7 +517,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1017 - Gasto de Combustível
+## 1017 - Gasto de Combustível
 
 ~~~csharp
 using System;
@@ -548,7 +548,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1018 - Cédulas (solução 1)
+## 1018 - Cédulas (solução 1)
 
 ~~~csharp
 using System;
@@ -593,7 +593,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1018 - Cédulas (solução 2 - com dicionários)
+## 1018 - Cédulas (solução 2 - com dicionários)
 
 ~~~csharp
 /*
@@ -659,7 +659,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1019 - Conversão de Tempo
+## 1019 - Conversão de Tempo
 
 ~~~csharp
 using System;
@@ -692,7 +692,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1020 - Idade em dias
+## 1020 - Idade em dias
 
 ~~~csharp
 using System;
@@ -723,7 +723,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1021 - Notas e moedas
+## 1021 - Notas e moedas
 
 ~~~csharp
 using System;
@@ -764,7 +764,7 @@ namespace TreinosBeecrowd
 }
 ~~~
 
-#### 1035 - Teste de Seleção 1
+## 1035 - Teste de Seleção 1
 
 ~~~csharp
 using System;
@@ -796,7 +796,7 @@ namespace ConsoleApp
 }
 ~~~
 
-#### 1036 - Fórmula de Bhaskara
+## 1036 - Fórmula de Bhaskara
 
 ~~~csharp
 using System;
@@ -829,7 +829,7 @@ namespace ConsoleApp
 }
 ~~~
 
-#### 1037 - Intervalo
+## 1037 - Intervalo
 
 ~~~csharp
 using System;
@@ -863,7 +863,7 @@ namespace ConsoleApp
 }
 ~~~
 
-#### 1038 - Lanche (solução com dicionários)
+## 1038 - Lanche (solução com dicionários)
 
 ~~~csharp
 using System;
@@ -898,7 +898,7 @@ namespace ConsoleApp
 }
 ~~~
 
-#### 1040 - Média 3
+## 1040 - Média 3
 
 ~~~csharp
 using System;
@@ -949,7 +949,7 @@ namespace ConsoleApp
 }
 ~~~
 
-#### 1041 - Coordenadas de um Ponto
+## 1041 - Coordenadas de um Ponto
 
 ~~~csharp
 using System;
@@ -985,55 +985,55 @@ namespace ConsoleApp
 }
 ~~~
 
-#### 1042 - Sort Simples
+## 1042 - Sort Simples
 
 ~~~csharp
 
 ~~~
 
-#### 1043 - Triângulo
+## 1043 - Triângulo
 
 ~~~csharp
 
 ~~~
 
-#### 1044 - Múltiplos
+## 1044 - Múltiplos
 
 ~~~csharp
 
 ~~~
 
-#### 1045 - Tipos de Triângulos
+## 1045 - Tipos de Triângulos
 
 ~~~csharp
 
 ~~~
 
-#### 1046 - Tempo de Jogo
+## 1046 - Tempo de Jogo
 
 ~~~csharp
 
 ~~~
 
-#### 1047 - Tempo de Jogo com Minutos
+## 1047 - Tempo de Jogo com Minutos
 
 ~~~csharp
 
 ~~~
 
-#### 1048 - Aumento de Salário
+## 1048 - Aumento de Salário
 
 ~~~csharp
 
 ~~~
 
-#### 1049 - Animal
+## 1049 - Animal
 
 ~~~csharp
 
 ~~~
 
-#### 1050 - DDD
+## 1050 - DDD
 
 ~~~csharp
 

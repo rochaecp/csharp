@@ -4,9 +4,7 @@
 - Por padrão o primeiro elemento da enum tem valor 0, o segundo tem valor 1 e etc.  
 - Para obter o valor inteiro da enum é necessário realizar uma conversão explícita para int.  
 
-## Exemplos
-
-#### Enum em arquivo
+## Enum em arquivo
 
 ~~~csharp
 // Arquivo Level.cs

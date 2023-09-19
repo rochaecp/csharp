@@ -1,6 +1,6 @@
 # C# - Casting
 
-#### Casting Implícito
+## Casting Implícito
 
 - Ocorre automaticamente.  
 - Converte um "tipo menor" em um "tipo maior":
@@ -14,7 +14,7 @@ double myDouble = 10D;
 myDouble = myInt;
 ~~~
 
-#### Casting Explícito
+## Casting Explícito
 
 - Ocorre de modo manual.  
 - Converte um "tipo maior" em um "tipo menor":
@@ -28,7 +28,7 @@ double myDouble = 10D;
 myInt = (int)myDouble;
 ~~~
 
-#### Converter para strings - ToString():
+## Converter para strings - ToString():
 
 ~~~csharp
 myStr = myDouble.ToString();
@@ -37,7 +37,7 @@ myStr = myLong.ToString();
 myStr = myBool.ToString();
 ~~~
 
-#### Convert()
+## Convert()
 
 ~~~csharp 
 myString = Convert.ToString(myInt);
@@ -47,7 +47,7 @@ myLong = Convert.ToInt64(myDouble);
 myBool = Convert.ToBoolean(myInt);
 ~~~
 
-#### Parse()
+## Parse()
 
 ~~~csharp
 myDouble = Double.Parse(myString);
@@ -55,7 +55,7 @@ myInt = Int32.Parse(myString);
 myLong = Int64.Parse(myString);    
 ~~~
 
-#### TryParse()
+## TryParse()
 
 ~~~csharp
 float notaAluno = 0F;

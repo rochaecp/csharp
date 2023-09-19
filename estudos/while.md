@@ -1,6 +1,6 @@
 # C# - While e Do .. While
 
-#### While
+## While
 
 ~~~csharp
 i = 0;
@@ -11,7 +11,7 @@ while (i < 5)
 }
 ~~~
 
-#### Do ... While
+## Do ... While
 
 ~~~csharp
 i = 0;

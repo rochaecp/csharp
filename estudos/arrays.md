@@ -1,8 +1,6 @@
-# C# - Arrays
+# C# - Arrays Unidimensionais
 
-## Arrays Unidimensionais
-
-#### Criar
+## Criar
 
 ~~~csharp
 int[] myIntArr = new int[3];
@@ -24,7 +22,7 @@ string[] myStrArr5;
 myStrArr5 = new string[3] { "aaa", "bbb", "ccc" };
 ~~~
 
-#### Indexar
+## Indexar
 
 ~~~csharp
 myItemStr = myStrArr[0]; // Um elemento
@@ -40,73 +38,73 @@ foreach (string i in myArrayString2) // Todos elementos
     Console.WriteLine(i);   
 ~~~
 
-#### Alterar
+## Alterar
 
 ~~~csharp
 myStrArr[0] = "Mauricio";
 ~~~
 
-#### Length
+## Length
 
 ~~~csharp
 myInt = myStrArr.Length;
 ~~~
 
-#### Array.Sort()
+## Array.Sort()
 
 ~~~csharp
 Array.Sort(myStrArr);
 ~~~
 
-#### Max()
+## Max()
 
 ~~~csharp
 myInt = myIntArr.Max(); // Namespace: System.Linq
 ~~~        
 
-#### Min()
+## Min()
 
 ~~~csharp
 myInt = myIntArr.Min(); // // Namespace: System.Linq
 ~~~        
 
-#### Sum()
+## Sum()
 
 ~~~csharp
 myInt = myIntArr.Sum(); // // Namespace: System.Linq
 ~~~ 
 
-#### Coverter String em Array de Char
+## Coverter String em Array de Char
 
 ~~~csharp
 string myStr = "This is String example";
 char[] myCharArr = myStr.ToCharArray();        
 ~~~
 
-#### Converter Array de Char em String
+## Converter Array de Char em String
 
 ~~~csharp
 myStr = string.Join("", myCharArr);    
 ~~~
 
-## Arrays Bidimensionais
+# C# - Arrays Bidimensionais
 
-#### Criar
+## Criar
 
 ~~~csharp
 int [,] myIntArr = new int [3, 2];
 int [,] myIntArr2 = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
 ~~~
 
-#### Indexar
+## Indexar
 
 ~~~csharp
 myItemStr = myStrArr[0, 0];
 ~~~        
 
-## Arrays Tridimensionais
+# C# - Arrays Tridimensionais
 
-#### Criar
+## Criar
 
 ~~~csharp
 int [, ,] myIntArr = new int [3, 2, 4];

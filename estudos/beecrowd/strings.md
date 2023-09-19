@@ -1,6 +1,6 @@
 # C# - Soluções Beecrowd
 
-#### 1024 - Criptografia
+## 1024 - Criptografia
 
 ~~~csharp
 using System.Linq;

@@ -1,16 +1,16 @@
 # C# - Variáveis, constantes e tipos
 
-#### Variáveis
+## Variáveis
 
 - C# é estaticamente e fortemente tipado.
 
-#### Tipos
+## Tipos
     
 - Strings
     - 2 bytes por caractere
     - são imutáveis
 
-#### Modificadores Literais
+## Modificadores Literais
     
 - int: 0
 - uint: 0U
@@ -24,7 +24,7 @@
 var x = 120F; 
 ~~~
 
-#### Inferência de tipos
+## Inferência de tipos
 
 - É necessário inicializar na declaração
 ~~~csharp
@@ -34,14 +34,14 @@ var idade2; // não funciona
 idade2 = 31;
 ~~~    
 
-#### Inicialização com valor default (operador default)
+## Inicialização com valor default (operador default)
 
 ~~~csharp
 int a = default(int); 
 int b = default; // outra forma
 ~~~
 
-#### Constantes
+## Constantes
 
 - Precisam ser inicializadas
 ~~~csharp
@@ -49,7 +49,7 @@ const int myConst = 10;
 const var minhaConstante = 10; // erro: não aceita inferência de tipos
 ~~~   
 
-#### sizeof
+## sizeof
 
 ~~~csharp
 int tamanho = sizeof(byte)

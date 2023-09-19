@@ -1,6 +1,6 @@
 # .NET - Command-Line Interface (CLI) 
 
-#### Diversos
+## Diversos
 
 ~~~bash
 dotnet --version
@@ -10,7 +10,7 @@ dotnet new --help
 dotnet new console --help     
 ~~~
 
-#### Criar aplicação console
+## Criar aplicação console
     
 ~~~bash
 dotnet new console -n meuPrimeiroProjeto 
@@ -22,13 +22,13 @@ dotnet new console # usa nome do dir pai
 dotnet restore 
 ~~~
 
-#### Compilar
+## Compilar
 
 ~~~bash
 dotnet build 
 ~~~
 
-#### Rodar    
+## Rodar    
 
 ~~~bash
 dotnet run 
@@ -36,7 +36,7 @@ dotnet run
 
 ## Exemplos completos
 
-#### Criar uma aplicação de console
+## Criar uma aplicação de console
 
 ~~~bash
 # jeito 1
@@ -47,7 +47,7 @@ dotnet new console
 dotnet new console -n nomeProjeto
 ~~~
 
-#### Criar uma solution com api
+## Criar uma solution com api
 
 ~~~bash
 ## criar uma solução

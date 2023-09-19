@@ -1,12 +1,12 @@
 # C# - Operadores
 
-#### Operador de Atribuição
+## Operador de Atribuição
 
 | Operador  | Nome do Operador  | Exemplo     |
 | :---:     | :---:             | :---:       |
 | ```=```   | Atribuição        |             |
 
-#### Operadores Aritméticos  
+## Operadores Aritméticos  
 
 | Operador  | Nome do Operador      | Exemplo   |
 | :---:     | :---:                 | :---:     |
@@ -18,7 +18,7 @@
 | ```++```  | Pré ou pós incremento |           |
 | ```--```  | Pré ou pós decremento |           |
  
-#### Operadores Aritméticos de Atribuição Reduzida (ou atribuição composta)  
+## Operadores Aritméticos de Atribuição Reduzida (ou atribuição composta)  
 
 | Operador  | Nome do Operador     | Exemplo    |
 | :---:     | :---:                | :---:      |
@@ -29,7 +29,7 @@
 | ```%=```  |                      |            |
 
   
-#### Operadores Relacionais
+## Operadores Relacionais
 
 | Operador  | Nome do Operador      | Exemplo   |
 | :---:     | :---:                 | :---:     |
@@ -40,7 +40,7 @@
 | ```>=```  |                       |           |
 | ```<=```  |                       |           |
 
-#### Operadores Lógicos
+## Operadores Lógicos
 
 | Operador  | Nome do Operador | Exemplo   |
 | :---:     | :---:            | :---:     |
@@ -48,7 +48,7 @@
 | ```\|\|```| OU lógico        |           | 
 | ```!```   | NÃO lógico       |           | 
 
-#### Operador Ternário
+## Operador Ternário
 
 ~~~csharp
 int a = 10
