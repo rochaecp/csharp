@@ -1,54 +1,55 @@
 # C# - Classes e Objetos
 
-    Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
-    Nomes de classe iniciam com letra maiúscula.
-    Classes possuem membros (campos/atributos, propriedades e métodos)
+- Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
+- Nomes de classe iniciam com letra maiúscula.
+- Classes possuem membros (campos/atributos, propriedades e métodos)
 
-- Criando uma Classe e Instanciando um Objeto a partir dela
-    - Arquivo: Carro.cs
-    ~~~csharp
-    using System;
+## Criando uma Classe e Instanciando um Objeto a partir dela
 
-    namespace MyApplication
+~~~csharp
+// Arquivo: Carro.cs
+using System;
+
+namespace MyApplication
+{
+    class Carro
     {
-        class Carro
-        {
-            // campo ou atributo
-            public string cor; 
+        // campo ou atributo
+        public string cor; 
 
-            // método construtor
-            public Carro(string cor)
-            { 
-                this.cor = cor;
-            }
+        // método construtor
+        public Carro(string cor)
+        { 
+            this.cor = cor;
+        }
 
-            // método construtor sobrecarregado
-            public Carro()
-            { 
-                this.cor = "azul";
-            }
+        // método construtor sobrecarregado
+        public Carro()
+        { 
+            this.cor = "azul";
+        }
 
-            // método
-            public void printCor()
-            { 
-                Console.WriteLine($"Cor = {cor}");
-            }
+        // método
+        public void printCor()
+        { 
+            Console.WriteLine($"Cor = {cor}");
         }
     }
-    ~~~
+}
+~~~
 
-    - Arquivo: Program.cs
-    ~~~csharp
-    using System;
-    namespace MyApplication
+~~~csharp
+// Arquivo: Program.cs
+using System;
+namespace MyApplication
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                Carro c = new Carro("vermelho");
-                c.printCor();
-            }
+            Carro c = new Carro("vermelho");
+            c.printCor();
         }
     }
-    ~~~ 
+}
+~~~ 

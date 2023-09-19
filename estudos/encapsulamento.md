@@ -1,82 +1,84 @@
 # C# - Encapsulamento
 
-    Encapsulamento:
-        É o processo de ocultar membros de uma classe do acesso exterior utilizando modificadores de acesso.
-    Propriedades:
-        Uma propriedade permite um acesso controlado a um campo.  
-        Se não definirmos o método set a propriedade será somente de leitura.
+Encapsulamento:
+    É o processo de ocultar membros de uma classe do acesso exterior utilizando modificadores de acesso.
+Propriedades:
+    Uma propriedade permite um acesso controlado a um campo.  
+    Se não definirmos o método set a propriedade será somente de leitura.
 
-- Criando uma classe com campos privados e propriedades públicas
-    - Arquivo: Retangulo.cs
-    ~~~csharp
-    using System;
+## Criando uma classe com campos privados e propriedades públicas
 
-    namespace MyApplication
+~~~csharp
+// Arquivo: Retangulo.cs
+using System;
+
+namespace MyApplication
+{
+    public class Retangulo
     {
-        public class Retangulo
+        // campos privados
+        private double largura;
+        private double comprimento;
+
+        // propriedade pública
+        public double Largura
         {
-            // campos privados
-            private double largura;
-            private double comprimento;
-
-            // propriedade pública
-            public double Largura
+            get { return largura; }
+            set
             {
-                get { return largura; }
-                set
-                {
-                    if (value < 0)
-                        throw new ArgumentException("Largura não pode ser menor do que zero");
-                    else
-                        largura = value;
-                }
+                if (value < 0)
+                    throw new ArgumentException("Largura não pode ser menor do que zero");
+                else
+                    largura = value;
             }
+        }
 
-            // propriedade pública
-            public double Comprimento
+        // propriedade pública
+        public double Comprimento
+        {
+            get { return comprimento; }
+            set
             {
-                get { return comprimento; }
-                set
-                {
-                    if (value < 0)
-                        throw new ArgumentException("Comprimento não pode ser menor do que zero");
-                    else
-                        comprimento = value;
-                }
+                if (value < 0)
+                    throw new ArgumentException("Comprimento não pode ser menor do que zero");
+                else
+                    comprimento = value;
             }
+        }
 
-            public double GetArea()
+        public double GetArea()
+        {
+            return largura * comprimento;
+        }
+    }
+}
+~~~
+
+
+~~~csharp
+// Arquivo: Program.cs
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var r = new Retangulo();
+
+            try
             {
-                return largura * comprimento;
+                r.Comprimento = Convert.ToDouble(Console.ReadLine());
+                r.Largura = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine($"Area = {r.GetArea()}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
-    ~~~
-
-    - Arquivo: Program.cs
-    ~~~csharp
-    using System;
-
-    namespace MyApplication
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var r = new Retangulo();
-
-                try
-                {
-                    r.Comprimento = Convert.ToDouble(Console.ReadLine());
-                    r.Largura = Convert.ToDouble(Console.ReadLine());
-
-                    Console.WriteLine($"Area = {r.GetArea()}");
-                }
-                catch (ArgumentException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-    }
-    ~~~
+}
+~~~
