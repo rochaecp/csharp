@@ -43,8 +43,8 @@
 
 ## POO
 
-- [Modificadores de Acesso](estudos/modificadores-acesso.md)
 - [Classes e Objetos](estudos/classes-objetos.md)
+- [Modificadores de Acesso](estudos/modificadores-acesso.md)
 - [Métodos](estudos/metodos.md)
 - [Encapsulamento](estudos/encapsulamento.md)
 - [Herança](estudos/heranca.md)

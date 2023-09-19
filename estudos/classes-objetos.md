@@ -3,6 +3,16 @@
 - Os 4 pilares da POO são: Abstração, Encapsulamento, Herança e Polimorfismo.
 - Nomes de classe iniciam com letra maiúscula.
 - Classes possuem membros (campos/atributos, propriedades e métodos)
+- Classe
+    - Conjunto de métodos e propriedades que definem um escopo.
+- Objeto
+    - Elemento com características definidas por uma classe.
+- Atributos
+    - Conjunto de características definidas por uma classe.
+- Métodos
+    - Comportamentos de uma classe.
+- Construtor
+    - Método que inicializa um objeto.                
 
 ## Criando uma Classe e Instanciando um Objeto a partir dela
 
