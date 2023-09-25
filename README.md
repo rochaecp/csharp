@@ -46,6 +46,7 @@
 - [Classes e Objetos](estudos/classes-objetos.md)
 - [Modificadores de Acesso](estudos/modificadores-acesso.md)
 - [Métodos](estudos/metodos.md)
+- [Métodos de Extensão](estudos/metodos-extensao.md)
 - [Encapsulamento](estudos/encapsulamento.md)
 - [Herança](estudos/heranca.md)
 - [Polimorfismo](estudos/polimorfismo.md)

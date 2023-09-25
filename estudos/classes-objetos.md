@@ -14,7 +14,7 @@
 - Construtor
     - Método que inicializa um objeto.                
 
-## Criando uma Classe e Instanciando um Objeto a partir dela
+## Criar uma classe e instanciar um objeto a partir dela
 
 ~~~csharp
 // Arquivo: Carro.cs

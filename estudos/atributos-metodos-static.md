@@ -15,28 +15,12 @@
 ## Classes Estáticas
 
 ~~~csharp
-// Arquivo Program.cs
-using System;
-
-namespace MyApplication
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(Calculadora.Somar(2, 4)) ;
-        }
-    }
-}
-~~~
-
-~~~csharp
 // Arquivo Calculadora.cs
 using System;
 
 namespace MyApplication
 {
-    static class Calculadora
+    public static class Calculadora
     {
         public static int Somar(int num1, int num2)
         {
@@ -46,6 +30,23 @@ namespace MyApplication
         public static int Multiplicar(int num1, int num2)
         {
             return num1 * num2;
+        }
+    }
+}
+~~~
+
+~~~csharp
+// Arquivo Program.cs
+// Utilizando a classe estática criada anteriormente
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Calculadora.Somar(2, 4)) ;
         }
     }
 }
