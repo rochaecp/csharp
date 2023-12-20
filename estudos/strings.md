@@ -25,7 +25,8 @@ minhaString = $"Meu nome completo é: {minhaString2} {minhaString3}"; // versão
 caractere = minhaString[0]; // readonly
 ~~~
 
-- Caracteres de Escape
+## Caracteres de Escape
+
 - \\' 
 - \\"
 - \\n
