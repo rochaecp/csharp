@@ -3,9 +3,7 @@
 - Namespace: System.Linq
 - Permite fazer consultas em qualquer coleção que implemente a interface IEnumerable<T> como por exemplo: arrays, listas, etc.
 
-## Exemplos
-
-### Conversões
+## Conversões
 
 #### Converter um Array de strings em um Array de Inteiros
 
@@ -16,6 +14,11 @@ foreach(int e in arrInt) // exibe
     Console.WriteLine(e * 10);
 ~~~
 
+~~~csharp
+string[] valores = new string[] { "2", "5", "3", "1", "4" };
+var valoresInt = valores.Select(x => Int32.Parse(x));   
+~~~
+
 #### Converter um Array de Strings em uma Lista de Inteiros
 
 ~~~csharp
@@ -24,7 +27,7 @@ List<int> lista = ArrEntrada.Select(e => int.Parse(e)).ToList(); // converte
 lista.ForEach(e => Console.WriteLine(e)); // exibe
 ~~~
 
-### Ordenações
+## Ordenações
 
 #### Ordenar uma Lista
 
@@ -34,40 +37,31 @@ List<int> listaOrdenada = lista.OrderBy(e => e).ToList();
 listaOrdenada.ForEach(e => Console.WriteLine(e));
 ~~~
 
+#### Converter e ordenar
 
+~~~csharp
+string[] valores = new string[] { "2", "5", "3", "1", "4" };
+var valoresIntOrdenados = valores.Select(x => Int32.Parse(x)).OrderBy(i => i); // lista
+int [] result = numerosStr.Select(x => Int32.Parse(x)).OrderBy(i => i).ToArray(); // array
+~~~       
 
-## Select()
+## Outros
 
-- recebe como parâmetro uma função anônima na forma de uma expressão lambda 
+#### Tornar todos elementos maiúsculos
 
 ~~~csharp
 string[] nomes = new string[] { "Maurício", "Maria", "Joana" };
 var resultado = nomes.Select(x => x.ToUpper());        
 ~~~
 
-~~~csharp
-string[] valores = new string[] { "2", "5", "3", "1", "4" };
-var valoresInt = valores.Select(x => Int32.Parse(x));        
-~~~
-
-## OrderBy() 
-
-~~~csharp
-string[] valores = new string[] { "2", "5", "3", "1", "4" };
-var valoresIntOrdenados = valores.Select(x => Int32.Parse(x)).OrderBy(i => i);
-int [] result = numerosStr.Select(x => Int32.Parse(x)).OrderBy(i => i).ToArray(); 
-    // outra forma
-~~~           
-
-## Where() 
+#### Selecionar apenas elementos não nulos
 
 ~~~csharp
 string[] nomesComNulos = new string[] { "Maurício", null, "Maria", "", "Joana", string.Empty };
 var nomes = nomesComNulos.Where(x => !string.IsNullOrEmpty(x));
-    // remove strings nulas ou vazias        
 ~~~     
 
-## Count()
+#### Contar o total de elementos com uma determinada condição
 
 ~~~csharp
 bool[] resultados = new bool[] { true, false, false, true, true };
@@ -79,7 +73,7 @@ int[] notas = { 10, 9, 10, 5, 3 };
 int totAcimaMedia = notas.Count(x => x >= 6);  
 ~~~     
 
-## Encadeando Operadores de Consulta
+#### Encadear Operadores de Consulta
 
 ~~~csharp
 int[] numeros = new int[] { 10, 20, 30, 40, 50, 60 };
