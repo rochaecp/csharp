@@ -7,25 +7,21 @@
 
 ### Conversões
 
-#### Converter um Array de inteiros em um Array de Int
+#### Converter um Array de strings em um Array de Inteiros
 
 ~~~csharp
 string[] arrStr = new string[] {"3", "2", "1"}; // cria array de string
 int[] arrInt = arrStr.Select(e => int.Parse(e)).ToArray(); // converte cada elem em int
-
-// exibe
-foreach(int e in arrInt)
+foreach(int e in arrInt) // exibe
     Console.WriteLine(e * 10);
 ~~~
 
-#### Converter um Array de Strings em uma Lista de Int
+#### Converter um Array de Strings em uma Lista de Inteiros
 
 ~~~csharp
 string[] ArrEntrada = new string[] { "3", "2", "1" };
 List<int> lista = ArrEntrada.Select(e => int.Parse(e)).ToList(); // converte
-
-// exibe
-lista.ForEach(e => Console.WriteLine(e)); // printa
+lista.ForEach(e => Console.WriteLine(e)); // exibe
 ~~~
 
 ### Ordenações
