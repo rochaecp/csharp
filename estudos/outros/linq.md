@@ -3,6 +3,43 @@
 - Namespace: System.Linq
 - Permite fazer consultas em qualquer coleção que implemente a interface IEnumerable<T> como por exemplo: arrays, listas, etc.
 
+## Exemplos
+
+### Conversões
+
+#### Converter um Array de inteiros em um Array de Int
+
+~~~csharp
+string[] arrStr = new string[] {"3", "2", "1"}; // cria array de string
+int[] arrInt = arrStr.Select(e => int.Parse(e)).ToArray(); // converte cada elem em int
+
+// exibe
+foreach(int e in arrInt)
+    Console.WriteLine(e * 10);
+~~~
+
+#### Converter um Array de Strings em uma Lista de Int
+
+~~~csharp
+string[] ArrEntrada = new string[] { "3", "2", "1" };
+List<int> lista = ArrEntrada.Select(e => int.Parse(e)).ToList(); // converte
+
+// exibe
+lista.ForEach(e => Console.WriteLine(e)); // printa
+~~~
+
+### Ordenações
+
+#### Ordenar uma Lista
+
+~~~csharp
+List<int> lista = new List<int> {3, 2, 1};
+List<int> listaOrdenada = lista.OrderBy(e => e).ToList();
+listaOrdenada.ForEach(e => Console.WriteLine(e));
+~~~
+
+
+
 ## Select()
 
 - recebe como parâmetro uma função anônima na forma de uma expressão lambda 

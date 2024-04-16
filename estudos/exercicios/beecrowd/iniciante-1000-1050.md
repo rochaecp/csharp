@@ -988,7 +988,26 @@ namespace ConsoleApp
 ## 1042 - Sort Simples
 
 ~~~csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] ArrEntrada = Console.ReadLine().Split(' ');
+            List<int> lista = ArrEntrada.Select(e => int.Parse(e)).ToList();
+            List<int> listaOrdenada = lista.OrderBy(e => e).ToList();
+
+            listaOrdenada.ForEach(e => Console.WriteLine(e));
+            Console.WriteLine();
+            lista.ForEach(e => Console.WriteLine(e));
+        }
+    }
+}
 ~~~
 
 ## 1043 - Triângulo
