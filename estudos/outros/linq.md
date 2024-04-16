@@ -45,13 +45,15 @@ var valoresIntOrdenados = valores.Select(x => Int32.Parse(x)).OrderBy(i => i); /
 int [] result = numerosStr.Select(x => Int32.Parse(x)).OrderBy(i => i).ToArray(); // array
 ~~~       
 
-## Outros
+## Fatias
 
-#### Tornar todos elementos maiúsculos
+#### Obter todos elementos que satisfazem a uma condição
 
 ~~~csharp
-string[] nomes = new string[] { "Maurício", "Maria", "Joana" };
-var resultado = nomes.Select(x => x.ToUpper());        
+int[] meuArray = new int[] {1, 2, -15, 72, 6, 5, 4, 3, 2, 1};
+int[] meuArray2 = meuArray.Where(e => e > 3).ToArray(); // só elementos maiores que 3
+foreach(int e in meuArray2)
+    Console.WriteLine(e);
 ~~~
 
 #### Selecionar apenas elementos não nulos
@@ -60,6 +62,8 @@ var resultado = nomes.Select(x => x.ToUpper());
 string[] nomesComNulos = new string[] { "Maurício", null, "Maria", "", "Joana", string.Empty };
 var nomes = nomesComNulos.Where(x => !string.IsNullOrEmpty(x));
 ~~~     
+
+## Contagem
 
 #### Contar o total de elementos com uma determinada condição
 
@@ -71,7 +75,16 @@ int totalTrue = resultados.Count(x => x == true);
 ~~~csharp
 int[] notas = { 10, 9, 10, 5, 3 };
 int totAcimaMedia = notas.Count(x => x >= 6);  
-~~~     
+~~~    
+
+## Outros
+
+#### Tornar todos elementos maiúsculos
+
+~~~csharp
+string[] nomes = new string[] { "Maurício", "Maria", "Joana" };
+var resultado = nomes.Select(x => x.ToUpper());        
+~~~
 
 #### Encadear Operadores de Consulta
 
