@@ -1013,7 +1013,29 @@ namespace treinoUri
 ## 1043 - Triângulo
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            double[] inputs = Console.ReadLine().Split(' ').Select(e => double.Parse(e)).ToArray();
+            if((inputs[0] + inputs[1]) > inputs[2] && (inputs[0] + inputs[2]) > inputs[1] && (inputs[1] + inputs[2]) > inputs[0])
+                Console.WriteLine($"Perimetro = {inputs.Sum():F1}");
+            else
+            {
+                double area = (inputs[0] + inputs[1]) * inputs[2] / 2;
+                Console.WriteLine($"Area = {area:F1}");
+            }
+        }
+    }
+}
 ~~~
 
 ## 1044 - Múltiplos
