@@ -1041,7 +1041,27 @@ namespace treinoUri
 ## 1044 - Múltiplos
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+//using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            int[] inputs = Console.ReadLine().Split(' ').Select(e => int.Parse(e)).ToArray();
+            Array.Sort(inputs);
+            if(inputs[1] % inputs[0] == 0)
+                Console.WriteLine("Sao Multiplos");
+            else
+                Console.WriteLine("Nao sao Multiplos");
+        }
+    }
+}
 ~~~
 
 ## 1045 - Tipos de Triângulos
