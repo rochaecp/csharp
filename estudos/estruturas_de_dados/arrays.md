@@ -50,10 +50,21 @@ myStrArr[0] = "Mauricio";
 myInt = myStrArr.Length;
 ~~~
 
-## Array.Sort()
+## Ordenar
 
 ~~~csharp
 Array.Sort(myStrArr);
+~~~
+
+## Exibir
+
+#### Utilizando linq com foreach (converte em lista)
+
+~~~csharp
+using System.Linq;
+// ...
+int[] meuArray = { 5, 3, 8, 4, 1 };
+meuArray.ToList().ForEach(e => Console.WriteLine(e));
 ~~~
 
 ## Max()

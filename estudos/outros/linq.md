@@ -3,7 +3,16 @@
 - Namespace: System.Linq
 - Permite fazer consultas em qualquer coleção que implemente a interface IEnumerable<T> como por exemplo: arrays, listas, etc.
 
-## Conversões
+## Exibir
+
+#### Exibir um array utilizando linq com foreach (converte em lista)
+
+~~~csharp
+int[] meuArray = { 5, 3, 8, 4, 1 };
+meuArray.ToList().ForEach(e => Console.WriteLine(e));
+~~~
+
+## Converter
 
 #### Converter um Array de strings em um Array de Inteiros
 
@@ -27,7 +36,7 @@ List<int> lista = ArrEntrada.Select(e => int.Parse(e)).ToList(); // converte
 lista.ForEach(e => Console.WriteLine(e)); // exibe
 ~~~
 
-## Ordenações
+## Ordenar
 
 #### Ordenar uma Lista
 
@@ -45,7 +54,7 @@ var valoresIntOrdenados = valores.Select(x => Int32.Parse(x)).OrderBy(i => i); /
 int [] result = numerosStr.Select(x => Int32.Parse(x)).OrderBy(i => i).ToArray(); // array
 ~~~       
 
-## Fatias
+## Fatiar
 
 #### Obter todos elementos que satisfazem a uma condição
 
@@ -63,7 +72,7 @@ string[] nomesComNulos = new string[] { "Maurício", null, "Maria", "", "Joana",
 var nomes = nomesComNulos.Where(x => !string.IsNullOrEmpty(x));
 ~~~     
 
-## Contagem
+## Contar
 
 #### Contar o total de elementos com uma determinada condição
 
