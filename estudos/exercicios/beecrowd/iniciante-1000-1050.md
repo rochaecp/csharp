@@ -1067,7 +1067,42 @@ namespace treinoUri
 ## 1045 - Tipos de Triângulos
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            double[] inputs = Console.ReadLine().Split(' ').Select(e => double.Parse(e)).ToArray();
+            Array.Sort(inputs);
+            Array.Reverse(inputs);
+            double a = inputs[0], b = inputs[1], c = inputs[2];
+            
+            if(a >= (b + c))
+                Console.WriteLine("NAO FORMA TRIANGULO");
+            else if (Math.Pow(a,2) == (Math.Pow(b,2) + Math.Pow(c,2)))
+                Console.WriteLine("TRIANGULO RETANGULO");
+            else 
+            {
+                if (Math.Pow(a,2) > (Math.Pow(b,2) + Math.Pow(c,2)))
+                    Console.WriteLine("TRIANGULO OBTUSANGULO");
+                else if (Math.Pow(a,2) < (Math.Pow(b,2) + Math.Pow(c,2)))
+                    Console.WriteLine("TRIANGULO ACUTANGULO");
+                
+                if (a == b && b == c)
+                    Console.WriteLine("TRIANGULO EQUILATERO");
+                else if (a == b || b == c || a == c)
+                    Console.WriteLine("TRIANGULO ISOSCELES");                                                          
+            }
+        }
+    }
+}
 ~~~
 
 ## 1046 - Tempo de Jogo

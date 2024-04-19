@@ -52,8 +52,18 @@ myInt = myStrArr.Length;
 
 ## Ordenar
 
+#### Ordenar de modo crescente
+
 ~~~csharp
 Array.Sort(myStrArr);
+~~~
+
+#### Ordenar de modo decrescente
+
+~~~csharp
+int[] array = {5, 3, 8, 1, 4};
+Array.Sort(array);
+Array.Reverse(array);
 ~~~
 
 ## Exibir
