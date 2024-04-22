@@ -52,8 +52,6 @@ finally
 }        
 ~~~
 
-## Try ... Catch ... Finally   
-
 ~~~csharp
 try
 {
@@ -61,15 +59,15 @@ try
     int result = 100 / x;
     Console.WriteLine(result);
 }
-catch (DivideByZeroException ex)
+catch (DivideByZeroException ex) // se x == 0
 {
     Console.WriteLine("Divisão por zero. Error Info: {0}", ex.Message);
 }
-catch (InvalidOperationException ex)
+catch (InvalidOperationException ex) 
 {
     Console.WriteLine("Operação inválida. Error Info: {0}", ex.Message);
 }
-catch (FormatException ex)
+catch (FormatException ex) // se x == 'a'
 {
     Console.WriteLine("Operação inválida. Error Info: {0}", ex.Message);
 }
