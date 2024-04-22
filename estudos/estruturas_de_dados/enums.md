@@ -35,3 +35,27 @@ namespace MyProject
     }
 }
 ~~~
+
+## Printando o valor int da enum
+
+~~~csharp
+// Arquivo Program.cs
+namespace ConsoleApp
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            TesteEnum e = TesteEnum.TRES;
+            Console.WriteLine((int) e);
+        }
+    }
+
+    public enum TesteEnum : int
+    {
+        UM = 1,
+        DOIS = 2,
+        TRES = 3
+    }
+}
+~~~

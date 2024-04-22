@@ -68,4 +68,3 @@
 - [Iniciante - 1101 a 1150](estudos/exercicios/beecrowd/iniciante-1101-1150.md)
 - [Estruturas e Bibliotecas](estudos/exercicios/beecrowd/estruturas-e-bibliotecas.md)
 - [Strings](estudos/exercicios/beecrowd/strings.md)
-

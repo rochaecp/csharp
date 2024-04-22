@@ -1,10 +1,27 @@
 # C# - Listas
 
+- Namespace: System.Collections.Generic
+
+## Tamanho
+
+~~~csharp
+myInt = myIntList.Count;
+~~~
+
 ## Criar
 
 ~~~csharp
-List<int> myIntList = new List<int>(); // Namespace: System.Collections.Generic
+using System.Collections.Generic;
+// ...
+List<int> myIntList = new List<int>();
 List<int> myIntList2 = new List<int>() { 10, 20, 30, 40 };
+~~~
+
+## Exibir 
+
+~~~csharp
+List<int> myIntList = new List<int>() { 10, 20, 30 };
+myIntList.ForEach(x => Console.WriteLine(x));
 ~~~
 
 ## Incluir
@@ -42,19 +59,24 @@ myIntList.ForEach(delegate (int myInt)
 });
 ~~~
 
-## Count
+## Ordenar
 
-~~~csharp
-myInt = myIntList.Count;
-~~~
-
-## Sort()
+#### Ordem Crescente
 
 ~~~csharp
 myIntList.Sort();
 ~~~
 
-## Coverter listas em arrays
+#### Ordem Decrescente
+
+~~~csharp
+myIntList.Sort();
+myIntList.Reverse();
+~~~
+
+## Coverter
+
+#### Coverter listas em arrays
 
 ~~~csharp
 int[] meuArray = minhaLista.ToArray();

@@ -2,22 +2,32 @@
 
 ## Criar
 
-~~~csharp
-Dictionary<string, string> myDict = new Dictionary<string, string>() // String, String
-{
-    { "txt", "notepad" },
-    { "bmp", "paint" },
-    { "svg", "inkscape"}
-};    
-~~~  
+#### Int, String
 
 ~~~csharp
-Dictionary<int, string> myDict2 = new Dictionary<int, string>() // Int, String
+Dictionary<int, string> myDict2 = new Dictionary<int, string>() 
 {
     { 1, "Maurício" },
     { 2, "Maria" },
     { 3, "Joana"}
 };    
+~~~
+
+#### String, String
+
+~~~csharp
+Dictionary<string, string> myDict = new Dictionary<string, string>()
+{
+    { "txt", "notepad" },
+    { "bmp", "paint" },
+    { "svg", "inkscape"}
+};    
+~~~
+
+## Tamanho
+
+~~~csharp
+myInt = myDict.Count;
 ~~~
 
 ## Incluir
@@ -43,9 +53,20 @@ myStr = myDict["txt"];
 myStr2 = myDict2[1]; 
 ~~~
 
+## Exibir
+
+#### Exibir Chaves
+
 ~~~csharp
 for (int i = 0; i < myDict.Count; i++)
     Console.WriteLine(myDict.Keys.ElementAt(i));
+~~~
+
+#### Exibir Elementos
+
+~~~csharp
+for(int i = 0; i < myDict.Count; i++)
+    Console.WriteLine(myDict.Values.ElementAt(i));
 ~~~
 
 ~~~csharp
@@ -53,19 +74,15 @@ for (int i = 0; i < myDict.Count; i++)
     Console.WriteLine(myDict[myDict.Keys.ElementAt(i)]);        
 ~~~
 
-## Count
+## Verificar
 
-~~~csharp
-myInt = myDict.Count;
-~~~
-
-## Keys.Contains
+#### Verificar se existe uma determinada chave
 
 ~~~csharp
 myBool = myDict.Keys.Contains("txt");
 ~~~
 
-## Values.Contains
+#### Verificar se existe uma determinada chave
 
 ~~~csharp
 myBool = myDict.Values.Contains("notepad");

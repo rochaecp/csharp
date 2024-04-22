@@ -1,5 +1,11 @@
 # C# - Arrays Unidimensionais
 
+## Tamanho
+
+~~~csharp
+myInt = myStrArr.Length;
+~~~
+
 ## Criar
 
 ~~~csharp
@@ -24,17 +30,21 @@ myStrArr5 = new string[3] { "aaa", "bbb", "ccc" };
 
 ## Indexar
 
-~~~csharp
-myItemStr = myStrArr[0]; // Um elemento
-~~~
+#### Um elemento
 
 ~~~csharp
-for (int i = 0; i < myArrayString2.Length; i++) Todos elementos
+myItemStr = myStrArr[0]; 
+~~~
+
+#### Todos elementos
+
+~~~csharp
+for (int i = 0; i < myArrayString2.Length; i++) 
     Console.WriteLine(myStrArr[i]);        
 ~~~
 
 ~~~csharp
-foreach (string i in myArrayString2) // Todos elementos
+foreach (string i in myArrayString2)
     Console.WriteLine(i);   
 ~~~
 
@@ -42,12 +52,6 @@ foreach (string i in myArrayString2) // Todos elementos
 
 ~~~csharp
 myStrArr[0] = "Mauricio";
-~~~
-
-## Length
-
-~~~csharp
-myInt = myStrArr.Length;
 ~~~
 
 ## Ordenar
@@ -80,19 +84,25 @@ meuArray.ToList().ForEach(e => Console.WriteLine(e));
 ## Max()
 
 ~~~csharp
-myInt = myIntArr.Max(); // Namespace: System.Linq
+using System.Linq;
+// ...
+myInt = myIntArr.Max();
 ~~~        
 
 ## Min()
 
 ~~~csharp
-myInt = myIntArr.Min(); // // Namespace: System.Linq
+using System.Linq;
+// ...
+myInt = myIntArr.Min();
 ~~~        
 
 ## Sum()
 
 ~~~csharp
-myInt = myIntArr.Sum(); // // Namespace: System.Linq
+using System.Linq;
+// ...
+myInt = myIntArr.Sum();
 ~~~ 
 
 ## Coverter String em Array de Char

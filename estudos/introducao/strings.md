@@ -1,5 +1,11 @@
 # C# - Strings 
 
+## Tamanho
+
+~~~csharp
+int tamanho = minhaString.Length;
+~~~
+
 ## Criar
 
 ~~~csharp
@@ -33,12 +39,6 @@ caractere = minhaString[0]; // readonly
 - \\t
 - \\b
 - \\\
-
-## Tamanho
-
-~~~csharp
-int tamanho = minhaString.Length;
-~~~
 
 ## Índice de caractere
 
