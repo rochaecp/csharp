@@ -90,6 +90,17 @@ minhaString = "meu pastel é mais barato";
 char[] caractereArray = minhaString.ToCharArray();
 ~~~
 
+## Converter string em array de string
+
+~~~csharp
+string minhaString = "Sejam bem vindos";
+string [] minhaStringArray = minhaString.Split(' ');
+foreach (string str in minhaStringArray)
+    Console.WriteLine(str); // sejam
+                            // bem
+                            // vindos
+~~~
+
 ## Modificar um caractere de string em determinado índice
 
 ~~~csharp
@@ -99,22 +110,9 @@ caractereArray[0] = 'O';
 minhaString = new string(caractereArray);
 ~~~
 
-## Modificar caractere de string em determinado índice
-
 ~~~csharp
 minhaString = "Mauricio";
 StringBuilder sb = new StringBuilder(minhaString); // Namespace: System.Text.  
 sb[0] = 'X';
 minhaString = sb.ToString();
-~~~
-
-## Converter string em array
-
-~~~csharp
-string minhaString = "Sejam bem vindos";
-string [] minhaStringArray = minhaString.Split(' ');
-foreach (string str in minhaStringArray)
-    Console.WriteLine(str); // sejam
-                            // bem
-                            // vindos
 ~~~

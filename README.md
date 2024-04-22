@@ -9,11 +9,12 @@
 - [Variáveis, Constantes e Tipos](estudos/introducao/variaveis-const-tipos.md)
 - [Operadores](estudos/introducao/operadores.md)
 - [Casting](estudos/introducao/casting.md)
-- [Inputs e outputs pelo console](estudos/introducao/console.md)
+- [Console - Leitura](estudos/introducao/console-leitura.md)
+- [Console - Escrita](estudos/introducao/console-escrita.md)
 - [Strings](estudos/introducao/strings.md)
 - [Math](estudos/introducao/math.md)
 - [Gerar Números Aleatórios](estudos/introducao/random.md)
-- [Datas](estudos/datas.md)
+- [Datas](estudos/introducao/datas.md)
 
 #### Comandos Condicionais e de Repetição
 

@@ -39,6 +39,8 @@ myStr = myBool.ToString();
 
 ## Convert()
 
+- Possui sobrecargas para converter conteúdos vindos de diversos tipos.
+
 ~~~csharp 
 myString = Convert.ToString(myInt);
 myDouble = Convert.ToDouble(myStr);
@@ -48,6 +50,8 @@ myBool = Convert.ToBoolean(myInt);
 ~~~
 
 ## Parse()
+
+- Só converte conteúdos vindos de uma string.
 
 ~~~csharp
 myDouble = Double.Parse(myString);

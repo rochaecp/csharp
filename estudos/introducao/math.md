@@ -1,5 +1,7 @@
 # C# - Math
 
+- Classe estática com constantes e métodos matemáticos.
+
 ## Constante PI
 
 ~~~csharp
