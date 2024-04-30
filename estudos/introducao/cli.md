@@ -63,3 +63,9 @@ dotnet sln add tests/minhaapi.tests/
 ## adicionar referencia dos testes à api
 dotnet add tests/minhaapi.tests/ reference src/minhaapi/
 ~~~
+
+## Ler um arquivo .txt como pelo console
+
+~~~bash
+cat .\arquivo.txt | dotnet run # basta ter um Console.ReadLine(); no Program.cs para ler
+~~~

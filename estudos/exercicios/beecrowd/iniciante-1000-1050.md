@@ -1108,7 +1108,31 @@ namespace treinoUri
 ## 1046 - Tempo de Jogo
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+//using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            int[] inputs = Console.ReadLine().Split(' ').Select(e => int.Parse(e)).ToArray();
+            int hini = inputs[0], hfim = inputs[1];
+            int duracao = 0;
+
+            if (hfim > hini)
+                duracao = hfim - hini;
+            else
+                duracao = (24 - hini) + hfim;
+
+            Console.WriteLine($"O JOGO DUROU {duracao} HORA(S)");
+        }
+    }
+}
 ~~~
 
 ## 1047 - Tempo de Jogo com Minutos
