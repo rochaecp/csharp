@@ -1150,6 +1150,50 @@ namespace treinoUri
         static void Main(string[] args)
         {
             //CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            string[] input = Console.ReadLine().Split(' ');
+            int horaInicial = int.Parse(input[0]);
+            int minutoInicial = int.Parse(input[1]);
+            int horaFinal = int.Parse(input[2]);
+            int minutoFinal = int.Parse(input[3]);
+
+            int duracaoHoras = horaFinal - horaInicial;
+            int duracaoMinutos = minutoFinal - minutoInicial;
+
+            if (duracaoMinutos < 0)
+            {
+                duracaoMinutos += 60;
+                duracaoHoras--;
+            }
+
+            if (duracaoHoras < 0)
+            {
+                duracaoHoras += 24;
+            }
+
+            if (duracaoHoras == 0 && duracaoMinutos == 0)
+            {
+                duracaoHoras = 24;
+            }
+
+            Console.WriteLine($"O JOGO DUROU {duracaoHoras} HORA(S) E {duracaoMinutos} MINUTO(S)");
+        }
+    }
+}
+~~~
+
+~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+//using System.Globalization;
+
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-US");
             int[] inputs = Console.ReadLine().Split(' ').Select(e => int.Parse(e)).ToArray();
             int hIni = inputs[0], minIni = inputs[1], hFim = inputs[2], minFim = inputs[3];
             int duracaoHoras = 0, duracaoMin = 0;
