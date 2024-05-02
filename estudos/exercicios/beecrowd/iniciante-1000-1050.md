@@ -1138,7 +1138,50 @@ namespace treinoUri
 ## 1047 - Tempo de Jogo com Minutos
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+//using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            int[] inputs = Console.ReadLine().Split(' ').Select(e => int.Parse(e)).ToArray();
+            int hIni = inputs[0], minIni = inputs[1], hFim = inputs[2], minFim = inputs[3];
+            int duracaoHoras = 0, duracaoMin = 0;
+
+
+            if(hFim == hIni)
+            {
+                if (minFim == minIni)
+                    duracaoHoras = 24;
+                else if (minFim > minIni)
+                    duracaoHoras = 0;
+                else if (minFim < minIni)
+                    duracaoHoras = 23; 
+            }
+            else if (hFim > hIni)
+                duracaoHoras = hFim - hIni;
+            else if (hFim < hIni)
+                duracaoHoras = (24 - hIni) + hFim;
+
+            if (minFim >= minIni)
+                duracaoMin = minFim - minIni;
+            else if (minFim < minIni)
+            {
+                duracaoMin = (60 - minIni) + minFim;
+                if(hFim != hIni)
+                    duracaoHoras = duracaoHoras > 0 ? duracaoHoras - 1 : 0;
+            }
+
+            Console.WriteLine($"O JOGO DUROU {duracaoHoras} HORA(S) E {duracaoMin} MINUTO(S)");
+        }
+    }
+}
 ~~~
 
 ## 1048 - Aumento de Salário
