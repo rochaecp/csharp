@@ -1154,7 +1154,6 @@ namespace treinoUri
             int hIni = inputs[0], minIni = inputs[1], hFim = inputs[2], minFim = inputs[3];
             int duracaoHoras = 0, duracaoMin = 0;
 
-
             if(hFim == hIni)
             {
                 if (minFim == minIni)
