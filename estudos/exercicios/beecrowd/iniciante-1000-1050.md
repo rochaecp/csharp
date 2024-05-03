@@ -1230,7 +1230,36 @@ namespace treinoUri
 ## 1048 - Aumento de Salário
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            double salario = double.Parse(Console.ReadLine());
+            double perc = 0.0;
+
+            if (salario <= 400.00) perc = 0.15;
+            else if (salario <= 800.00) perc = 0.12;
+            else if (salario <= 1200.00) perc = 0.10;
+            else if (salario <= 2000.00) perc = 0.07;
+            else perc = 0.04; 
+
+            double reajuste = salario * perc;
+            double novosalario = salario + reajuste;
+
+            Console.WriteLine($"Novo salario: {novosalario:F2}");
+            Console.WriteLine($"Reajuste ganho: {reajuste:F2}");
+            Console.WriteLine($"Em percentual: {perc * 100} %");
+        }
+    }
+}
 ~~~
 
 ## 1049 - Animal
