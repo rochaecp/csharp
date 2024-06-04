@@ -1265,7 +1265,31 @@ namespace treinoUri
 ## 1049 - Animal
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IDictionary<(string, string, string), string> animais = new Dictionary<(string, string, string), string>();
+            animais.Add(("vertebrado", "ave", "carnivoro"), "aguia");
+            animais.Add(("vertebrado", "ave", "onivoro"), "pomba");
+            animais.Add(("vertebrado", "mamifero", "onivoro"), "homem");
+            animais.Add(("vertebrado", "mamifero", "herbivoro"), "vaca");
+            animais.Add(("invertebrado", "inseto", "hematofago"), "pulga");
+            animais.Add(("invertebrado", "inseto", "herbivoro"), "lagarta");
+            animais.Add(("invertebrado", "anelideo", "hematofago"), "sanguessuga");
+            animais.Add(("invertebrado", "anelideo", "onivoro"), "minhoca");
+
+            Console.WriteLine(animais[(Console.ReadLine(), Console.ReadLine(), Console.ReadLine())]);
+        }
+    }
+}
 ~~~
 
 ## 1050 - DDD
