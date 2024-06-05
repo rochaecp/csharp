@@ -1295,5 +1295,36 @@ namespace treinoUri
 ## 1050 - DDD
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IDictionary<string, string> ddd = new Dictionary<string, string>()
+            {
+                {"61", "Brasilia"},
+                {"71", "Salvador"},
+                {"11", "Sao Paulo"},
+                {"21", "Rio de Janeiro"},
+                {"32", "Juiz de Fora"},
+                {"19", "Campinas"},
+                {"27", "Vitoria"},
+                {"31", "Belo Horizonte"}
+            };
+
+            string input = Console.ReadLine();
+            if(ddd.ContainsKey(input))
+                Console.WriteLine(ddd[input]);
+            else
+                Console.WriteLine("DDD nao cadastrado");
+
+        }
+    }
+}
 ~~~
