@@ -49,7 +49,12 @@ int indice = minhaString.IndexOf("a"); // -1 == não encontrou
 ## Fatia
 
 ~~~csharp
-minhaString = minhaString2.Substring(2); // do inicio ate posicao 2    
+string nome = "mauricio";
+string saida = nome.Substring(0); // mauricio
+string saida = nome.Substring(1); // auricio
+string saida = nome.Substring(0, 1); // m
+string saida = nome.Substring(0, 4); // maur
+string saida = nome.Substring(1, 4); // auri
 ~~~
 
 ## Converter Maiúsculo
