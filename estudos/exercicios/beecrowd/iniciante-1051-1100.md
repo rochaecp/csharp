@@ -3,7 +3,31 @@
 ## 1051 - Imposto de Renda
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            double salario = Convert.ToDouble(Console.ReadLine());
+            if (salario <= 2000)
+                Console.WriteLine("Isento");
+            else if (salario > 2000 && salario <= 3000)
+                Console.WriteLine($"R$ {((salario - 2000) * 0.08):F2}");
+            else if (salario > 3000 && salario <= 4500)
+                Console.WriteLine($"R$ {(80 + (salario - 3000) * 0.18):F2}");
+            else if (salario > 4500)
+                Console.WriteLine($"R$ {(80 +  270 + (salario - 4500) * 0.28):F2}");
+
+        }
+    }
+}
 ~~~
 
 ## 1052 - Mês
