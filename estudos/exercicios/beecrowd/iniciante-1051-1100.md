@@ -33,7 +33,28 @@ namespace treinoUri
 ## 1052 - Mês
 
 ~~~csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Globalization;
 
+namespace treinoUri
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            string[] meses = {
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            };
+
+            int opcao = int.Parse(Console.ReadLine());
+            Console.WriteLine(meses[opcao - 1]);     
+        }
+    }
+}
 ~~~
 
 ## 1059 - Números Pares
