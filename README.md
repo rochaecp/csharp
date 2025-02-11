@@ -4,7 +4,6 @@
 
 #### Introdução
 
-- [CLI](01_linguagem_csharp/01_introducao/cli.md)
 - [Conceitos Gerais](01_linguagem_csharp/01_introducao/conceitos.md)
 - [Regions](01_linguagem_csharp/01_introducao/region.md)
 - [Comentários](01_linguagem_csharp/01_introducao/comentarios.md)
@@ -60,17 +59,23 @@
 - [Interfaces](01_linguagem_csharp/06_poo/interfaces.md)
 - [Classes, Atributos e Métodos Static](01_linguagem_csharp/06_poo/atributos-metodos-static.md)
 
+## Úteis
+
+- [CLI](A_uteis/cli.md)
+
 ## Exemplos
 
-- [Olá Mundo](02_exemplos/ola-mundo.md)
-- [Cadastro de Séries](02_exemplos/ex-cadastro-series.md)
-- [Curiosidades](02_exemplos/curiosidades.md)
+#### URI
 
-## Exercícios
+- [Lendo uma entrada](B_exemplos/beecrowd/lendo-entradas.md)
+- [Iniciante - 1000 a 1050](B_exemplos/beecrowd/iniciante-1000-1050.md)
+- [Iniciante - 1051 a 1100](B_exemplos/beecrowd/iniciante-1051-1100.md)
+- [Iniciante - 1101 a 1150](B_exemplos/beecrowd/iniciante-1101-1150.md)
+- [Estruturas e Bibliotecas](B_exemplos/beecrowd/estruturas-e-bibliotecas.md)
+- [Strings](B_exemplos/beecrowd/strings.md)
 
-- [Lendo uma entrada](03_exercicios/beecrowd/lendo-entradas.md)
-- [Iniciante - 1000 a 1050](03_exercicios/beecrowd/iniciante-1000-1050.md)
-- [Iniciante - 1051 a 1100](03_exercicios/beecrowd/iniciante-1051-1100.md)
-- [Iniciante - 1101 a 1150](03_exercicios/beecrowd/iniciante-1101-1150.md)
-- [Estruturas e Bibliotecas](03_exercicios/beecrowd/estruturas-e-bibliotecas.md)
-- [Strings](03_exercicios/beecrowd/strings.md)
+#### Diversos
+
+- [Olá Mundo](B_exemplos/diversos/ola-mundo.md)
+- [Cadastro de Séries](B_exemplos/diversos/ex-cadastro-series.md)
+- [Curiosidades](B_exemplos/diversos/curiosidades.md)
