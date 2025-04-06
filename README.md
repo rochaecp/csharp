@@ -1,6 +1,6 @@
-# C#
+# C\#
 
-## Linguagem C#
+## Linguagem C\#
 
 #### Introdução
 
@@ -37,27 +37,39 @@
 - [Dicionários](01_linguagem_csharp/04_estruturas_de_dados/dicionarios.md)
 - [Tuplas](01_linguagem_csharp/04_estruturas_de_dados/tuplas.md)
 
-#### Outros
-
-- [Exceções](01_linguagem_csharp/05_outros/excecoes.md)
-- [Arquivos](01_linguagem_csharp/05_outros/arquivos.md)
-- [LINQ](01_linguagem_csharp/05_outros/linq.md)
-- [Expressões Lambda](01_linguagem_csharp/05_outros/expressoes-lambda.md)
-- [Regex](01_linguagem_csharp/05_outros/regex.md)
-- [Delegates](01_linguagem_csharp/05_outros/delegates.md)
-
 #### POO
 
-- [Classes e Objetos](01_linguagem_csharp/06_poo/classes-objetos.md)
-- [Modificadores de Acesso](01_linguagem_csharp/06_poo/modificadores-acesso.md)
-- [Métodos](01_linguagem_csharp/06_poo/metodos.md)
-- [Métodos de Extensão](01_linguagem_csharp/06_poo/metodos-extensao.md)
-- [Encapsulamento](01_linguagem_csharp/06_poo/encapsulamento.md)
-- [Herança](01_linguagem_csharp/06_poo/heranca.md)
-- [Polimorfismo](01_linguagem_csharp/06_poo/polimorfismo.md)
-- [Abstração](01_linguagem_csharp/06_poo/abstracao.md)
-- [Interfaces](01_linguagem_csharp/06_poo/interfaces.md)
-- [Classes, Atributos e Métodos Static](01_linguagem_csharp/06_poo/atributos-metodos-static.md)
+- [Classes e Objetos](01_linguagem_csharp/05_poo/classes-objetos.md)
+- [Modificadores de Acesso](01_linguagem_csharp/05_poo/modificadores-acesso.md)
+- [Métodos](01_linguagem_csharp/05_poo/metodos.md)
+- [Métodos de Extensão](01_linguagem_csharp/05_poo/metodos-extensao.md)
+- [Encapsulamento](01_linguagem_csharp/05_poo/encapsulamento.md)
+- [Herança](01_linguagem_csharp/05_poo/heranca.md)
+- [Polimorfismo](01_linguagem_csharp/05_poo/polimorfismo.md)
+- [Abstração](01_linguagem_csharp/05_poo/abstracao.md)
+- [Interfaces](01_linguagem_csharp/05_poo/interfaces.md)
+- [Classes, Atributos e Métodos Static](01_linguagem_csharp/05_poo/atributos-metodos-static.md)
+
+#### Exceções
+
+- [Exceções](01_linguagem_csharp/06_excecoes/excecoes.md)
+
+#### Arquivos
+
+- [Arquivos](01_linguagem_csharp/07_arquivos/arquivos.md)
+
+#### Acesso a Bancos de Dados
+
+#### Programação Assíncrona
+
+#### Multithreading
+
+#### Diversos
+
+- [LINQ](01_linguagem_csharp/diversos/linq.md)
+- [Expressões Lambda](01_linguagem_csharp/diversos/expressoes-lambda.md)
+- [Regex](01_linguagem_csharp/diversos/regex.md)
+- [Delegates](01_linguagem_csharp/diversos/delegates.md)
 
 ## Úteis
 
